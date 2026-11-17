@@ -1,0 +1,123 @@
+{
+  "project": {
+    "name": "\u53e4\u57c3\u53ca\u6d77\u62a5",
+    "path": "C:\\Users\\admin\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a44b5c058ed79ea0914a279\\ancient-egypt-poster",
+    "operation": "create",
+    "deviceType": "freeSize",
+    "language": "zh-CN",
+    "dashboardMode": false,
+    "replicationMode": null,
+    "sourceUrl": null,
+    "visualSpecExcerpt": null,
+    "styleDefinitionBrief": "Ancient Egypt exhibition poster with desert gold, lapis lazuli blue, terracotta accents on sandstone background. Cinzel serif display type, Noto Serif body. Hieroglyphic-inspired decorative borders and geometric patterns. Dramatic cinematic lighting with warm golden tones.",
+    "designRead": "Cultural exhibition poster / history enthusiasts and art lovers / dramatic ancient luxury / medium density / avoid cartoonish illustrations",
+    "designDials": {
+      "layoutVariance": 4,
+      "motionIntensity": 1,
+      "visualDensity": 3
+    },
+    "styleContinuityAnchors": {
+      "colorSystem": {
+        "primaryColorRole": "Desert gold (#D4A843) for key display elements and ornamental borders",
+        "brandHuePolicy": "Warm gold primary with lapis blue and terracotta as accent layers only",
+        "stateColors": "N/A for poster"
+      },
+      "shapeSystem": "Sharp edges and angular geometric patterns inspired by Egyptian architecture; zero border-radius",
+      "typographySystem": "Cinzel Decorative for hero title, Cinzel for subtitles, Noto Serif for body; all-caps tracking-wider for display text",
+      "spacingSystem": "Generous padding for dramatic breathing room between sections",
+      "componentLanguage": "Ornamental borders, wing-shaped geometric dividers, lotus and papyrus decorative motifs",
+      "surfaceAndDepth": "Border-led layering with gold metallic borders; subtle warm shadows for depth",
+      "imageryAndIconography": "Egyptian hieroglyphics, pharaoh motifs, pyramid silhouettes, ankh symbols, eye of Horus",
+      "interactionTone": "N/A - static poster design"
+    },
+    "specsConstraints": null,
+    "sharedProjectShellContract": null,
+    "generationTree": {
+      "root": {
+        "nodeId": "gen-page-poster",
+        "kind": "page-leaf",
+        "pageIds": ["page-poster"],
+        "output": "pages/poster.html",
+        "sharedRegions": [],
+        "privateRegions": ["entire poster page"],
+        "mutableSlots": [],
+        "status": "planned",
+        "children": []
+      }
+    }
+  },
+  "designSource": {
+    "operatingMode": "free-explore",
+    "libraryIdentity": null,
+    "libraryPath": null,
+    "cssFilePath": "C:\\Users\\admin\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a44b5c058ed79ea0914a279\\ancient-egypt-poster\\colors_and_type.css",
+    "brandPrefix": "ae",
+    "themeMode": "light",
+    "designDecisionSummary": "Desert gold + lapis lazuli + terracotta palette on sandstone background. Cinzel Decorative display, Noto Serif body. Sharp angular edges, hieroglyphic ornamental borders. Generous spacing for dramatic effect.",
+    "componentContractKind": null,
+    "forbiddenInventedComponents": [],
+    "allowedComponents": [],
+    "styleConstraints": {
+      "radiusMax": 0,
+      "spacingBase": 1,
+      "fontSizeBody": 16,
+      "fontSizeMin": 12,
+      "controlHeightDefault": 40,
+      "controlHeightLarge": 48
+    },
+    "productContext": {
+      "kitType": "poster",
+      "productType": "cultural exhibition"
+    },
+    "actualTokenNameReference": [
+      { "semanticPurpose": "Primary gold", "tokenName": "--ae-primary" },
+      { "semanticPurpose": "Background sand", "tokenName": "--ae-background" },
+      { "semanticPurpose": "Lapis blue accent", "tokenName": "--ae-accent-blue" },
+      { "semanticPurpose": "Terracotta accent", "tokenName": "--ae-accent-terracotta" },
+      { "semanticPurpose": "Primary text", "tokenName": "--ae-text-primary" },
+      { "semanticPurpose": "Gold text", "tokenName": "--ae-text-gold" },
+      { "semanticPurpose": "Border", "tokenName": "--ae-border" }
+    ]
+  },
+  "pages": [
+    {
+      "nodeId": "page-poster",
+      "slug": "poster",
+      "title": "\u53e4\u57c3\u53ca\u6d77\u62a5",
+      "htmlSrc": "pages/poster.html",
+      "pageIndex": 1,
+      "stateGroupId": null,
+      "stateRole": null,
+      "baseStatePageId": null,
+      "sharedShellContract": [],
+      "mutableRegions": [],
+      "derivedFromHtmlSrc": null,
+      "derivationType": "original",
+      "sourcePageId": null,
+      "sourceHtmlSrc": null,
+      "pageType": "showcase",
+      "businessScenario": "Ancient Egypt cultural exhibition poster - single page dramatic visual layout",
+      "visualNorthStar": "A dramatic, cinematic poster that evokes the majesty and mystery of ancient Egypt through golden ornamental borders, deep lapis blue contrasts, and hieroglyphic-inspired decorative elements framing a central exhibition announcement",
+      "compositionPattern": "Full-bleed poster: ornamental border frame wrapping entire canvas, dramatic top-to-bottom hierarchy with winged sun disc header, central hero visual, stylized title block, and footer with event details. Asymmetric gold and blue contrast bands.",
+      "continuityAnchors": [],
+      "libraryRestraintMode": false,
+      "uiKitPath": null,
+      "componentPlan": [],
+      "imagePlan": ["hero-egypt-artifact.jpg"],
+      "chartsRequired": false,
+      "miniProgramStyle": false,
+      "qualityRisks": ["Large display text rendering", "Ornamental CSS complexity"]
+    }
+  ],
+  "assets": [
+    {
+      "filename": "hero-egypt-artifact.jpg",
+      "role": "critical-hero",
+      "owningPage": "poster",
+      "semanticDescription": "Ancient Egyptian artifact or pharaoh imagery with dramatic golden lighting and lapis blue accents",
+      "status": "planned"
+    }
+  ],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}

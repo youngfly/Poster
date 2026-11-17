@@ -1,0 +1,13 @@
+{
+  "root": {
+    "nodeId": "gen-page-poster",
+    "kind": "page-leaf",
+    "pageIds": ["page-poster"],
+    "output": "pages/poster.html",
+    "sharedRegions": [],
+    "privateRegions": ["entire poster page"],
+    "mutableSlots": [],
+    "status": "planned",
+    "children": []
+  }
+}

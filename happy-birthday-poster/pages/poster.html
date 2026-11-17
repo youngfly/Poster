@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐海报</title>
+    <style id="theme-vars">
+/* ============================================
+   Happy Birthday Poster — Brand CSS
+   生日庆典: 温暖金色、甜蜜粉色、缤纷活力
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #E8927C;
+  --color-primary-light: #F0A898;
+  --color-primary-lighter: #F5C4B8;
+  --color-primary-lightest: #FAE4DE;
+  --color-primary-dark: #C47060;
+  --color-primary-darker: #8B4F40;
+  --color-primary-darkest: #5C3530;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #7AAF7A;
+  --state-warning: #D4AD4E;
+  --state-error: #C46868;
+  --state-info: #5A7FA5;
+
+  /* ── Surface Palette (Warm Cream) ── */
+  --color-bg-main: #FFF9F2;
+  --color-bg-secondary: #FFF3E8;
+  --color-bg-tertiary: #FFEBD8;
+  --color-bg-elevated: #FFFBF7;
+  --color-bg-overlay: rgba(92, 53, 48, 0.5);
+
+  /* ── Celebration Palette ── */
+  --color-gold: #D4A844;
+  --color-gold-light: #E8C46A;
+  --color-gold-lighter: #F5DEA0;
+  --color-pink: #E8789A;
+  --color-pink-light: #F098B0;
+  --color-pink-lighter: #F8C0D0;
+  --color-mint: #7ABFA0;
+  --color-mint-light: #A0D4B8;
+  --color-lavender: #A08FCC;
+  --color-lavender-light: #C0B4E0;
+
+  /* ── Text Palette ── */
+  --color-text-primary: #2D2018;
+  --color-text-secondary: #5C4F40;
+  --color-text-tertiary: #8B7D6B;
+  --color-text-inverse: #FFF9F2;
+  --color-text-link: #C47060;
+
+  /* ── Border Palette ── */
+  --color-border: #F0D8C4;
+  --color-border-subtle: #F5E4D4;
+  --color-border-strong: #E8927C;
+
+  /* ── Typography ── */
+  --font-family-display: "Playfair Display", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  --font-family-accent: "Playfair Display", "Noto Serif SC", Georgia, serif;
+  --font-family-festive: "Noto Sans SC", system-ui, sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+  --font-size-6xl: 6rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.15;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.06em;
+  --letter-spacing-wider: 0.12em;
+  --letter-spacing-widest: 0.2em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(92, 53, 48, 0.03);
+  --shadow-md: 0 2px 8px rgba(92, 53, 48, 0.04);
+  --shadow-lg: 0 8px 24px rgba(92, 53, 48, 0.04);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-primary: #F0A898;
+  --color-primary-light: #E8927C;
+  --color-primary-lighter: #C47060;
+  --color-primary-lightest: #8B4F40;
+  --color-primary-dark: #F5C4B8;
+  --color-primary-darker: #FAE4DE;
+  --color-primary-darkest: #FFF2EC;
+
+  --color-bg-main: #1A1410;
+  --color-bg-secondary: #221C16;
+  --color-bg-tertiary: #2C241C;
+  --color-bg-elevated: #1E1812;
+  --color-bg-overlay: rgba(0, 0, 0, 0.65);
+
+  --color-text-primary: #FFF3E8;
+  --color-text-secondary: #D4C0A8;
+  --color-text-tertiary: #8B7D6B;
+  --color-text-inverse: #2D2018;
+  --color-text-link: #F0A898;
+
+  --color-border: #4A3D30;
+  --color-border-subtle: #3A3028;
+  --color-border-strong: #F0A898;
+
+  --color-gold: #E8C46A;
+  --color-gold-light: #D4A844;
+  --color-gold-lighter: #A08030;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-primary: var(--color-primary);
+    --color-border: var(--color-border);
+  }
+  @layer base {
+    body { background: var(--color-background); color: var(--color-text-primary); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen antialiased" style="margin:0; padding:0; overflow-x:hidden;">
+    <main class="min-h-screen flex flex-col items-center px-4 py-12 relative overflow-hidden" style="min-height:100vh;">
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- BACKGROUND GRADIENT LAYER                -->
+        <!-- ═══════════════════════════════════════ -->
+        <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse at top right, #9888CC 0%, #6B8FCC 30%, #E88098 60%, #D4A850 85%, #F2F0ED 100%);"></div>
+
+        <!-- Noise grain overlay -->
+        <div aria-hidden="true" style="position:fixed;inset:0;z-index:1;opacity:0.03;pointer-events:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);background-repeat:repeat;background-size:200px 200px;"></div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- DECORATIVE GLASS ORBS                    -->
+        <!-- ═══════════════════════════════════════ -->
+        <!-- Top-left large pink orb -->
+        <div aria-hidden="true" style="position:absolute;top:-30px;left:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 35% 35%, rgba(255,255,255,0.5) 0%, rgba(232,120,152,0.35) 40%, rgba(232,120,152,0.08) 70%, transparent 100%);opacity:0.25;z-index:1;pointer-events:none;"></div>
+        <!-- Top-right blue orb -->
+        <div aria-hidden="true" style="position:absolute;top:60px;right:-50px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle at 35% 35%, rgba(255,255,255,0.5) 0%, rgba(107,143,204,0.35) 40%, rgba(107,143,204,0.08) 70%, transparent 100%);opacity:0.22;z-index:1;pointer-events:none;"></div>
+        <!-- Middle-left lavender orb -->
+        <div aria-hidden="true" style="position:absolute;top:40%;left:-60px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle at 35% 35%, rgba(255,255,255,0.5) 0%, rgba(152,136,204,0.3) 40%, rgba(152,136,204,0.06) 70%, transparent 100%);opacity:0.18;z-index:1;pointer-events:none;"></div>
+        <!-- Bottom-right gold orb -->
+        <div aria-hidden="true" style="position:absolute;bottom:10%;right:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle at 35% 35%, rgba(255,255,255,0.55) 0%, rgba(212,168,68,0.35) 40%, rgba(212,168,68,0.08) 70%, transparent 100%);opacity:0.2;z-index:1;pointer-events:none;"></div>
+        <!-- Bottom-left small mint orb -->
+        <div aria-hidden="true" style="position:absolute;bottom:5%;left:5%;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle at 35% 35%, rgba(255,255,255,0.5) 0%, rgba(122,191,160,0.35) 40%, rgba(122,191,160,0.08) 70%, transparent 100%);opacity:0.18;z-index:1;pointer-events:none;"></div>
+        <!-- Top-center small pink orb -->
+        <div aria-hidden="true" style="position:absolute;top:15%;left:50%;transform:translateX(-50%);width:60px;height:60px;border-radius:50%;background:radial-gradient(circle at 35% 35%, rgba(255,255,255,0.5) 0%, rgba(240,152,176,0.35) 40%, rgba(240,152,176,0.08) 70%, transparent 100%);opacity:0.15;z-index:1;pointer-events:none;"></div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- CONTENT STACK (z-index above orbs)      -->
+        <!-- ═══════════════════════════════════════ -->
+        <div style="position:relative;z-index:2;width:100%;max-width:680px;display:flex;flex-direction:column;align-items:center;gap:40px;">
+
+            <!-- ═══════════════════════════════════════ -->
+            <!-- MAIN TITLE — GLASS PANEL                -->
+            <!-- ═══════════════════════════════════════ -->
+            <section style="width:100%;max-width:80%;text-align:center;">
+                <div class="glass-panel glass-panel--title">
+                    <h1 style="font-family:'Noto Sans SC', var(--font-family-body);font-size:var(--font-size-5xl);font-weight:var(--font-weight-bold);color:var(--color-text-primary);letter-spacing:-0.02em;margin:0 0 12px 0;text-wrap:balance;word-break:keep-all;overflow-wrap:break-word;">生日快乐</h1>
+                    <p style="font-family:'Noto Sans SC', var(--font-family-body);font-size:var(--font-size-xl);font-weight:var(--font-weight-light);color:var(--color-text-secondary);letter-spacing:0.08em;margin:0;">Happy Birthday</p>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════ -->
+            <!-- HERO IMAGE — GLASS PANEL                -->
+            <!-- ═══════════════════════════════════════ -->
+            <section style="width:100%;max-width:90%;text-align:center;">
+                <div class="glass-panel glass-panel--image" style="padding:12px;">
+                    <img src="../assets/hero-birthday-cake.jpg" alt="生日蛋糕庆祝" style="width:100%;border-radius:20px;display:block;filter:brightness(1.05);" loading="eager">
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════ -->
+            <!-- BIRTHDAY WISHES — FLOATING GLASS CARD  -->
+            <!-- ═══════════════════════════════════════ -->
+            <section style="width:100%;max-width:520px;text-align:center;">
+                <div class="glass-panel glass-panel--heavy" style="border-radius:32px;">
+                    <!-- Decorative glass spheres row -->
+                    <div style="display:flex;justify-content:center;gap:10px;margin-bottom:20px;" aria-hidden="true">
+                        <span class="glass-sphere glass-sphere--pink"></span>
+                        <span class="glass-sphere glass-sphere--blue"></span>
+                        <span class="glass-sphere glass-sphere--gold"></span>
+                    </div>
+                    <p style="font-family:'Noto Sans SC', var(--font-family-body);font-size:var(--font-size-md);color:var(--color-text-primary);line-height:var(--line-height-loose);margin:0;">愿你的每一天都充满阳光与欢笑，<br>愿所有美好都如约而至，<br>愿你永远年轻，永远热泪盈眶。<br>生日快乐！</p>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════ -->
+            <!-- CELEBRATION DETAILS — GLASS PILL BUTTONS -->
+            <!-- ═══════════════════════════════════════ -->
+            <section style="text-align:center;">
+                <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+                    <div class="glass-pill">
+                        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--color-pink);margin-right:8px;flex-shrink:0;"></span>
+                        <span style="font-family:'Noto Sans SC', var(--font-family-body);font-size:var(--font-size-sm);color:var(--color-text-primary);white-space:nowrap;">日期 · 08月15日</span>
+                    </div>
+                    <div class="glass-pill">
+                        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--color-gold);margin-right:8px;flex-shrink:0;"></span>
+                        <span style="font-family:'Noto Sans SC', var(--font-family-body);font-size:var(--font-size-sm);color:var(--color-text-primary);white-space:nowrap;">时间 · 18:00</span>
+                    </div>
+                    <div class="glass-pill">
+                        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--color-mint);margin-right:8px;flex-shrink:0;"></span>
+                        <span style="font-family:'Noto Sans SC', var(--font-family-body);font-size:var(--font-size-sm);color:var(--color-text-primary);white-space:nowrap;">地点 · 星光厅</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════ -->
+            <!-- FOOTER — GLASS BAR                       -->
+            <!-- ═══════════════════════════════════════ -->
+            <footer style="width:100%;max-width:360px;text-align:center;">
+                <div class="glass-panel glass-panel--footer">
+                    <p style="font-family:'Noto Sans SC', var(--font-family-body);font-size:var(--font-size-sm);color:var(--color-text-tertiary);margin:0;">庆祝每一个美好的日子</p>
+                </div>
+            </footer>
+
+        </div><!-- /content stack -->
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CUSTOM STYLES — Liquid Glass System          -->
+    <!-- ═══════════════════════════════════════════ -->
+    <style>
+        /* ── Base Body Reset ── */
+        body {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            color: var(--color-text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ── Glass Panel — Base ── */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            padding: 32px 40px;
+        }
+
+        /* ── Glass Panel — Heavy (for wishes card) ── */
+        .glass-panel--heavy {
+            background: rgba(255, 255, 255, 0.55);
+            -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        /* ── Glass Panel — Image wrapper ── */
+        .glass-panel--image {
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.35);
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+        }
+
+        /* ── Glass Panel — Footer ── */
+        .glass-panel--footer {
+            padding: 16px 32px;
+            background: rgba(255, 255, 255, 0.35);
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+        }
+
+        /* ── Prismatic Border Accent ── */
+        .glass-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg,
+                rgba(107, 143, 204, 0.35),
+                rgba(232, 120, 152, 0.35),
+                rgba(212, 168, 68, 0.35),
+                rgba(122, 191, 160, 0.35),
+                rgba(152, 136, 204, 0.35)
+            );
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .glass-panel {
+            position: relative;
+        }
+
+        /* ── Glass Pill Buttons ── */
+        .glass-pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.45);
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: var(--radius-full);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+        /* ── Glass Sphere Decorations ── */
+        .glass-sphere {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            box-shadow: inset 0 -2px 4px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        .glass-sphere--pink {
+            background: radial-gradient(circle at 40% 35%, rgba(255,255,255,0.7) 0%, var(--color-pink-light) 50%, var(--color-pink) 100%);
+        }
+
+        .glass-sphere--blue {
+            background: radial-gradient(circle at 40% 35%, rgba(255,255,255,0.7) 0%, #8FAAD8 50%, #6B8FCC 100%);
+        }
+
+        .glass-sphere--gold {
+            background: radial-gradient(circle at 40% 35%, rgba(255,255,255,0.7) 0%, var(--color-gold-lighter) 50%, var(--color-gold) 100%);
+        }
+
+        /* ── Responsive Scaling ── */
+        @media (max-width: 640px) {
+            .glass-panel {
+                padding: 24px 20px;
+                border-radius: 20px;
+            }
+            .glass-panel--heavy {
+                border-radius: 24px;
+            }
+            section:first-of-type {
+                max-width: 90% !important;
+            }
+        }
+
+        @media (min-width: 641px) {
+            .glass-panel {
+                padding: 40px 48px;
+            }
+        }
+    </style>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

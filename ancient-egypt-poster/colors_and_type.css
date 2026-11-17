@@ -1,0 +1,170 @@
+/* Ancient Egypt Poster - Brand Design Tokens */
+/* Prefix: ae */
+
+:root {
+  /* === Color System === */
+  /* Primary: Desert Gold */
+  --ae-primary: #D4A843;
+  --ae-primary-hover: #E0BA5A;
+  --ae-primary-active: #B8922E;
+
+  /* Background palette - deep sand and stone */
+  --ae-background: #F5E6C8;
+  --ae-background-secondary: #E8D5A8;
+  --ae-background-tertiary: #FFFDF5;
+  --ae-surface: #FAF0DB;
+  --ae-surface-elevated: #FFF8EC;
+
+  /* Accent: Lapis Lazuli Blue */
+  --ae-accent-blue: #1B3A5C;
+  --ae-accent-blue-light: #2A5580;
+  --ae-accent-blue-deep: #0D1F33;
+
+  /* Terracotta accent */
+  --ae-accent-terracotta: #B85C38;
+  --ae-accent-terracotta-light: #CC7A55;
+  --ae-accent-terracotta-dark: #8E4020;
+
+  /* Text colors */
+  --ae-text-primary: #2C1810;
+  --ae-text-secondary: #5C4A3A;
+  --ae-text-tertiary: #8B7B6B;
+  --ae-text-inverse: #FAF0DB;
+  --ae-text-gold: #D4A843;
+
+  /* Borders and dividers */
+  --ae-border: #C4A882;
+  --ae-border-light: #D8C8A8;
+  --ae-divider: #BFA978;
+
+  /* State colors */
+  --state-success: #4A7C59;
+  --state-warning: #C4962E;
+  --state-error: #A63D2F;
+  --state-info: #1B3A5C;
+
+  /* Shadow system - border/surface-led for static, deeper for floating */
+  --ae-shadow-sm: 0 1px 2px rgba(44, 24, 16, 0.04);
+  --ae-shadow-md: 0 4px 8px rgba(44, 24, 16, 0.05);
+  --ae-shadow-lg: 0 8px 24px rgba(44, 24, 16, 0.05);
+  --ae-shadow-floating: 0 16px 40px rgba(44, 24, 16, 0.08);
+
+  /* === Typography System === */
+  /* Display font: Cinzel (ancient Roman inscriptions feel) */
+  /* Body font: Noto Serif (elegant serif for readability) */
+  --ae-font-display: 'Cinzel', 'Georgia', 'Times New Roman', serif;
+  --ae-font-body: 'Noto Serif SC', 'Noto Serif', 'Georgia', serif;
+  --ae-font-accent: 'Cinzel Decorative', 'Cinzel', serif;
+
+  /* Type scale */
+  --ae-text-xs: 0.75rem;
+  --ae-text-sm: 0.875rem;
+  --ae-text-base: 1rem;
+  --ae-text-lg: 1.125rem;
+  --ae-text-xl: 1.25rem;
+  --ae-text-2xl: 1.5rem;
+  --ae-text-3xl: 2rem;
+  --ae-text-4xl: 2.5rem;
+  --ae-text-5xl: 3.5rem;
+  --ae-text-6xl: 4.5rem;
+  --ae-text-hero: 6rem;
+
+  /* Font weights */
+  --ae-weight-normal: 400;
+  --ae-weight-medium: 500;
+  --ae-weight-bold: 700;
+  --ae-weight-black: 900;
+
+  /* Line heights */
+  --ae-leading-tight: 1.1;
+  --ae-leading-snug: 1.25;
+  --ae-leading-normal: 1.5;
+  --ae-leading-relaxed: 1.7;
+
+  /* Letter spacing */
+  --ae-tracking-tight: -0.02em;
+  --ae-tracking-normal: 0;
+  --ae-tracking-wide: 0.05em;
+  --ae-tracking-wider: 0.1em;
+  --ae-tracking-widest: 0.2em;
+
+  /* === Shape System === */
+  --ae-radius-none: 0px;
+  --ae-radius-sm: 2px;
+  --ae-radius-md: 4px;
+  --ae-radius-lg: 8px;
+  --ae-radius-full: 9999px;
+
+  /* === Spacing System === */
+  --ae-space-1: 0.25rem;
+  --ae-space-2: 0.5rem;
+  --ae-space-3: 0.75rem;
+  --ae-space-4: 1rem;
+  --ae-space-6: 1.5rem;
+  --ae-space-8: 2rem;
+  --ae-space-10: 2.5rem;
+  --ae-space-12: 3rem;
+  --ae-space-16: 4rem;
+  --ae-space-20: 5rem;
+  --ae-space-24: 6rem;
+  --ae-space-32: 8rem;
+}
+
+/* Typography utility classes */
+.ae-display { font-family: var(--ae-font-display); }
+.ae-body { font-family: var(--ae-font-body); }
+.ae-accent { font-family: var(--ae-font-accent); }
+
+.ae-text-hero {
+  font-family: var(--ae-font-accent);
+  font-size: var(--ae-text-hero);
+  font-weight: var(--ae-weight-bold);
+  line-height: var(--ae-leading-tight);
+  letter-spacing: var(--ae-tracking-wider);
+  color: var(--ae-primary);
+  text-transform: uppercase;
+}
+
+.ae-title {
+  font-family: var(--ae-font-display);
+  font-size: var(--ae-text-4xl);
+  font-weight: var(--ae-weight-bold);
+  line-height: var(--ae-leading-tight);
+  letter-spacing: var(--ae-tracking-wide);
+  color: var(--ae-text-primary);
+}
+
+.ae-subtitle {
+  font-family: var(--ae-font-body);
+  font-size: var(--ae-text-xl);
+  font-weight: var(--ae-weight-normal);
+  line-height: var(--ae-leading-snug);
+  color: var(--ae-text-secondary);
+}
+
+.ae-body-text {
+  font-family: var(--ae-font-body);
+  font-size: var(--ae-text-base);
+  font-weight: var(--ae-weight-normal);
+  line-height: var(--ae-leading-relaxed);
+  color: var(--ae-text-primary);
+}
+
+.ae-caption {
+  font-family: var(--ae-font-body);
+  font-size: var(--ae-text-sm);
+  font-weight: var(--ae-weight-normal);
+  line-height: var(--ae-leading-normal);
+  color: var(--ae-text-tertiary);
+  letter-spacing: var(--ae-tracking-wide);
+}
+
+.ae-label {
+  font-family: var(--ae-font-display);
+  font-size: var(--ae-text-xs);
+  font-weight: var(--ae-weight-bold);
+  line-height: var(--ae-leading-normal);
+  color: var(--ae-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--ae-tracking-widest);
+}

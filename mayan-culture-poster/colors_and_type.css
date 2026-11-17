@@ -1,0 +1,150 @@
+/* ============================================
+   Mayan Culture Poster — Brand CSS
+   玛雅文明: 翡翠绿、黄金色、石灰石、丛林迷雾
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #2D6B4F;
+  --color-primary-light: #3D8F6A;
+  --color-primary-lighter: #6AAF8E;
+  --color-primary-lightest: #B0D4BF;
+  --color-primary-dark: #1E4A37;
+  --color-primary-darker: #133326;
+  --color-primary-darkest: #0A1E15;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #4A8F5A;
+  --state-warning: #C49A3A;
+  --state-error: #A85D4A;
+  --state-info: #5A7F9F;
+
+  /* ── Surface Palette (Limestone / Stone Tones) ── */
+  --color-bg-main: #F2EDE4;
+  --color-bg-secondary: #EAE3D6;
+  --color-bg-tertiary: #E0D7C8;
+  --color-bg-elevated: #F7F4EF;
+  --color-bg-overlay: rgba(10, 30, 21, 0.7);
+
+  /* ── Gold Accent ── */
+  --color-gold: #B8922E;
+  --color-gold-light: #D4AD4E;
+  --color-gold-lighter: #E8CFA0;
+  --color-gold-dark: #8A6D1E;
+
+  /* ── Stone / Terracotta ── */
+  --color-stone: #8B7D6B;
+  --color-stone-light: #A89577;
+  --color-stone-dark: #5C5040;
+
+  /* ── Text Palette ── */
+  --color-text-primary: #1A1A17;
+  --color-text-secondary: #3D3D35;
+  --color-text-tertiary: #6B6B60;
+  --color-text-inverse: #F2EDE4;
+  --color-text-link: #1E4A37;
+
+  /* ── Border Palette ── */
+  --color-border: #C9BFA8;
+  --color-border-subtle: #E0D7C8;
+  --color-border-strong: #2D6B4F;
+
+  /* ── Typography ── */
+  --font-family-display: "Cinzel", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  --font-family-accent: "Cinzel Decorative", "Cinzel", "Noto Serif SC", serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-wider: 0.15em;
+  --letter-spacing-widest: 0.3em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(10, 30, 21, 0.04);
+  --shadow-md: 0 2px 8px rgba(10, 30, 21, 0.05);
+  --shadow-lg: 0 8px 24px rgba(10, 30, 21, 0.05);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-primary: #3D8F6A;
+  --color-primary-light: #2D6B4F;
+  --color-primary-lighter: #1E4A37;
+  --color-primary-lightest: #133326;
+  --color-primary-dark: #6AAF8E;
+  --color-primary-darker: #B0D4BF;
+  --color-primary-darkest: #D4E8E0;
+
+  --color-bg-main: #121510;
+  --color-bg-secondary: #1A1D16;
+  --color-bg-tertiary: #222518;
+  --color-bg-elevated: #161912;
+  --color-bg-overlay: rgba(0, 0, 0, 0.75);
+
+  --color-text-primary: #EAE3D6;
+  --color-text-secondary: #C9BFA8;
+  --color-text-tertiary: #8B8170;
+  --color-text-inverse: #1A1A17;
+  --color-text-link: #6AAF8E;
+
+  --color-border: #4A4230;
+  --color-border-subtle: #3D3628;
+  --color-border-strong: #3D8F6A;
+
+  --color-gold: #D4AD4E;
+  --color-gold-light: #B8922E;
+  --color-gold-lighter: #8A6D1E;
+  --color-gold-dark: #E8CFA0;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}

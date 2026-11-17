@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "page-poster",
+      "title": "生日快乐海报",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1782904000000,
+      "canvasData": {
+        "x": 0,
+        "y": 0,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/poster.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "image-001",
+      "title": "生日蛋糕庆祝主视觉",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782904000000,
+      "canvasData": {
+        "x": 0,
+        "y": 774
+      },
+      "devMetadata": {
+        "imageSrc": "assets/hero-birthday-cake.jpg"
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": true,
+    "deviceType": "freeSize",
+    "projectName": "生日快乐海报",
+    "designLibrary": null
+  }
+}

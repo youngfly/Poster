@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "id": "page-poster",
+      "title": "古埃及海报",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1782888000000,
+      "canvasData": {
+        "x": 132,
+        "y": -312,
+        "group": 0,
+        "layoutSnapshot": {
+          "version": 1,
+          "contentHeight": 1412,
+          "viewportWidth": 800,
+          "sourceHash": "fnv1a-41f8113a",
+          "measuredAt": 1786066155462
+        }
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/poster.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "image-001",
+      "title": "主视觉：法老黄金面具",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782888100000,
+      "canvasData": {
+        "x": 648,
+        "y": -300,
+        "naturalSize": {
+          "width": 1368,
+          "height": 768
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/hero-egypt-artifact.jpg"
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": false,
+    "deviceType": "freeSize",
+    "projectName": "古埃及海报"
+  }
+}

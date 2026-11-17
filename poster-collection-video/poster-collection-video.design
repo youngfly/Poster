@@ -1,0 +1,124 @@
+{
+  "data": [
+    {
+      "id": "page-collection",
+      "title": "海报集合体",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1782902000000,
+      "canvasData": {
+        "x": 396,
+        "y": -132,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/collection.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "image-001",
+      "title": "日式风格海报素材",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782902000000,
+      "canvasData": {
+        "x": 0,
+        "y": 377
+      },
+      "devMetadata": {
+        "imageSrc": "assets/poster-01-japanese.jpg"
+      }
+    },
+    {
+      "id": "image-002",
+      "title": "中国风海报素材",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782902000000,
+      "canvasData": {
+        "x": 0,
+        "y": 732
+      },
+      "devMetadata": {
+        "imageSrc": "assets/poster-02-chinese.jpg"
+      }
+    },
+    {
+      "id": "image-003",
+      "title": "玛雅文化海报素材",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782902000000,
+      "canvasData": {
+        "x": 516,
+        "y": 372
+      },
+      "devMetadata": {
+        "imageSrc": "assets/poster-03-mayan.jpg"
+      }
+    },
+    {
+      "id": "image-004",
+      "title": "莫奈展览海报素材",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782902000000,
+      "canvasData": {
+        "x": 504,
+        "y": 732
+      },
+      "devMetadata": {
+        "imageSrc": "assets/poster-04-monet.jpg"
+      }
+    },
+    {
+      "id": "image-005",
+      "title": "毕加索风格海报素材",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782902000000,
+      "canvasData": {
+        "x": 1032,
+        "y": 372
+      },
+      "devMetadata": {
+        "imageSrc": "assets/poster-05-picasso.jpg"
+      }
+    },
+    {
+      "id": "image-006",
+      "title": "古埃及海报素材",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782902000000,
+      "canvasData": {
+        "x": 1020,
+        "y": 732
+      },
+      "devMetadata": {
+        "imageSrc": "assets/poster-06-egypt.jpg"
+      }
+    },
+    {
+      "id": "image-007",
+      "title": "古希腊海报素材",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782902000000,
+      "canvasData": {
+        "x": 1572,
+        "y": 360
+      },
+      "devMetadata": {
+        "imageSrc": "assets/poster-07-greece.jpg"
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": false,
+    "deviceType": "desktop",
+    "projectName": "海报集合体",
+    "designLibrary": null
+  }
+}

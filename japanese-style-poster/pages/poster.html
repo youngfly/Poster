@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <style id="theme-vars">
+/* ============================================
+   Japanese Style Poster — Brand CSS
+   侘寂美学: 素雅、留白、自然质感
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #8B7355;
+  --color-primary-light: #A89577;
+  --color-primary-lighter: #C4B8A4;
+  --color-primary-lightest: #E8E0D4;
+  --color-primary-dark: #6B5740;
+  --color-primary-darker: #4A3B2B;
+  --color-primary-darkest: #2D2219;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #6B8F6B;
+  --state-warning: #C4A35A;
+  --state-error: #A85D4A;
+  --state-info: #6B8A9F;
+
+  /* ── Surface Palette ── */
+  --color-bg-main: #F5F0E8;
+  --color-bg-secondary: #EDE6DA;
+  --color-bg-tertiary: #E2D9CB;
+  --color-bg-elevated: #FAF7F2;
+  --color-bg-overlay: rgba(45, 34, 25, 0.6);
+
+  /* ── Text Palette ── */
+  --color-text-primary: #2D2219;
+  --color-text-secondary: #5C4F3D;
+  --color-text-tertiary: #8B7D6B;
+  --color-text-inverse: #F5F0E8;
+  --color-text-link: #6B5740;
+
+  /* ── Border Palette ── */
+  --color-border: #D4C9B8;
+  --color-border-subtle: #E2D9CB;
+  --color-border-strong: #A89577;
+
+  /* ── Typography ── */
+  --font-family-display: "Noto Serif SC", "Source Han Serif SC", "Yu Mincho", "Hiragino Mincho ProN", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --font-family-accent: "Noto Serif SC", Georgia, serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-wider: 0.15em;
+  --letter-spacing-widest: 0.25em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(45, 34, 25, 0.04);
+  --shadow-md: 0 2px 8px rgba(45, 34, 25, 0.05);
+  --shadow-lg: 0 8px 24px rgba(45, 34, 25, 0.05);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-primary: #C4B8A4;
+  --color-primary-light: #A89577;
+  --color-primary-lighter: #8B7D6B;
+  --color-primary-lightest: #6B5740;
+  --color-primary-dark: #D4C9B8;
+  --color-primary-darker: #E2D9CB;
+  --color-primary-darkest: #F5F0E8;
+
+  --color-bg-main: #1A1610;
+  --color-bg-secondary: #232017;
+  --color-bg-tertiary: #2D2920;
+  --color-bg-elevated: #1E1B14;
+  --color-bg-overlay: rgba(0, 0, 0, 0.7);
+
+  --color-text-primary: #E8E0D4;
+  --color-text-secondary: #C4B8A4;
+  --color-text-tertiary: #8B7D6B;
+  --color-text-inverse: #2D2219;
+  --color-text-link: #D4C9B8;
+
+  --color-border: #4A3B2B;
+  --color-border-subtle: #3D3228;
+  --color-border-strong: #6B5740;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-primary: var(--color-primary);
+    --color-border: var(--color-border);
+  }
+  @layer base {
+    body { background: var(--color-background); color: var(--color-text-primary); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main class="relative min-h-screen" style="background-color: var(--color-bg-main); color: var(--color-text-primary);">
+
+      <!-- Paper Texture Overlay -->
+      <div class="fixed inset-0 pointer-events-none z-50" style="background-image: radial-gradient(circle at 20% 30%, rgba(139, 115, 85, 0.02) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(139, 115, 85, 0.03) 0%, transparent 50%);"></div>
+
+      <!-- ═══════════════════════════════════════
+           HERO SECTION — Zen Garden Image + Vertical Title
+           ═══════════════════════════════════════ -->
+      <section class="relative" style="min-height: 60vh;">
+        <!-- Hero Background Image -->
+        <div class="absolute inset-0" style="min-height: 60vh;">
+          <img src="../assets/hero-zen-garden.jpg" alt="枯山水禅意庭院" class="w-full h-full object-cover" style="filter: saturate(0.85) sepia(0.1);">
+          <!-- Warm Overlay -->
+          <div class="absolute inset-0" style="background-color: rgba(245, 240, 232, 0.2);"></div>
+          <!-- Bottom Gradient Fade -->
+          <div class="absolute bottom-0 left-0 right-0 h-32" style="background: linear-gradient(to top, var(--color-bg-main), transparent);"></div>
+        </div>
+
+        <!-- Vertical Title Block (Right-Aligned) -->
+        <div class="relative flex justify-end items-start px-6 pt-10 sm:px-10 sm:pt-16 lg:px-16 lg:pt-20" style="min-height: 60vh;">
+          <div class="flex flex-col items-end" style="writing-mode: vertical-rl; font-family: var(--font-family-display); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: var(--font-weight-light); color: var(--color-text-primary); letter-spacing: var(--letter-spacing-wider); line-height: var(--line-height-loose); padding-top: 2rem;">
+            <span>侘寂之美</span>
+          </div>
+        </div>
+
+        <!-- Subtitle (Horizontal, Bottom-Left) -->
+        <div class="absolute bottom-12 left-6 sm:left-10 lg:left-16" style="z-index: 2;">
+          <p style="font-family: var(--font-family-body); font-size: var(--font-size-sm); font-weight: var(--font-weight-regular); color: var(--color-text-secondary); letter-spacing: var(--letter-spacing-widest);">日本传统美学</p>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════
+           DECORATIVE RULE — Top Divider
+           ═══════════════════════════════════════ -->
+      <div class="mx-6 sm:mx-10 lg:mx-16 my-8 sm:my-12">
+        <div style="height: 1px; background-color: var(--color-border-strong);"></div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           BODY CONTENT — Wabi-Sabi Philosophy
+           ═══════════════════════════════════════ -->
+      <section class="mx-6 sm:mx-10 lg:mx-16 sm:my-8 lg:my-12">
+        <div class="max-w-lg sm:max-w-xl lg:max-w-2xl" style="padding-left: 0;">
+          <h2 style="font-family: var(--font-family-display); font-size: var(--font-size-xl); font-weight: var(--font-weight-regular); color: var(--color-text-primary); letter-spacing: var(--letter-spacing-wider); margin-bottom: 1.5rem;">不完美中的完美</h2>
+          <p style="font-family: var(--font-family-body); font-size: var(--font-size-base); font-weight: var(--font-weight-regular); color: var(--color-text-secondary); line-height: var(--line-height-loose); margin-bottom: 1rem;">
+            侘寂，是一种以不完美、不恒久、不完全为美的哲学。它教我们在残缺中看见完整，在无常中体会永恒。枯山水庭园中的每一粒砂石，都承载着对自然最深沉的敬意。
+          </p>
+          <p style="font-family: var(--font-family-body); font-size: var(--font-size-base); font-weight: var(--font-weight-regular); color: var(--color-text-secondary); line-height: var(--line-height-loose);">
+            茶室中的裂痕、花道中的留白、书法中的一笔寂——美，不在于华丽，而在于真诚。
+          </p>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════
+           DECORATIVE RULE — Middle Divider
+           ═══════════════════════════════════════ -->
+      <div class="mx-6 sm:mx-10 lg:mx-16 my-10 sm:my-16">
+        <div class="flex items-center gap-4">
+          <div class="flex-1" style="height: 1px; background-color: var(--color-border);"></div>
+          <div style="width: 6px; height: 6px; border-radius: 50%; background-color: var(--color-border-strong);"></div>
+          <div class="flex-1" style="height: 1px; background-color: var(--color-border);"></div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           SEASONAL ELEMENT — Four Seasons Kanji
+           ═══════════════════════════════════════ -->
+      <section class="mx-6 sm:mx-10 lg:mx-16 my-6 sm:my-10">
+        <div class="flex justify-center items-center gap-8 sm:gap-12 lg:gap-16">
+          <span style="font-family: var(--font-family-display); font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: var(--font-weight-light); color: var(--color-text-tertiary); writing-mode: vertical-rl; letter-spacing: var(--letter-spacing-wider);">春</span>
+          <span style="font-family: var(--font-family-display); font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: var(--font-weight-light); color: var(--color-text-tertiary); writing-mode: vertical-rl; letter-spacing: var(--letter-spacing-wider);">夏</span>
+          <span style="font-family: var(--font-family-display); font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: var(--font-weight-light); color: var(--color-text-tertiary); writing-mode: vertical-rl; letter-spacing: var(--letter-spacing-wider);">秋</span>
+          <span style="font-family: var(--font-family-display); font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: var(--font-weight-light); color: var(--color-text-tertiary); writing-mode: vertical-rl; letter-spacing: var(--letter-spacing-wider);">冬</span>
+        </div>
+        <p class="text-center mt-4 sm:mt-6" style="font-family: var(--font-family-body); font-size: var(--font-size-xs); font-weight: var(--font-weight-regular); color: var(--color-text-tertiary); letter-spacing: var(--letter-spacing-widest);">四季流转 · 万物自然</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════
+           DECORATIVE RULE — Bottom Divider
+           ═══════════════════════════════════════ -->
+      <div class="mx-6 sm:mx-10 lg:mx-16 my-10 sm:my-16">
+        <div style="height: 1px; background-color: var(--color-border);"></div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           FOOTER — Stamp Seal & Year
+           ═══════════════════════════════════════ -->
+      <footer class="mx-6 sm:mx-10 lg:mx-16 pb-12 sm:pb-16 lg:pb-20">
+        <div class="flex items-end justify-between">
+          <!-- CSS-Only Stamp Seal -->
+          <div class="flex items-center gap-4">
+            <div style="width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--color-primary); display: flex; align-items: center; justify-content: center; transform: rotate(-8deg); opacity: 0.7;">
+              <span style="font-family: var(--font-family-display); font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); color: var(--color-primary); writing-mode: vertical-rl; letter-spacing: var(--letter-spacing-normal); line-height: 1;">寂</span>
+            </div>
+          </div>
+          <!-- Year Text -->
+          <div style="font-family: var(--font-family-body); font-size: var(--font-size-xs); font-weight: var(--font-weight-regular); color: var(--color-text-tertiary); letter-spacing: var(--letter-spacing-wider); padding-bottom: 4px;">
+            令和八年度
+          </div>
+        </div>
+      </footer>
+
+    </main>
+
+    <!-- Custom Styles (placed before </body> per free-explore rules) -->
+    <style>
+      /* Paper texture & subtle body refinement */
+      body {
+        background-color: var(--color-bg-main) !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Google Fonts Import */
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+    </style>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

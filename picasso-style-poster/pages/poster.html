@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毕加索风格海报 — Picasso Style Poster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style id="theme-vars">
+/* ============================================
+   Picasso Style Poster — Brand CSS
+   立体主义: 大胆色块、蓝粉对比、几何碎片、原始张力
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #2E5BA0;
+  --color-primary-light: #4A7ABF;
+  --color-primary-lighter: #7AA3D4;
+  --color-primary-lightest: #B8D0EA;
+  --color-primary-dark: #1E3D6B;
+  --color-primary-darker: #132A4A;
+  --color-primary-darkest: #0A1A2E;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #5A8B5A;
+  --state-warning: #C49A3A;
+  --state-error: #A85D4A;
+  --state-info: #2E5BA0;
+
+  /* ── Surface Palette (Warm Canvas / Ochre) ── */
+  --color-bg-main: #F5EFE0;
+  --color-bg-secondary: #EDE5D2;
+  --color-bg-tertiary: #E2D8C0;
+  --color-bg-elevated: #FAF6EE;
+  --color-bg-overlay: rgba(10, 26, 46, 0.6);
+
+  /* ── Picasso Signature Palette ── */
+  --color-rose: #C46878;
+  --color-rose-light: #D88A96;
+  --color-rose-dark: #8B3D4A;
+  --color-ochre: #C4953A;
+  --color-ochre-light: #DAB05E;
+  --color-ochre-dark: #8A6828;
+  --color-terra: #B8705A;
+  --color-terra-light: #D09080;
+  --color-sage: #7A9B7A;
+
+  /* ── Text Palette ── */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #3D3D3D;
+  --color-text-tertiary: #6B6B6B;
+  --color-text-inverse: #F5EFE0;
+  --color-text-link: #1E3D6B;
+
+  /* ── Border Palette ── */
+  --color-border: #C9BCA0;
+  --color-border-subtle: #E2D8C0;
+  --color-border-strong: #2E5BA0;
+
+  /* ── Typography ── */
+  --font-family-display: "Playfair Display", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  --font-family-accent: "Playfair Display", "Noto Serif SC", Georgia, serif;
+  --font-family-bold: "Impact", "Arial Black", "Noto Sans SC", sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+  --font-size-6xl: 6rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+  --line-height-loose: 1.9;
+
+  --letter-spacing-tight: -0.03em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.06em;
+  --letter-spacing-wider: 0.12em;
+  --letter-spacing-widest: 0.2em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(10, 26, 46, 0.04);
+  --shadow-md: 0 2px 8px rgba(10, 26, 46, 0.05);
+  --shadow-lg: 0 8px 24px rgba(10, 26, 46, 0.05);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-primary: #4A7ABF;
+  --color-primary-light: #2E5BA0;
+  --color-primary-lighter: #1E3D6B;
+  --color-primary-lightest: #132A4A;
+  --color-primary-dark: #7AA3D4;
+  --color-primary-darker: #B8D0EA;
+  --color-primary-darkest: #E0EBF5;
+
+  --color-bg-main: #161410;
+  --color-bg-secondary: #1E1C16;
+  --color-bg-tertiary: #28241C;
+  --color-bg-elevated: #1A1814;
+  --color-bg-overlay: rgba(0, 0, 0, 0.7);
+
+  --color-text-primary: #EDE5D2;
+  --color-text-secondary: #C9BCA0;
+  --color-text-tertiary: #8A8070;
+  --color-text-inverse: #1A1A1A;
+  --color-text-link: #7AA3D4;
+
+  --color-border: #4A4030;
+  --color-border-subtle: #3A3428;
+  --color-border-strong: #4A7ABF;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-primary: var(--color-primary);
+    --color-border: var(--color-border);
+  }
+  @layer base {
+    body { background: var(--color-background); color: var(--color-text-primary); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen antialiased" style="background:var(--color-bg-main);color:var(--color-text-primary);font-family:var(--font-family-body);margin:0;padding:0;">
+
+    <!-- Canvas texture overlay -->
+    <div style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;opacity:0.03;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%224%22 height=%224%22%3E%3Crect width=%224%22 height=%224%22 fill=%22%23999%22/%3E%3Crect width=%221%22 height=%221%22 fill=%22%23ccc%22/%3E%3C/svg%3E');"></div>
+
+    <main style="position:relative;overflow:hidden;min-height:100vh;border-radius:0;">
+
+      <!-- ═══════════════════════════════════════════
+           ANGULAR GEOMETRIC FRAME
+           ═══════════════════════════════════════════ -->
+      <!-- Left blue vertical strip -->
+      <div style="position:fixed;top:0;left:0;width:40px;height:100%;background:var(--color-primary);z-index:50;border-radius:0;"></div>
+      <!-- Top rose horizontal strip -->
+      <div style="position:fixed;top:0;left:0;width:100%;height:24px;background:var(--color-rose);z-index:49;border-radius:0;"></div>
+      <!-- Bottom-right ochre diagonal accent -->
+      <div style="position:fixed;bottom:40px;right:-80px;width:300px;height:6px;background:var(--color-ochre);transform:rotate(-25deg);z-index:50;border-radius:0;"></div>
+      <div style="position:fixed;bottom:55px;right:-60px;width:240px;height:4px;background:var(--color-ochre-dark);transform:rotate(-25deg);z-index:50;border-radius:0;"></div>
+
+      <!-- ═══════════════════════════════════════════
+           HERO IMAGE SECTION
+           ═══════════════════════════════════════════ -->
+      <section style="position:relative;margin-top:24px;padding-left:56px;">
+        <div style="width:72%;border-radius:0;overflow:hidden;position:relative;">
+          <img src="../assets/hero-cubist-portrait.jpg" alt="Picasso Cubist Portrait"
+               style="width:100%;height:auto;display:block;border-radius:0;object-fit:cover;max-height:55vh;">
+        </div>
+        <!-- Angular divider below image — trapezoid in ochre -->
+        <div style="width:55%;height:18px;background:var(--color-ochre);margin-left:8%;border-radius:0;clip-path:polygon(0 0, 85% 0, 100% 100%, 0 100%);"></div>
+        <!-- Secondary thin angular line -->
+        <div style="width:30%;height:6px;background:var(--color-rose-dark);margin-left:15%;margin-top:-4px;border-radius:0;clip-path:polygon(10% 0, 100% 0, 90% 100%, 0 100%);"></div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════
+           TITLE SECTION — Asymmetric, dramatic
+           ═══════════════════════════════════════════ -->
+      <section style="position:relative;padding:var(--space-10) var(--space-8) var(--space-6) 56px;overflow:hidden;">
+        <!-- Massive PICASSO title -->
+        <h1 style="font-family:var(--font-family-display);font-size:var(--font-size-6xl);font-weight:var(--font-weight-black);color:var(--color-primary);letter-spacing:var(--letter-spacing-tight);line-height:1.0;text-align:left;margin:0;padding:0;text-transform:uppercase;text-wrap:balance;word-break:keep-all;overflow-wrap:break-word;border-radius:0;">
+          PICASSO
+        </h1>
+        <!-- 毕加索 offset to the right -->
+        <div style="text-align:right;margin-top:-32px;padding-right:8%;">
+          <span style="font-family:'Noto Serif SC',var(--font-family-display);font-size:var(--font-size-3xl);font-weight:var(--font-weight-bold);color:var(--color-rose);line-height:var(--line-height-tight);display:inline-block;border-radius:0;">
+            毕加索
+          </span>
+        </div>
+        <!-- Years centered -->
+        <p style="font-family:var(--font-family-body);font-size:var(--font-size-sm);color:var(--color-terra);letter-spacing:var(--letter-spacing-widest);text-align:center;margin-top:var(--space-4);margin-bottom:0;border-radius:0;">
+          1881 — 1973
+        </p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════
+           CUBIST QUOTE SECTION
+           ═══════════════════════════════════════════ -->
+      <section style="position:relative;background:var(--color-bg-secondary);padding:var(--space-8) var(--space-8) var(--space-8) 56px;border-radius:0;">
+        <!-- Left accent bar -->
+        <div style="position:absolute;top:0;left:56px;width:4px;height:100%;background:var(--color-primary);border-radius:0;"></div>
+        <!-- Chinese quote -->
+        <blockquote style="font-family:var(--font-family-accent);font-size:var(--font-size-xl);font-style:italic;color:var(--color-text-primary);line-height:var(--line-height-relaxed);margin:0;padding-left:var(--space-10);border-radius:0;">
+          "艺术是揭示真理的谎言。"
+        </blockquote>
+        <!-- English translation right-aligned -->
+        <p style="font-family:var(--font-family-accent);font-size:var(--font-size-base);font-style:italic;color:var(--color-text-tertiary);text-align:right;margin-top:var(--space-4);margin-bottom:0;padding-right:var(--space-8);border-radius:0;">
+          Art is a lie that tells the truth.
+        </p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════
+           THREE PERIODS — Tricolor band
+           ═══════════════════════════════════════════ -->
+      <section style="display:flex;border-radius:0;margin-left:40px;">
+        <!-- Blue Period -->
+        <div style="flex:1;background:var(--color-primary);padding:var(--space-8) var(--space-4);text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;border-radius:0;min-height:180px;">
+          <h2 style="font-family:var(--font-family-body);font-size:var(--font-size-2xl);font-weight:var(--font-weight-bold);color:#FFFFFF;margin:0 0 var(--space-2) 0;letter-spacing:var(--letter-spacing-wider);border-radius:0;">
+            蓝色时期
+          </h2>
+          <p style="font-family:var(--font-family-body);font-size:var(--font-size-sm);color:rgba(255,255,255,0.8);margin:0;letter-spacing:var(--letter-spacing-wider);border-radius:0;">
+            1901 — 1904
+          </p>
+        </div>
+        <!-- Rose Period -->
+        <div style="flex:1;background:var(--color-rose);padding:var(--space-8) var(--space-4);text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;border-radius:0;min-height:180px;">
+          <h2 style="font-family:var(--font-family-body);font-size:var(--font-size-2xl);font-weight:var(--font-weight-bold);color:#FFFFFF;margin:0 0 var(--space-2) 0;letter-spacing:var(--letter-spacing-wider);border-radius:0;">
+            玫瑰时期
+          </h2>
+          <p style="font-family:var(--font-family-body);font-size:var(--font-size-sm);color:rgba(255,255,255,0.8);margin:0;letter-spacing:var(--letter-spacing-wider);border-radius:0;">
+            1904 — 1906
+          </p>
+        </div>
+        <!-- Cubism Period -->
+        <div style="flex:1;background:var(--color-ochre);padding:var(--space-8) var(--space-4);text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;border-radius:0;min-height:180px;">
+          <h2 style="font-family:var(--font-family-body);font-size:var(--font-size-2xl);font-weight:var(--font-weight-bold);color:#FFFFFF;margin:0 0 var(--space-2) 0;letter-spacing:var(--letter-spacing-wider);border-radius:0;">
+            立体主义
+          </h2>
+          <p style="font-family:var(--font-family-body);font-size:var(--font-size-sm);color:rgba(255,255,255,0.8);margin:0;letter-spacing:var(--letter-spacing-wider);border-radius:0;">
+            1907 — 1921
+          </p>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════
+           EXHIBITION DETAILS
+           ═══════════════════════════════════════════ -->
+      <section style="padding:var(--space-10) var(--space-8) var(--space-8) 56px;border-radius:0;">
+        <h3 style="font-family:var(--font-family-body);font-size:var(--font-size-xs);font-weight:var(--font-weight-medium);color:var(--color-text-tertiary);letter-spacing:var(--letter-spacing-wider);text-transform:uppercase;margin:0 0 var(--space-6) 0;border-radius:0;">
+          PABLO PICASSO RETROSPECTIVE
+        </h3>
+        <div style="display:flex;gap:var(--space-16);border-radius:0;">
+          <!-- Left column: dates -->
+          <div style="border-radius:0;">
+            <p style="font-family:var(--font-family-body);font-size:var(--font-size-sm);font-weight:var(--font-weight-bold);color:var(--color-text-secondary);margin:0 0 var(--space-1) 0;text-transform:uppercase;letter-spacing:var(--letter-spacing-wider);border-radius:0;">
+              展期
+            </p>
+            <p style="font-family:var(--font-family-body);font-size:var(--font-size-base);color:var(--color-text-secondary);line-height:var(--line-height-loose);margin:0;border-radius:0;">
+              2026.10.01 — 12.31
+            </p>
+          </div>
+          <!-- Right column: location -->
+          <div style="border-radius:0;">
+            <p style="font-family:var(--font-family-body);font-size:var(--font-size-sm);font-weight:var(--font-weight-bold);color:var(--color-text-secondary);margin:0 0 var(--space-1) 0;text-transform:uppercase;letter-spacing:var(--letter-spacing-wider);border-radius:0;">
+              地点
+            </p>
+            <p style="font-family:var(--font-family-body);font-size:var(--font-size-base);color:var(--color-text-secondary);line-height:var(--line-height-loose);margin:0;border-radius:0;">
+              当代艺术博物馆
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════
+           FOOTER GEOMETRIC ELEMENT
+           ═══════════════════════════════════════════ -->
+      <footer style="display:flex;margin-left:40px;border-radius:0;">
+        <div style="flex:1;background:var(--color-sage);padding:var(--space-4);display:flex;align-items:center;justify-content:center;border-radius:0;min-height:48px;">
+          <span style="font-family:var(--font-family-body);font-size:var(--font-size-sm);color:#FFFFFF;letter-spacing:var(--letter-spacing-widest);text-transform:uppercase;border-radius:0;">
+            巴黎 · 马德里 · 纽约
+          </span>
+        </div>
+        <div style="flex:1;background:var(--color-terra);padding:var(--space-4);display:flex;align-items:center;justify-content:center;border-radius:0;min-height:48px;">
+        </div>
+      </footer>
+
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

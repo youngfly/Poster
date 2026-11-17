@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晨昏线壁纸</title>
+    <style id="theme-vars">
+:root {
+  --space-black: #0a0a1a;
+  --space-deep: #000000;
+  --earth-glow: rgba(26, 58, 92, 0.35);
+  --earth-glow-strong: rgba(26, 58, 92, 0.6);
+  --star-accent: #fff5e6;
+  --text-subtle: rgba(255, 255, 255, 0.3);
+  --atmosphere-blue: rgba(70, 130, 200, 0.15);
+  --sunlight-gold: rgba(255, 210, 120, 0.08);
+  --sunlight-edge: rgba(255, 200, 100, 0.12);
+  --terminator-glow: rgba(255, 180, 60, 0.15);
+  --terminator-line: rgba(255, 160, 40, 0.25);
+  --city-lights: rgba(255, 200, 80, 0.6);
+  --city-lights-dim: rgba(255, 180, 60, 0.3);
+  --color-primary: #1a3a5c;
+  --color-primary-light: #2a5a8c;
+  --color-primary-dark: #0a1a2c;
+  --color-foreground: #e8edf2;
+  --color-foreground-muted: rgba(232, 237, 242, 0.6);
+  --color-background: #0a0a1a;
+  --color-surface: #111827;
+  --color-surface-elevated: #1a2332;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --state-success: #22c55e;
+  --state-warning: #eab308;
+  --state-error: #ef4444;
+  --state-info: #3b82f6;
+  --radius-sm: 2px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-space-background: var(--color-background);
+    --color-space-foreground: var(--color-foreground);
+    --color-space-primary: var(--color-primary);
+    --color-space-surface: var(--color-surface);
+    --color-space-border: var(--color-border);
+  }
+
+  @layer base {
+    body { background: var(--color-background); color: var(--color-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main class="relative w-full min-h-screen overflow-hidden" style="background: linear-gradient(180deg, var(--space-deep) 0%, var(--space-black) 40%, #080610 100%);">
+
+        <!-- Starfield background base layer -->
+        <div class="absolute inset-0 starfield-layer" aria-hidden="true">
+            <img src="../assets/starfield-background.jpg" alt="" class="w-full h-full object-cover" style="opacity: 0.85;">
+        </div>
+
+        <!-- Warm-toned star layers for twinkling depth -->
+        <div class="absolute inset-0" aria-hidden="true" id="stars-container">
+            <div class="stars stars-small-warm"></div>
+            <div class="stars stars-medium-warm"></div>
+            <div class="stars stars-large-warm"></div>
+        </div>
+
+        <!-- Deep space vignette overlay -->
+        <div class="absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse at 45% 50%, transparent 35%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.92) 100%);"></div>
+
+        <!-- Earth composition with terminator -->
+        <div class="absolute inset-0 flex items-center justify-center" aria-hidden="true">
+
+            <!-- Outer atmospheric glow layers (asymmetric for terminator) -->
+            <div class="earth-glow-layer earth-glow-outer-terminator"></div>
+            <div class="earth-glow-layer earth-glow-mid-terminator"></div>
+            <div class="earth-glow-layer earth-glow-inner-terminator"></div>
+
+            <!-- Warm golden light bleed from sunlit side (left) into space -->
+            <div class="absolute pointer-events-none" style="width: 90vmin; height: 90vmin; left: -10vmin; background: radial-gradient(ellipse at 40% 50%, rgba(255,190,80,0.07) 0%, rgba(255,160,40,0.03) 40%, transparent 70%);"></div>
+            <div class="absolute pointer-events-none" style="width: 60vmin; height: 60vmin; left: -5vmin; background: radial-gradient(ellipse at 45% 50%, rgba(255,210,120,0.05) 0%, transparent 50%);"></div>
+
+            <!-- Subtle lens flare from sun direction (left side) -->
+            <div class="absolute pointer-events-none lens-flare-warm" style="top: 15%; left: 8%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,220,140,0.06) 0%, rgba(255,180,60,0.02) 40%, transparent 70%);"></div>
+            <div class="absolute pointer-events-none" style="top: 25%; left: 15%; width: 120px; height: 120px; background: radial-gradient(circle, rgba(255,240,200,0.04) 0%, transparent 60%);"></div>
+
+            <!-- Earth main image (terminator) -->
+            <div class="earth-container-terminator">
+                <img src="../assets/earth-terminator.jpg" alt="Earth from space with terminator line" class="earth-image-terminator">
+
+                <!-- Terminator line shimmer effect -->
+                <div class="absolute inset-0 rounded-full terminator-shimmer" style="pointer-events: none;"></div>
+
+                <!-- Sunlit side warm overlay (left half) -->
+                <div class="absolute inset-0 rounded-full overflow-hidden" style="pointer-events: none;">
+                    <div class="absolute top-0 left-0 w-1/2 h-full sunlit-wash"></div>
+                </div>
+
+                <!-- Night side dark overlay (right half) -->
+                <div class="absolute inset-0 rounded-full overflow-hidden" style="pointer-events: none;">
+                    <div class="absolute top-0 right-0 w-1/2 h-full nightside-shadow"></div>
+                </div>
+
+                <!-- City lights on the dark side (CSS radial-gradient dots) -->
+                <div class="absolute inset-0 rounded-full overflow-hidden" style="pointer-events: none;">
+                    <div class="city-lights-layer"></div>
+                </div>
+
+                <!-- Limb brightening overlay -->
+                <div class="absolute inset-0 rounded-full" style="box-shadow: inset -10px -6px 40px rgba(10,10,30,0.5), inset 6px 3px 25px rgba(255,200,100,0.12); pointer-events: none;"></div>
+
+                <!-- Atmospheric rim glow (stronger on sunlit side) -->
+                <div class="absolute rounded-full atmospheric-rim-terminator"></div>
+            </div>
+        </div>
+
+        <!-- Spacecraft window frame effect -->
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="border: 1px solid rgba(255,255,255,0.025); box-shadow: inset 0 0 150px rgba(0,0,0,0.85), inset 0 0 50px rgba(0,0,0,0.6);"></div>
+
+        <!-- "Pale Blue Dot" watermark text (positioned to the dark/right side) -->
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center pointer-events-none">
+            <p class="watermark-text-terminator" style="font-family: 'Georgia', 'Times New Roman', serif; color: var(--text-subtle); font-size: clamp(14px, 1.5vw, 22px); letter-spacing: 0.35em; text-transform: uppercase; font-weight: 300; opacity: 0.25;">
+                Pale Blue Dot
+            </p>
+        </div>
+
+        <!-- Secondary subtle text -->
+        <div class="absolute bottom-16 left-0 right-0 flex justify-center pointer-events-none">
+            <p style="font-family: 'Georgia', 'Times New Roman', serif; color: var(--text-subtle); font-size: clamp(10px, 0.8vw, 13px); letter-spacing: 0.2em; opacity: 0.12; font-weight: 300;">
+                Carl Sagan, 1990
+            </p>
+        </div>
+
+    </main>
+    <!-- Custom CSS for terminator wallpaper composition (placed before </body> per rules) -->
+    <style>
+        /* ========== WARM STAR TWINKLE ANIMATION ========== */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .stars-small-warm {
+            background-image:
+                radial-gradient(1px 1px at 8% 22%, rgba(255,240,210,0.5), transparent),
+                radial-gradient(1px 1px at 22% 68%, rgba(255,235,200,0.4), transparent),
+                radial-gradient(1px 1px at 38% 12%, rgba(255,245,220,0.6), transparent),
+                radial-gradient(1px 1px at 52% 82%, rgba(255,240,210,0.3), transparent),
+                radial-gradient(1px 1px at 68% 33%, rgba(255,245,225,0.5), transparent),
+                radial-gradient(1px 1px at 83% 88%, rgba(255,235,200,0.4), transparent),
+                radial-gradient(1px 1px at 14% 87%, rgba(255,240,210,0.5), transparent),
+                radial-gradient(1px 1px at 58% 48%, rgba(255,235,200,0.3), transparent),
+                radial-gradient(1px 1px at 88% 18%, rgba(255,245,220,0.6), transparent),
+                radial-gradient(1px 1px at 33% 58%, rgba(255,240,210,0.4), transparent),
+                radial-gradient(1px 1px at 4% 52%, rgba(255,235,200,0.5), transparent),
+                radial-gradient(1px 1px at 76% 72%, rgba(255,240,210,0.3), transparent),
+                radial-gradient(1px 1px at 46% 95%, rgba(255,245,225,0.5), transparent),
+                radial-gradient(1px 1px at 20% 40%, rgba(255,240,210,0.4), transparent),
+                radial-gradient(1px 1px at 93% 58%, rgba(255,235,200,0.6), transparent),
+                radial-gradient(1px 1px at 30% 78%, rgba(255,240,210,0.3), transparent),
+                radial-gradient(1px 1px at 66% 10%, rgba(255,245,220,0.5), transparent),
+                radial-gradient(1px 1px at 50% 30%, rgba(255,235,200,0.4), transparent),
+                radial-gradient(1px 1px at 80% 50%, rgba(255,240,210,0.6), transparent),
+                radial-gradient(1px 1px at 10% 98%, rgba(255,235,200,0.3), transparent);
+            animation: twinkle-slow 8s ease-in-out infinite alternate;
+        }
+
+        .stars-medium-warm {
+            background-image:
+                radial-gradient(1.5px 1.5px at 16% 32%, rgba(255,230,180,0.7), transparent),
+                radial-gradient(1.5px 1.5px at 43% 74%, rgba(255,240,210,0.5), transparent),
+                radial-gradient(1.5px 1.5px at 70% 20%, rgba(255,235,190,0.6), transparent),
+                radial-gradient(1.5px 1.5px at 86% 64%, rgba(255,230,180,0.4), transparent),
+                radial-gradient(1.5px 1.5px at 6% 80%, rgba(255,240,210,0.6), transparent),
+                radial-gradient(1.5px 1.5px at 56% 14%, rgba(255,235,190,0.5), transparent),
+                radial-gradient(1.5px 1.5px at 31% 90%, rgba(255,230,180,0.7), transparent),
+                radial-gradient(1.5px 1.5px at 90% 44%, rgba(255,240,210,0.4), transparent),
+                radial-gradient(1.5px 1.5px at 63% 57%, rgba(255,235,190,0.6), transparent),
+                radial-gradient(1.5px 1.5px at 40% 40%, rgba(255,230,180,0.5), transparent);
+            animation: twinkle-medium 12s ease-in-out infinite alternate;
+        }
+
+        .stars-large-warm {
+            background-image:
+                radial-gradient(2px 2px at 18% 17%, rgba(255,240,200,0.9), transparent),
+                radial-gradient(2px 2px at 73% 87%, rgba(255,230,190,0.8), transparent),
+                radial-gradient(2px 2px at 48% 52%, rgba(255,240,210,0.7), transparent),
+                radial-gradient(2.5px 2.5px at 88% 27%, rgba(255,210,160,0.9), transparent),
+                radial-gradient(2px 2px at 8% 62%, rgba(255,240,200,0.6), transparent);
+            animation: twinkle-fast 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle-slow {
+            0% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.6; }
+        }
+
+        @keyframes twinkle-medium {
+            0% { opacity: 0.4; }
+            50% { opacity: 0.9; }
+            100% { opacity: 0.5; }
+        }
+
+        @keyframes twinkle-fast {
+            0% { opacity: 0.3; }
+            33% { opacity: 1; }
+            66% { opacity: 0.6; }
+            100% { opacity: 0.8; }
+        }
+
+        /* ========== EARTH GLOW LAYERS (TERMINATOR ASYMMETRIC) ========== */
+        .earth-glow-layer {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .earth-glow-outer-terminator {
+            width: 62vmin;
+            height: 62vmin;
+            background: radial-gradient(ellipse at 35% 50%, rgba(255,190,80,0.08) 0%, var(--earth-glow) 40%, transparent 70%);
+            animation: atmospheric-pulse-outer-terminator 12s ease-in-out infinite;
+        }
+
+        .earth-glow-mid-terminator {
+            width: 56vmin;
+            height: 56vmin;
+            background: radial-gradient(ellipse at 40% 50%, rgba(255,180,60,0.06) 0%, var(--atmosphere-blue) 35%, transparent 65%);
+            animation: atmospheric-pulse-mid 8s ease-in-out infinite;
+        }
+
+        .earth-glow-inner-terminator {
+            width: 52vmin;
+            height: 52vmin;
+            background: radial-gradient(ellipse at 42% 50%, rgba(255,200,100,0.04) 0%, rgba(100,170,230,0.08) 25%, transparent 60%);
+            animation: atmospheric-pulse-inner 6s ease-in-out infinite;
+        }
+
+        @keyframes atmospheric-pulse-outer-terminator {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+
+        @keyframes atmospheric-pulse-mid {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.02); opacity: 0.9; }
+        }
+
+        @keyframes atmospheric-pulse-inner {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.01); opacity: 0.8; }
+        }
+
+        /* ========== EARTH IMAGE (TERMINATOR) ========== */
+        .earth-container-terminator {
+            position: relative;
+            width: 50vmin;
+            height: 50vmin;
+        }
+
+        .earth-image-terminator {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            filter: saturate(1.15) contrast(1.08);
+            box-shadow:
+                0 0 40px rgba(255,190,80,0.15),
+                0 0 80px rgba(26,58,92,0.3),
+                0 0 160px rgba(26,58,92,0.15),
+                -20px 0 60px rgba(255,180,60,0.08);
+        }
+
+        /* ========== TERMINATOR LINE SHIMMER ========== */
+        .terminator-shimmer {
+            background: linear-gradient(90deg,
+                transparent 42%,
+                rgba(255,180,60,0.06) 47%,
+                rgba(255,160,40,0.1) 49%,
+                rgba(255,180,60,0.12) 50%,
+                rgba(255,160,40,0.1) 51%,
+                rgba(255,180,60,0.06) 53%,
+                transparent 58%
+            );
+            animation: terminator-shimmer-anim 10s ease-in-out infinite;
+        }
+
+        @keyframes terminator-shimmer-anim {
+            0%, 100% { opacity: 0.6; }
+            25% { opacity: 1; }
+            50% { opacity: 0.7; }
+            75% { opacity: 0.9; }
+        }
+
+        /* ========== SUNLIT WASH (LEFT SIDE) ========== */
+        .sunlit-wash {
+            background: linear-gradient(90deg,
+                rgba(255,210,120,0.08) 0%,
+                rgba(255,190,80,0.05) 60%,
+                rgba(255,180,60,0.02) 85%,
+                transparent 100%
+            );
+        }
+
+        /* ========== NIGHTSIDE SHADOW (RIGHT SIDE) ========== */
+        .nightside-shadow {
+            background: linear-gradient(270deg,
+                rgba(5,5,20,0.45) 0%,
+                rgba(5,5,20,0.3) 50%,
+                rgba(10,10,30,0.15) 80%,
+                transparent 100%
+            );
+        }
+
+        /* ========== CITY LIGHTS (CSS DOT PATTERN ON DARK SIDE) ========== */
+        .city-lights-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background:
+                radial-gradient(1.5px 1.5px at 62% 32%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 65% 38%, var(--city-lights-dim), transparent),
+                radial-gradient(1.5px 1.5px at 70% 35%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 68% 42%, var(--city-lights-dim), transparent),
+                radial-gradient(2px 2px at 64% 45%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 72% 40%, var(--city-lights-dim), transparent),
+                radial-gradient(1.5px 1.5px at 75% 48%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 67% 50%, var(--city-lights-dim), transparent),
+                radial-gradient(1.5px 1.5px at 78% 52%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 70% 55%, var(--city-lights-dim), transparent),
+                radial-gradient(2px 2px at 73% 58%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 66% 60%, var(--city-lights-dim), transparent),
+                radial-gradient(1.5px 1.5px at 80% 55%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 76% 62%, var(--city-lights-dim), transparent),
+                radial-gradient(1.5px 1.5px at 82% 60%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 69% 65%, var(--city-lights-dim), transparent),
+                radial-gradient(2px 2px at 74% 68%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 85% 65%, var(--city-lights-dim), transparent),
+                radial-gradient(1.5px 1.5px at 71% 72%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 78% 75%, var(--city-lights-dim), transparent),
+                radial-gradient(1.5px 1.5px at 83% 70%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 68% 78%, var(--city-lights-dim), transparent),
+                radial-gradient(2px 2px at 76% 80%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 81% 78%, var(--city-lights-dim), transparent),
+                radial-gradient(1.5px 1.5px at 72% 82%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 86% 82%, var(--city-lights-dim), transparent),
+                radial-gradient(1.5px 1.5px at 77% 85%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 84% 88%, var(--city-lights-dim), transparent),
+                radial-gradient(1px 1px at 63% 70%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 88% 75%, var(--city-lights-dim), transparent),
+                radial-gradient(1.5px 1.5px at 79% 72%, var(--city-lights), transparent),
+                radial-gradient(1px 1px at 67% 55%, var(--city-lights-dim), transparent);
+            animation: city-lights-pulse 6s ease-in-out infinite;
+        }
+
+        @keyframes city-lights-pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        /* ========== ATMOSPHERIC RIM (TERMINATOR - ASYMMETRIC) ========== */
+        .atmospheric-rim-terminator {
+            top: -3%;
+            left: -3%;
+            width: 106%;
+            height: 106%;
+            border: 2px solid rgba(100,170,230,0.06);
+            border-left-color: rgba(255,200,100,0.1);
+            border-right-color: rgba(60,80,120,0.04);
+            box-shadow:
+                -10px 0 25px rgba(255,200,100,0.08),
+                10px 0 25px rgba(20,30,60,0.1),
+                0 0 20px rgba(100,170,230,0.06),
+                inset -8px 0 20px rgba(255,200,100,0.04),
+                inset 8px 0 15px rgba(20,30,60,0.06);
+            animation: rim-glow-terminator 10s ease-in-out infinite;
+        }
+
+        @keyframes rim-glow-terminator {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        /* ========== LENS FLARE WARM ANIMATION ========== */
+        .lens-flare-warm {
+            animation: lens-flare-breathe 15s ease-in-out infinite;
+        }
+
+        @keyframes lens-flare-breathe {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.08); }
+        }
+
+        /* ========== WATERMARK TEXT ========== */
+        .watermark-text-terminator {
+            animation: text-breathe-terminator 15s ease-in-out infinite;
+        }
+
+        @keyframes text-breathe-terminator {
+            0%, 100% { opacity: 0.18; }
+            50% { opacity: 0.32; }
+        }
+
+        /* ========== REDUCED MOTION ========== */
+        @media (prefers-reduced-motion: reduce) {
+            .stars-small-warm,
+            .stars-medium-warm,
+            .stars-large-warm,
+            .earth-glow-outer-terminator,
+            .earth-glow-mid-terminator,
+            .earth-glow-inner-terminator,
+            .atmospheric-rim-terminator,
+            .watermark-text-terminator,
+            .terminator-shimmer,
+            .city-lights-layer,
+            .lens-flare-warm {
+                animation: none;
+            }
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 640px) {
+            .earth-container-terminator {
+                width: 70vmin;
+                height: 70vmin;
+            }
+            .earth-glow-outer-terminator {
+                width: 82vmin;
+                height: 82vmin;
+            }
+            .earth-glow-mid-terminator {
+                width: 76vmin;
+                height: 76vmin;
+            }
+            .earth-glow-inner-terminator {
+                width: 70vmin;
+                height: 70vmin;
+            }
+        }
+    </style>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

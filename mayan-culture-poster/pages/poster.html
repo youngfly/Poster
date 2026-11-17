@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玛雅文化海报</title>
+    <style id="theme-vars">
+/* ============================================
+   Mayan Culture Poster — Brand CSS
+   玛雅文明: 翡翠绿、黄金色、石灰石、丛林迷雾
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #2D6B4F;
+  --color-primary-light: #3D8F6A;
+  --color-primary-lighter: #6AAF8E;
+  --color-primary-lightest: #B0D4BF;
+  --color-primary-dark: #1E4A37;
+  --color-primary-darker: #133326;
+  --color-primary-darkest: #0A1E15;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #4A8F5A;
+  --state-warning: #C49A3A;
+  --state-error: #A85D4A;
+  --state-info: #5A7F9F;
+
+  /* ── Surface Palette (Limestone / Stone Tones) ── */
+  --color-bg-main: #F2EDE4;
+  --color-bg-secondary: #EAE3D6;
+  --color-bg-tertiary: #E0D7C8;
+  --color-bg-elevated: #F7F4EF;
+  --color-bg-overlay: rgba(10, 30, 21, 0.7);
+
+  /* ── Gold Accent ── */
+  --color-gold: #B8922E;
+  --color-gold-light: #D4AD4E;
+  --color-gold-lighter: #E8CFA0;
+  --color-gold-dark: #8A6D1E;
+
+  /* ── Stone / Terracotta ── */
+  --color-stone: #8B7D6B;
+  --color-stone-light: #A89577;
+  --color-stone-dark: #5C5040;
+
+  /* ── Text Palette ── */
+  --color-text-primary: #1A1A17;
+  --color-text-secondary: #3D3D35;
+  --color-text-tertiary: #6B6B60;
+  --color-text-inverse: #F2EDE4;
+  --color-text-link: #1E4A37;
+
+  /* ── Border Palette ── */
+  --color-border: #C9BFA8;
+  --color-border-subtle: #E0D7C8;
+  --color-border-strong: #2D6B4F;
+
+  /* ── Typography ── */
+  --font-family-display: "Cinzel", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  --font-family-accent: "Cinzel Decorative", "Cinzel", "Noto Serif SC", serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-wider: 0.15em;
+  --letter-spacing-widest: 0.3em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(10, 30, 21, 0.04);
+  --shadow-md: 0 2px 8px rgba(10, 30, 21, 0.05);
+  --shadow-lg: 0 8px 24px rgba(10, 30, 21, 0.05);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-primary: #3D8F6A;
+  --color-primary-light: #2D6B4F;
+  --color-primary-lighter: #1E4A37;
+  --color-primary-lightest: #133326;
+  --color-primary-dark: #6AAF8E;
+  --color-primary-darker: #B0D4BF;
+  --color-primary-darkest: #D4E8E0;
+
+  --color-bg-main: #121510;
+  --color-bg-secondary: #1A1D16;
+  --color-bg-tertiary: #222518;
+  --color-bg-elevated: #161912;
+  --color-bg-overlay: rgba(0, 0, 0, 0.75);
+
+  --color-text-primary: #EAE3D6;
+  --color-text-secondary: #C9BFA8;
+  --color-text-tertiary: #8B8170;
+  --color-text-inverse: #1A1A17;
+  --color-text-link: #6AAF8E;
+
+  --color-border: #4A4230;
+  --color-border-subtle: #3D3628;
+  --color-border-strong: #3D8F6A;
+
+  --color-gold: #D4AD4E;
+  --color-gold-light: #B8922E;
+  --color-gold-lighter: #8A6D1E;
+  --color-gold-dark: #E8CFA0;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-primary: var(--color-primary);
+    --color-border: var(--color-border);
+  }
+  @layer base {
+    body { background: var(--color-background); color: var(--color-text-primary); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main>
+
+    <!-- ═══ Google Fonts ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ═══ Poster Custom Styles ═══ -->
+    <style>
+      /* ── Stone texture background ── */
+      body {
+        background: var(--color-bg-main);
+        background-image:
+          repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(0,0,0,0.008) 3px,
+            rgba(0,0,0,0.008) 4px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 5px,
+            rgba(0,0,0,0.005) 5px,
+            rgba(0,0,0,0.005) 6px
+          );
+        min-height: 100vh;
+      }
+
+      /* ── Stepped Pyramid Border Frame ── */
+      .poster-frame {
+        position: relative;
+        margin: 0 auto;
+        max-width: 700px;
+        min-height: 100vh;
+        padding: 2rem;
+        border: 1.5px solid var(--color-primary);
+      }
+
+      /* Top border with stepped corners */
+      .poster-frame::before,
+      .poster-frame::after {
+        content: '';
+        position: absolute;
+        top: -1.5px;
+        height: 2px;
+        background: var(--color-primary);
+      }
+      .poster-frame::before {
+        left: 0;
+        right: 0;
+      }
+
+      /* ── Corner ornaments: stepped pyramid at each corner ── */
+      .corner-ornament {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+      }
+
+      .corner-ornament--tl { top: -1px; left: -1px; }
+      .corner-ornament--tr { top: -1px; right: -1px; transform: scaleX(-1); }
+      .corner-ornament--bl { bottom: -1px; left: -1px; transform: scaleY(-1); }
+      .corner-ornament--br { bottom: -1px; right: -1px; transform: scale(-1,-1); }
+
+      .corner-ornament .step {
+        position: absolute;
+        left: 0;
+        background: var(--color-primary);
+      }
+      .corner-ornament .step-1 {
+        top: 0;
+        width: 48px;
+        height: 4px;
+      }
+      .corner-ornament .step-2 {
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 48px;
+      }
+      .corner-ornament .step-3 {
+        top: 6px;
+        left: 6px;
+        width: 36px;
+        height: 3px;
+      }
+      .corner-ornament .step-4 {
+        top: 6px;
+        left: 0;
+        width: 3px;
+        height: 36px;
+      }
+      .corner-ornament .step-5 {
+        top: 12px;
+        left: 12px;
+        width: 24px;
+        height: 2px;
+      }
+      .corner-ornament .step-6 {
+        top: 12px;
+        left: 0;
+        width: 2px;
+        height: 24px;
+      }
+      .corner-ornament .step-7 {
+        top: 17px;
+        left: 17px;
+        width: 14px;
+        height: 1.5px;
+      }
+      .corner-ornament .step-8 {
+        top: 17px;
+        left: 0;
+        width: 1.5px;
+        height: 14px;
+      }
+
+      /* ── CSS Pyramid Icon (3 stacked bars) ── */
+      .pyramid-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+      }
+      .pyramid-icon .bar {
+        height: 3px;
+        border-radius: 1px;
+      }
+      .pyramid-icon--gold .bar { background: var(--color-gold); }
+      .pyramid-icon--primary .bar { background: var(--color-primary-lighter); }
+
+      .pyramid-icon .bar-1 { width: 12px; }
+      .pyramid-icon .bar-2 { width: 24px; }
+      .pyramid-icon .bar-3 { width: 36px; }
+
+      /* ── Gold Ornamental Divider ── */
+      .gold-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 1rem 0;
+      }
+      .gold-divider .line {
+        flex: 1;
+        max-width: 120px;
+        height: 1px;
+        background: var(--color-gold);
+      }
+      .gold-divider .diamond {
+        width: 8px;
+        height: 8px;
+        background: var(--color-gold);
+        transform: rotate(45deg);
+        flex-shrink: 0;
+      }
+      .gold-divider .dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--color-gold);
+        flex-shrink: 0;
+      }
+
+      /* ── Glyph Decoration Band ── */
+      .glyph-band {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 1rem 0;
+      }
+      .glyph-band .glyph-block {
+        width: 14px;
+        height: 14px;
+        border: 1px solid var(--color-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .glyph-band .glyph-block::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border: 1px solid var(--color-border);
+        transform: rotate(45deg);
+      }
+
+      /* ── Sun Disk ── */
+      .sun-disk {
+        width: 28px;
+        height: 28px;
+        border: 2px solid var(--color-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .sun-disk::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: var(--color-gold);
+        border-radius: 50%;
+      }
+      .sun-disk::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1px solid var(--color-gold);
+        border-radius: 50%;
+      }
+
+      /* ── Pillar columns ── */
+      .pillar-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+      }
+      .pillar-column + .pillar-column {
+        border-left: 1px solid var(--color-border-subtle);
+      }
+
+      /* ── Hero section ── */
+      .hero-section {
+        position: relative;
+        width: 100%;
+        height: 55vh;
+        min-height: 320px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-section img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          var(--color-primary-darkest) 0%,
+          rgba(10, 30, 21, 0.6) 50%,
+          rgba(10, 30, 21, 0.25) 100%
+        );
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 640px) {
+        .poster-frame { padding: 1rem; }
+        .pillar-column { padding: 0 0.5rem; }
+      }
+    </style>
+
+    <!-- ══════════════════════════════════════════════
+         POSTER CONTENT
+         ══════════════════════════════════════════════ -->
+
+    <div class="poster-frame">
+
+      <!-- ── Corner Ornaments ── -->
+      <div class="corner-ornament corner-ornament--tl" aria-hidden="true">
+        <div class="step step-1"></div>
+        <div class="step step-2"></div>
+        <div class="step step-3"></div>
+        <div class="step step-4"></div>
+        <div class="step step-5"></div>
+        <div class="step step-6"></div>
+        <div class="step step-7"></div>
+        <div class="step step-8"></div>
+      </div>
+      <div class="corner-ornament corner-ornament--tr" aria-hidden="true">
+        <div class="step step-1"></div>
+        <div class="step step-2"></div>
+        <div class="step step-3"></div>
+        <div class="step step-4"></div>
+        <div class="step step-5"></div>
+        <div class="step step-6"></div>
+        <div class="step step-7"></div>
+        <div class="step step-8"></div>
+      </div>
+      <div class="corner-ornament corner-ornament--bl" aria-hidden="true">
+        <div class="step step-1"></div>
+        <div class="step step-2"></div>
+        <div class="step step-3"></div>
+        <div class="step step-4"></div>
+        <div class="step step-5"></div>
+        <div class="step step-6"></div>
+        <div class="step step-7"></div>
+        <div class="step step-8"></div>
+      </div>
+      <div class="corner-ornament corner-ornament--br" aria-hidden="true">
+        <div class="step step-1"></div>
+        <div class="step step-2"></div>
+        <div class="step step-3"></div>
+        <div class="step step-4"></div>
+        <div class="step step-5"></div>
+        <div class="step step-6"></div>
+        <div class="step step-7"></div>
+        <div class="step step-8"></div>
+      </div>
+
+      <!-- ═══ 1. HERO SECTION ═══ -->
+      <section class="hero-section">
+        <img src="../assets/hero-mayan-pyramid.jpg" alt="玛雅金字塔与热带丛林" loading="eager">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+
+          <!-- Pyramid icon at top -->
+          <div class="pyramid-icon pyramid-icon--gold" aria-hidden="true">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+          </div>
+
+          <!-- Main title -->
+          <h1
+            style="font-family: var(--font-family-display); color: var(--color-text-inverse); font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); letter-spacing: var(--letter-spacing-widest); text-align: center; text-wrap: balance; word-break: keep-all; overflow-wrap: break-word; margin: 0; line-height: var(--line-height-tight);"
+          >
+            玛雅文明
+          </h1>
+
+          <!-- English subtitle -->
+          <p
+            style="font-family: var(--font-family-display); color: var(--color-gold-light); font-size: var(--font-size-sm); letter-spacing: 0.3em; text-transform: uppercase; margin: 0; text-align: center;"
+          >
+            Maya Civilization
+          </p>
+
+        </div>
+      </section>
+
+      <!-- ═══ 2. GOLD ORNAMENTAL DIVIDER ═══ -->
+      <div class="gold-divider" aria-hidden="true">
+        <div class="dot"></div>
+        <div class="line"></div>
+        <div class="diamond"></div>
+        <div class="line"></div>
+        <div class="dot"></div>
+      </div>
+
+      <!-- ═══ 3. DESCRIPTION SECTION ═══ -->
+      <section style="padding: 1.5rem 0 2rem 0;">
+        <p
+          style="font-family: var(--font-family-body); color: var(--color-text-secondary); font-size: var(--font-size-md); line-height: var(--line-height-relaxed); max-width: 600px; margin: 0 auto; text-align: center;"
+        >
+          公元前两千年至公元十六世纪，玛雅人在中美洲的热带雨林中创造了一个辉煌的文明。他们建造了宏伟的金字塔神庙，发明了精密的历法系统，发展了独立的象形文字，在数学、天文和建筑领域达到了令人惊叹的成就。
+        </p>
+      </section>
+
+      <!-- ═══ 4. THREE PILLARS SECTION ═══ -->
+      <section style="padding: 1rem 0 2rem 0;">
+        <div style="display: flex; align-items: stretch; justify-content: center; max-width: 560px; margin: 0 auto;">
+
+          <!-- Pillar 1: 天文历法 -->
+          <div class="pillar-column">
+            <div class="pyramid-icon pyramid-icon--primary" style="margin-bottom: 0.75rem;" aria-hidden="true">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+              <div class="bar bar-3"></div>
+            </div>
+            <h3
+              style="font-family: var(--font-family-display); color: var(--color-text-primary); font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-wide); margin: 0 0 0.5rem 0;"
+            >
+              天文历法
+            </h3>
+            <p
+              style="font-family: var(--font-family-body); color: var(--color-text-tertiary); font-size: var(--font-size-xs); line-height: var(--line-height-normal); margin: 0;"
+            >
+              精确追踪天体运行，制定复杂的历法周期
+            </p>
+          </div>
+
+          <!-- Pillar 2: 象形文字 -->
+          <div class="pillar-column">
+            <div class="pyramid-icon pyramid-icon--primary" style="margin-bottom: 0.75rem;" aria-hidden="true">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+              <div class="bar bar-3"></div>
+            </div>
+            <h3
+              style="font-family: var(--font-family-display); color: var(--color-text-primary); font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-wide); margin: 0 0 0.5rem 0;"
+            >
+              象形文字
+            </h3>
+            <p
+              style="font-family: var(--font-family-body); color: var(--color-text-tertiary); font-size: var(--font-size-xs); line-height: var(--line-height-normal); margin: 0;"
+            >
+              独创的书写系统，记录历史与宇宙观念
+            </p>
+          </div>
+
+          <!-- Pillar 3: 金字塔 -->
+          <div class="pillar-column">
+            <div class="pyramid-icon pyramid-icon--primary" style="margin-bottom: 0.75rem;" aria-hidden="true">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+              <div class="bar bar-3"></div>
+            </div>
+            <h3
+              style="font-family: var(--font-family-display); color: var(--color-text-primary); font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-wide); margin: 0 0 0.5rem 0;"
+            >
+              金字塔
+            </h3>
+            <p
+              style="font-family: var(--font-family-body); color: var(--color-text-tertiary); font-size: var(--font-size-xs); line-height: var(--line-height-normal); margin: 0;"
+            >
+              阶梯式神庙建筑，连接天地之间的神圣通道
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══ 5. GLYPH DECORATION BAND ═══ -->
+      <div class="glyph-band" aria-hidden="true">
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+        <div class="glyph-block"></div>
+      </div>
+
+      <!-- ═══ 6. FOOTER ═══ -->
+      <footer style="padding: 2rem 0 0.5rem 0;">
+
+        <!-- Gold divider -->
+        <div class="gold-divider" aria-hidden="true">
+          <div class="dot"></div>
+          <div class="line"></div>
+          <div class="diamond"></div>
+          <div class="line"></div>
+          <div class="dot"></div>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0.5rem 0 0.5rem;">
+          <!-- Left: date range -->
+          <span style="font-family: var(--font-family-body); color: var(--color-text-tertiary); font-size: var(--font-size-xs); letter-spacing: var(--letter-spacing-wide); white-space: nowrap;">
+            公元 250 — 900 年
+          </span>
+
+          <!-- Center: sun disk -->
+          <div class="sun-disk" aria-hidden="true"></div>
+
+          <!-- Right: region -->
+          <span style="font-family: var(--font-family-body); color: var(--color-text-tertiary); font-size: var(--font-size-xs); letter-spacing: var(--letter-spacing-wide); white-space: nowrap;">
+            中美洲
+          </span>
+        </div>
+
+      </footer>
+
+    </div><!-- /poster-frame -->
+
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

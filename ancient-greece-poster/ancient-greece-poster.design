@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "id": "page-poster",
+      "title": "古希腊展览海报",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1782889680000,
+      "canvasData": {
+        "x": 0,
+        "y": 0,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/poster.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "page-poster-animated",
+      "title": "古希腊展览海报 - 动态鎏金版",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1782889680000,
+      "canvasData": {
+        "x": 528,
+        "y": 0,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/poster-animated.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "image-001",
+      "title": "古希腊神殿主视觉",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782889680000,
+      "canvasData": {
+        "x": -12,
+        "y": 684
+      },
+      "devMetadata": {
+        "imageSrc": "assets/hero-greek-temple.jpg"
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": false,
+    "deviceType": "desktop",
+    "projectName": "古希腊展览海报",
+    "designLibrary": null
+  }
+}

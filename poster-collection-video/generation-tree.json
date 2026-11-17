@@ -1,0 +1,13 @@
+{
+  "root": {
+    "nodeId": "gen-page-collection",
+    "kind": "page-leaf",
+    "pageIds": ["page-collection"],
+    "output": "pages/collection.html",
+    "sharedRegions": [],
+    "privateRegions": ["full collection page"],
+    "mutableSlots": [],
+    "status": "planned",
+    "children": []
+  }
+}

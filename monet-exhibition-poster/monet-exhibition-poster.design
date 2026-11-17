@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "page-poster",
+      "title": "莫奈印象派展览海报",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1782898200000,
+      "canvasData": {
+        "x": 0,
+        "y": 0,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/poster.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "image-001",
+      "title": "莫奈睡莲池塘主视觉",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782898200000,
+      "canvasData": {
+        "x": 552,
+        "y": 84
+      },
+      "devMetadata": {
+        "imageSrc": "assets/hero-water-lilies.jpg"
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": false,
+    "deviceType": "freeSize",
+    "projectName": "莫奈印象派展览海报",
+    "designLibrary": null
+  }
+}

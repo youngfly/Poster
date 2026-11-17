@@ -1,0 +1,148 @@
+/* ============================================
+   Picasso Style Poster — Brand CSS
+   立体主义: 大胆色块、蓝粉对比、几何碎片、原始张力
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #2E5BA0;
+  --color-primary-light: #4A7ABF;
+  --color-primary-lighter: #7AA3D4;
+  --color-primary-lightest: #B8D0EA;
+  --color-primary-dark: #1E3D6B;
+  --color-primary-darker: #132A4A;
+  --color-primary-darkest: #0A1A2E;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #5A8B5A;
+  --state-warning: #C49A3A;
+  --state-error: #A85D4A;
+  --state-info: #2E5BA0;
+
+  /* ── Surface Palette (Warm Canvas / Ochre) ── */
+  --color-bg-main: #F5EFE0;
+  --color-bg-secondary: #EDE5D2;
+  --color-bg-tertiary: #E2D8C0;
+  --color-bg-elevated: #FAF6EE;
+  --color-bg-overlay: rgba(10, 26, 46, 0.6);
+
+  /* ── Picasso Signature Palette ── */
+  --color-rose: #C46878;
+  --color-rose-light: #D88A96;
+  --color-rose-dark: #8B3D4A;
+  --color-ochre: #C4953A;
+  --color-ochre-light: #DAB05E;
+  --color-ochre-dark: #8A6828;
+  --color-terra: #B8705A;
+  --color-terra-light: #D09080;
+  --color-sage: #7A9B7A;
+
+  /* ── Text Palette ── */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #3D3D3D;
+  --color-text-tertiary: #6B6B6B;
+  --color-text-inverse: #F5EFE0;
+  --color-text-link: #1E3D6B;
+
+  /* ── Border Palette ── */
+  --color-border: #C9BCA0;
+  --color-border-subtle: #E2D8C0;
+  --color-border-strong: #2E5BA0;
+
+  /* ── Typography ── */
+  --font-family-display: "Playfair Display", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  --font-family-accent: "Playfair Display", "Noto Serif SC", Georgia, serif;
+  --font-family-bold: "Impact", "Arial Black", "Noto Sans SC", sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+  --font-size-6xl: 6rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+  --line-height-loose: 1.9;
+
+  --letter-spacing-tight: -0.03em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.06em;
+  --letter-spacing-wider: 0.12em;
+  --letter-spacing-widest: 0.2em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(10, 26, 46, 0.04);
+  --shadow-md: 0 2px 8px rgba(10, 26, 46, 0.05);
+  --shadow-lg: 0 8px 24px rgba(10, 26, 46, 0.05);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-primary: #4A7ABF;
+  --color-primary-light: #2E5BA0;
+  --color-primary-lighter: #1E3D6B;
+  --color-primary-lightest: #132A4A;
+  --color-primary-dark: #7AA3D4;
+  --color-primary-darker: #B8D0EA;
+  --color-primary-darkest: #E0EBF5;
+
+  --color-bg-main: #161410;
+  --color-bg-secondary: #1E1C16;
+  --color-bg-tertiary: #28241C;
+  --color-bg-elevated: #1A1814;
+  --color-bg-overlay: rgba(0, 0, 0, 0.7);
+
+  --color-text-primary: #EDE5D2;
+  --color-text-secondary: #C9BCA0;
+  --color-text-tertiary: #8A8070;
+  --color-text-inverse: #1A1A1A;
+  --color-text-link: #7AA3D4;
+
+  --color-border: #4A4030;
+  --color-border-subtle: #3A3428;
+  --color-border-strong: #4A7ABF;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}

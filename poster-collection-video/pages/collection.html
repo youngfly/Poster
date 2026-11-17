@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海报集合体</title>
+    <style id="theme-vars">
+/* ============================================
+   Poster Collection Video — Brand CSS
+   暗色画廊: 深邃背景、纯白文字、微妙动画
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #E8E0D4;
+  --color-primary-light: #F0EBE0;
+  --color-primary-lighter: #F7F4EF;
+  --color-primary-lightest: #FAF8F4;
+  --color-primary-dark: #B0A898;
+  --color-primary-darker: #8B8478;
+  --color-primary-darkest: #5C5850;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #6AAF6A;
+  --state-warning: #D4AD4E;
+  --state-error: #C46868;
+  --state-info: #6A9FBF;
+
+  /* ── Surface Palette (Dark Gallery) ── */
+  --color-bg-main: #0A0A0A;
+  --color-bg-secondary: #141414;
+  --color-bg-tertiary: #1E1E1E;
+  --color-bg-elevated: #111111;
+  --color-bg-overlay: rgba(0, 0, 0, 0.8);
+
+  /* ── Accent ── */
+  --color-accent: #D4AD4E;
+  --color-accent-light: #E8CFA0;
+  --color-accent-dark: #A07B28;
+
+  /* ── Text Palette ── */
+  --color-text-primary: #F0EBE0;
+  --color-text-secondary: #B0A898;
+  --color-text-tertiary: #6B6860;
+  --color-text-inverse: #0A0A0A;
+  --color-text-link: #D4AD4E;
+
+  /* ── Border Palette ── */
+  --color-border: #2A2A2A;
+  --color-border-subtle: #1E1E1E;
+  --color-border-strong: #D4AD4E;
+
+  /* ── Typography ── */
+  --font-family-display: "Playfair Display", "Noto Serif SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-wider: 0.15em;
+  --letter-spacing-widest: 0.25em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Light Mode (inverted — rare usage) ── */
+html:not(.dark) {
+  --color-bg-main: #0A0A0A;
+  --color-bg-secondary: #141414;
+  --color-bg-tertiary: #1E1E1E;
+  --color-bg-elevated: #111111;
+  --color-text-primary: #F0EBE0;
+  --color-text-secondary: #B0A898;
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-primary: var(--color-primary);
+    --color-accent: var(--color-accent);
+    --color-border: var(--color-border);
+  }
+  @layer base {
+    body { background: var(--color-background); color: var(--color-text-primary); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main class="relative w-screen h-screen overflow-hidden" style="background: var(--color-bg-main);">
+      <!-- Vignette overlay -->
+      <div class="absolute inset-0 z-40 pointer-events-none" style="background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.35) 100%);"></div>
+
+      <!-- Slides Container -->
+      <div id="slideshow" class="relative w-full h-full">
+
+        <!-- Slide 1 — Japanese -->
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000" style="z-index: 0;">
+          <img src="../assets/poster-01-japanese.jpg" class="absolute inset-0 w-full h-full object-cover kenburns" alt="日式风格海报" />
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.1) 100%);"></div>
+          <div class="absolute bottom-0 left-0 px-12 pb-16">
+            <span class="slide-number absolute bottom-16 left-12 font-black leading-none select-none" style="font-size: 8rem; color: #8B7355; opacity: 0.2; z-index: 0; font-family: var(--font-family-display);">01</span>
+            <div class="relative" style="z-index: 1;">
+              <h2 class="slide-title" style="color: var(--color-text-primary); font-family: var(--font-family-display); font-size: var(--font-size-4xl); font-weight: bold; line-height: var(--line-height-tight);">日式风格海报</h2>
+              <p class="slide-subtitle" style="color: #8B7355; font-family: var(--font-family-body); font-size: var(--font-size-md); letter-spacing: 0.1em; margin-top: 8px;">侘寂之美 · Wabi-Sabi</p>
+              <div class="accent-line" style="width: 60px; height: 3px; background: #8B7355; margin-top: 16px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 — Chinese -->
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000" style="z-index: 0;">
+          <img src="../assets/poster-02-chinese.jpg" class="absolute inset-0 w-full h-full object-cover kenburns" alt="中国风海报" />
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.1) 100%);"></div>
+          <div class="absolute bottom-0 left-0 px-12 pb-16">
+            <span class="slide-number absolute bottom-16 left-12 font-black leading-none select-none" style="font-size: 8rem; color: #B83B3B; opacity: 0.2; z-index: 0; font-family: var(--font-family-display);">02</span>
+            <div class="relative" style="z-index: 1;">
+              <h2 class="slide-title" style="color: var(--color-text-primary); font-family: var(--font-family-display); font-size: var(--font-size-4xl); font-weight: bold; line-height: var(--line-height-tight);">中国风海报</h2>
+              <p class="slide-subtitle" style="color: #B83B3B; font-family: var(--font-family-body); font-size: var(--font-size-md); letter-spacing: 0.1em; margin-top: 8px;">东方意境 · 东方美学</p>
+              <div class="accent-line" style="width: 60px; height: 3px; background: #B83B3B; margin-top: 16px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 — Mayan -->
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000" style="z-index: 0;">
+          <img src="../assets/poster-03-mayan.jpg" class="absolute inset-0 w-full h-full object-cover kenburns" alt="玛雅文化海报" />
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.1) 100%);"></div>
+          <div class="absolute bottom-0 left-0 px-12 pb-16">
+            <span class="slide-number absolute bottom-16 left-12 font-black leading-none select-none" style="font-size: 8rem; color: #2D6B4F; opacity: 0.2; z-index: 0; font-family: var(--font-family-display);">03</span>
+            <div class="relative" style="z-index: 1;">
+              <h2 class="slide-title" style="color: var(--color-text-primary); font-family: var(--font-family-display); font-size: var(--font-size-4xl); font-weight: bold; line-height: var(--line-height-tight);">玛雅文化海报</h2>
+              <p class="slide-subtitle" style="color: #2D6B4F; font-family: var(--font-family-body); font-size: var(--font-size-md); letter-spacing: 0.1em; margin-top: 8px;">丛林金字塔 · 古代文明</p>
+              <div class="accent-line" style="width: 60px; height: 3px; background: #2D6B4F; margin-top: 16px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 — Monet -->
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000" style="z-index: 0;">
+          <img src="../assets/poster-04-monet.jpg" class="absolute inset-0 w-full h-full object-cover kenburns" alt="莫奈展览海报" />
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.1) 100%);"></div>
+          <div class="absolute bottom-0 left-0 px-12 pb-16">
+            <span class="slide-number absolute bottom-16 left-12 font-black leading-none select-none" style="font-size: 8rem; color: #5B7FA5; opacity: 0.2; z-index: 0; font-family: var(--font-family-display);">04</span>
+            <div class="relative" style="z-index: 1;">
+              <h2 class="slide-title" style="color: var(--color-text-primary); font-family: var(--font-family-display); font-size: var(--font-size-4xl); font-weight: bold; line-height: var(--line-height-tight);">莫奈展览海报</h2>
+              <p class="slide-subtitle" style="color: #5B7FA5; font-family: var(--font-family-body); font-size: var(--font-size-md); letter-spacing: 0.1em; margin-top: 8px;">光与色的诗人 · 印象派</p>
+              <div class="accent-line" style="width: 60px; height: 3px; background: #5B7FA5; margin-top: 16px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 — Picasso -->
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000" style="z-index: 0;">
+          <img src="../assets/poster-05-picasso.jpg" class="absolute inset-0 w-full h-full object-cover kenburns" alt="毕加索风格海报" />
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.1) 100%);"></div>
+          <div class="absolute bottom-0 left-0 px-12 pb-16">
+            <span class="slide-number absolute bottom-16 left-12 font-black leading-none select-none" style="font-size: 8rem; color: #C46878; opacity: 0.2; z-index: 0; font-family: var(--font-family-display);">05</span>
+            <div class="relative" style="z-index: 1;">
+              <h2 class="slide-title" style="color: var(--color-text-primary); font-family: var(--font-family-display); font-size: var(--font-size-4xl); font-weight: bold; line-height: var(--line-height-tight);">毕加索风格海报</h2>
+              <p class="slide-subtitle" style="color: #C46878; font-family: var(--font-family-body); font-size: var(--font-size-md); letter-spacing: 0.1em; margin-top: 8px;">立体主义 · Cubism</p>
+              <div class="accent-line" style="width: 60px; height: 3px; background: #C46878; margin-top: 16px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6 — Egypt -->
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000" style="z-index: 0;">
+          <img src="../assets/poster-06-egypt.jpg" class="absolute inset-0 w-full h-full object-cover kenburns" alt="古埃及海报" />
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.1) 100%);"></div>
+          <div class="absolute bottom-0 left-0 px-12 pb-16">
+            <span class="slide-number absolute bottom-16 left-12 font-black leading-none select-none" style="font-size: 8rem; color: #C49A3A; opacity: 0.2; z-index: 0; font-family: var(--font-family-display);">06</span>
+            <div class="relative" style="z-index: 1;">
+              <h2 class="slide-title" style="color: var(--color-text-primary); font-family: var(--font-family-display); font-size: var(--font-size-4xl); font-weight: bold; line-height: var(--line-height-tight);">古埃及海报</h2>
+              <p class="slide-subtitle" style="color: #C49A3A; font-family: var(--font-family-body); font-size: var(--font-size-md); letter-spacing: 0.1em; margin-top: 8px;">法老的荣光 · Ancient Egypt</p>
+              <div class="accent-line" style="width: 60px; height: 3px; background: #C49A3A; margin-top: 16px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 7 — Greece -->
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000" style="z-index: 0;">
+          <img src="../assets/poster-07-greece.jpg" class="absolute inset-0 w-full h-full object-cover kenburns" alt="古希腊海报" />
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.1) 100%);"></div>
+          <div class="absolute bottom-0 left-0 px-12 pb-16">
+            <span class="slide-number absolute bottom-16 left-12 font-black leading-none select-none" style="font-size: 8rem; color: #7A9DBF; opacity: 0.2; z-index: 0; font-family: var(--font-family-display);">07</span>
+            <div class="relative" style="z-index: 1;">
+              <h2 class="slide-title" style="color: var(--color-text-primary); font-family: var(--font-family-display); font-size: var(--font-size-4xl); font-weight: bold; line-height: var(--line-height-tight);">古希腊海报</h2>
+              <p class="slide-subtitle" style="color: #7A9DBF; font-family: var(--font-family-body); font-size: var(--font-size-md); letter-spacing: 0.1em; margin-top: 8px;">神殿与神话 · Ancient Greece</p>
+              <div class="accent-line" style="width: 60px; height: 3px; background: #7A9DBF; margin-top: 16px;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Progress Bar -->
+      <div id="progress-bar" class="absolute bottom-0 left-0" style="height: 3px; background: var(--color-accent); width: 0%; z-index: 50;"></div>
+
+      <!-- Navigation Dots -->
+      <div class="absolute bottom-8 left-1/2 flex gap-3" style="transform: translateX(-50%); z-index: 50;">
+        <button class="dot" data-index="0" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(240,235,224,0.3); border: none; cursor: pointer; transition: all 0.3s ease;"></button>
+        <button class="dot" data-index="1" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(240,235,224,0.3); border: none; cursor: pointer; transition: all 0.3s ease;"></button>
+        <button class="dot" data-index="2" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(240,235,224,0.3); border: none; cursor: pointer; transition: all 0.3s ease;"></button>
+        <button class="dot" data-index="3" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(240,235,224,0.3); border: none; cursor: pointer; transition: all 0.3s ease;"></button>
+        <button class="dot" data-index="4" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(240,235,224,0.3); border: none; cursor: pointer; transition: all 0.3s ease;"></button>
+        <button class="dot" data-index="5" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(240,235,224,0.3); border: none; cursor: pointer; transition: all 0.3s ease;"></button>
+        <button class="dot" data-index="6" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(240,235,224,0.3); border: none; cursor: pointer; transition: all 0.3s ease;"></button>
+      </div>
+
+      <!-- Slide Counter -->
+      <div class="absolute top-8 right-8 select-none" style="color: var(--color-text-tertiary); font-family: var(--font-family-body); font-size: var(--font-size-sm); letter-spacing: var(--letter-spacing-wide); z-index: 50;">
+        <span id="current-num">01</span> / <span>07</span>
+      </div>
+
+      <!-- Play/Pause Control -->
+      <button id="play-pause" class="absolute top-8 left-8 flex items-center justify-center" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: var(--color-text-primary); font-size: 14px; cursor: pointer; z-index: 50; transition: background 0.3s ease;" aria-label="播放/暂停">&#10074;&#10074;</button>
+    </main>
+
+    <!-- Custom styles (must be in body, not head) -->
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      @keyframes kenburns {
+        from { transform: scale(1.0) translate(0, 0); }
+        to { transform: scale(1.05) translate(-1%, -0.5%); }
+      }
+
+      .kenburns {
+        animation: kenburns 20s ease-in-out infinite alternate;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .kenburns {
+          animation: none;
+        }
+        .slide {
+          transition: opacity 0.01s !important;
+        }
+      }
+    </style>
+
+    <!-- Slideshow JavaScript -->
+    <script>
+      (function() {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const progressBar = document.getElementById('progress-bar');
+        const currentNum = document.getElementById('current-num');
+        const playPauseBtn = document.getElementById('play-pause');
+
+        let current = 0;
+        let playing = true;
+        let interval;
+
+        function showSlide(n) {
+          slides.forEach(function(s, i) {
+            s.style.opacity = i === n ? '1' : '0';
+            s.style.zIndex = i === n ? '1' : '0';
+          });
+          dots.forEach(function(d, i) {
+            if (i === n) {
+              d.style.background = 'var(--color-accent)';
+              d.style.transform = 'scale(1.3)';
+              d.classList.add('active');
+            } else {
+              d.style.background = 'rgba(240,235,224,0.3)';
+              d.style.transform = 'scale(1)';
+              d.classList.remove('active');
+            }
+          });
+          currentNum.textContent = String(n + 1).padStart(2, '0');
+          // Reset progress bar
+          progressBar.style.transition = 'none';
+          progressBar.style.width = '0%';
+          requestAnimationFrame(function() {
+            requestAnimationFrame(function() {
+              progressBar.style.transition = 'width 5s linear';
+              progressBar.style.width = '100%';
+            });
+          });
+        }
+
+        function nextSlide() {
+          current = (current + 1) % slides.length;
+          showSlide(current);
+        }
+
+        function startAutoPlay() {
+          stopAutoPlay();
+          interval = setInterval(nextSlide, 5000);
+        }
+
+        function stopAutoPlay() {
+          if (interval) {
+            clearInterval(interval);
+            interval = undefined;
+          }
+        }
+
+        // Navigation dots click
+        dots.forEach(function(dot, i) {
+          dot.addEventListener('click', function() {
+            stopAutoPlay();
+            current = i;
+            showSlide(current);
+            if (playing) startAutoPlay();
+          });
+        });
+
+        // Play/Pause
+        playPauseBtn.addEventListener('click', function() {
+          playing = !playing;
+          if (playing) {
+            playPauseBtn.innerHTML = '&#10074;&#10074;';
+            startAutoPlay();
+            progressBar.style.transition = 'width 5s linear';
+            progressBar.style.width = '100%';
+          } else {
+            playPauseBtn.innerHTML = '&#9654;';
+            stopAutoPlay();
+            progressBar.style.transition = 'none';
+          }
+        });
+
+        // Init
+        showSlide(0);
+        startAutoPlay();
+      })();
+    </script>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

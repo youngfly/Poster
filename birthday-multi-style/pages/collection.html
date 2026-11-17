@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多风格生日快乐合集</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <style id="theme-vars">
+/* ============================================
+   Chinese Birthday Poster — Brand CSS
+   东方意境: 朱红、墨色、宣纸、水墨韵味
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #B83B3B;
+  --color-primary-light: #D45A5A;
+  --color-primary-lighter: #E89595;
+  --color-primary-lightest: #F5D5D5;
+  --color-primary-dark: #8B2D2D;
+  --color-primary-darker: #5C1E1E;
+  --color-primary-darkest: #2D1010;
+
+  /* ── Ink / Dark Palette ── */
+  --color-ink: #1A1A1A;
+  --color-ink-light: #3D3D3D;
+  --color-ink-lighter: #6B6B6B;
+  --color-ink-lightest: #9E9E9E;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #5B8C5A;
+  --state-warning: #C49A3A;
+  --state-error: #A85D4A;
+  --state-info: #5A7F9F;
+
+  /* ── Surface Palette (Xuan Paper Tones) ── */
+  --color-bg-main: #F7F3EB;
+  --color-bg-secondary: #F0EBE0;
+  --color-bg-tertiary: #E8E1D3;
+  --color-bg-elevated: #FAF8F4;
+  --color-bg-overlay: rgba(26, 16, 16, 0.6);
+
+  /* ── Gold Accent ── */
+  --color-gold: #C49A3A;
+  --color-gold-light: #D4AD5E;
+  --color-gold-lighter: #E8CFA0;
+
+  /* ── Text Palette ── */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #3D3D3D;
+  --color-text-tertiary: #6B6B6B;
+  --color-text-inverse: #F7F3EB;
+  --color-text-link: #8B2D2D;
+
+  /* ── Border Palette ── */
+  --color-border: #D4C9B0;
+  --color-border-subtle: #E2D9CB;
+  --color-border-strong: #B83B3B;
+
+  /* ── Typography ── */
+  --font-family-display: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", "Songti SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-family-accent: "Noto Serif SC", "STKaiti", "KaiTi", Georgia, serif;
+  --font-family-brush: "Noto Serif SC", "STKaiti", "KaiTi", "Ma Shan Zheng", cursive;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-wider: 0.15em;
+  --letter-spacing-widest: 0.25em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --color-space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(26, 26, 26, 0.04);
+  --shadow-md: 0 2px 8px rgba(26, 26, 26, 0.05);
+  --shadow-lg: 0 8px 24px rgba(26, 26, 26, 0.05);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-primary: #D45A5A;
+  --color-primary-light: #B83B3B;
+  --color-primary-lighter: #8B2D2D;
+  --color-primary-lightest: #5C1E1E;
+  --color-primary-dark: #E89595;
+  --color-primary-darker: #F5D5D5;
+  --color-primary-darkest: #FAECEC;
+
+  --color-bg-main: #141210;
+  --color-bg-secondary: #1C1916;
+  --color-bg-tertiary: #252118;
+  --color-bg-elevated: #181614;
+  --color-bg-overlay: rgba(0, 0, 0, 0.7);
+
+  --color-text-primary: #F0EBE0;
+  --color-text-secondary: #D4C9B0;
+  --color-text-tertiary: #9E9E9E;
+  --color-text-inverse: #1A1A1A;
+  --color-text-link: #D45A5A;
+
+  --color-border: #4A3D30;
+  --color-border-subtle: #3D3228;
+  --color-border-strong: #D45A5A;
+
+  --color-gold: #D4AD5E;
+  --color-gold-light: #C49A3A;
+  --color-gold-lighter: #A07B28;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-primary: var(--color-primary);
+    --color-border: var(--color-border);
+  }
+  @layer base {
+    body { background: var(--color-background); color: var(--color-text-primary); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+
+      /* ── Slideshow Core ── */
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: #0A0A0A;
+        font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      }
+
+      .slideshow {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* ── Slide ── */
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        z-index: 0;
+        transition: opacity 1.2s ease-in-out;
+      }
+      .slide.active {
+        opacity: 1;
+        z-index: 1;
+      }
+
+      /* ── Ken Burns ── */
+      @keyframes kenburns {
+        from { transform: scale(1.0) translate(0, 0); }
+        to   { transform: scale(1.05) translate(-1%, -0.5%); }
+      }
+      .slide-image {
+        position: absolute;
+        inset: -5%;
+        width: 110%;
+        height: 110%;
+        object-fit: cover;
+        animation: kenburns 20s ease-out forwards;
+      }
+      .slide.active .slide-image {
+        animation-play-state: running;
+      }
+
+      /* ── Dark gradient overlay from bottom ── */
+      .slide-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0.4) 40%,
+          rgba(0, 0, 0, 0.15) 70%,
+          rgba(0, 0, 0, 0.05) 100%
+        );
+        z-index: 1;
+      }
+
+      /* ── Vignette ── */
+      .vignette {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at center,
+          transparent 50%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      /* ── Text content ── */
+      .slide-content {
+        position: absolute;
+        bottom: 120px;
+        left: 60px;
+        z-index: 3;
+        color: #fff;
+      }
+      .slide-number {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 7rem;
+        font-weight: 700;
+        line-height: 1;
+        opacity: 0.12;
+        position: absolute;
+        top: -80px;
+        left: -10px;
+        letter-spacing: -0.03em;
+      }
+      .slide-title {
+        font-family: "Noto Serif SC", "STSong", Georgia, serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+      }
+      .slide-subtitle {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: 0.12em;
+        opacity: 0.8;
+        margin-bottom: 16px;
+      }
+      .slide-accent-line {
+        width: 60px;
+        height: 3px;
+        transition: background-color 0.6s ease;
+      }
+
+      /* ── Progress bar ── */
+      .progress-bar-track {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 10;
+      }
+      .progress-bar-fill {
+        height: 100%;
+        width: 0%;
+        background: #D4AD4E;
+        transition: width 0.1s linear;
+      }
+      .progress-bar-fill.animating {
+        transition: width 4s linear;
+        width: 100% !important;
+      }
+
+      /* ── Navigation dots ── */
+      .nav-dots {
+        position: absolute;
+        bottom: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 14px;
+        z-index: 10;
+        align-items: center;
+      }
+      .nav-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.4s ease;
+        border: none;
+        outline: none;
+        padding: 0;
+      }
+      .nav-dot:hover {
+        background: rgba(255, 255, 255, 0.6);
+      }
+      .nav-dot.active {
+        background: #D4AD4E;
+        width: 32px;
+        border-radius: 5px;
+      }
+
+      /* ── Slide counter ── */
+      .slide-counter {
+        position: absolute;
+        top: 32px;
+        right: 40px;
+        z-index: 10;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.15em;
+      }
+      .slide-counter .current {
+        color: #D4AD4E;
+        font-weight: 700;
+      }
+
+      /* ── Play/pause button ── */
+      .play-pause-btn {
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        z-index: 10;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: rgba(0, 0, 0, 0.3);
+        color: rgba(255, 255, 255, 0.7);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        padding: 0;
+      }
+      .play-pause-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
+        color: #fff;
+      }
+      .play-pause-btn svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+
+      /* ── Title reveal animation ── */
+      @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      .slide.active .slide-content {
+        animation: fadeSlideUp 0.8s ease-out 0.3s both;
+      }
+      .slide:not(.active) .slide-content {
+        animation: none;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main class="slideshow" role="region" aria-label="Birthday Poster Style Collection Slideshow">
+
+        <!-- Vignette overlay -->
+        <div class="vignette"></div>
+
+        <!-- Slide 1 - Japanese -->
+        <div class="slide active" data-index="0">
+            <img class="slide-image" src="../assets/birthday-japanese-v.jpg" alt="日式侘寂之美生日海报">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-number" style="color:#8B7355;">01</div>
+                <div class="slide-title">日式 · 侘寂之美</div>
+                <div class="slide-subtitle">Wabi-Sabi Birthday</div>
+                <div class="slide-accent-line" style="background-color:#8B7355;"></div>
+            </div>
+        </div>
+
+        <!-- Slide 2 - Chinese -->
+        <div class="slide" data-index="1">
+            <img class="slide-image" src="../assets/birthday-chinese.jpg" alt="中式东方意境生日海报">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-number" style="color:#B83B3B;">02</div>
+                <div class="slide-title">中式 · 东方意境</div>
+                <div class="slide-subtitle">Oriental Auspicious</div>
+                <div class="slide-accent-line" style="background-color:#B83B3B;"></div>
+            </div>
+        </div>
+
+        <!-- Slide 3 - Mayan -->
+        <div class="slide" data-index="2">
+            <img class="slide-image" src="../assets/birthday-mayan-v.jpg" alt="玛雅丛林庆典生日海报">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-number" style="color:#2D6B4F;">03</div>
+                <div class="slide-title">玛雅 · 丛林庆典</div>
+                <div class="slide-subtitle">Mayan Celebration</div>
+                <div class="slide-accent-line" style="background-color:#2D6B4F;"></div>
+            </div>
+        </div>
+
+        <!-- Slide 4 - Monet -->
+        <div class="slide" data-index="3">
+            <img class="slide-image" src="../assets/birthday-monet.jpg" alt="莫奈光影印象生日海报">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-number" style="color:#5B7FA5;">04</div>
+                <div class="slide-title">莫奈 · 光影印象</div>
+                <div class="slide-subtitle">Impressionist Light</div>
+                <div class="slide-accent-line" style="background-color:#5B7FA5;"></div>
+            </div>
+        </div>
+
+        <!-- Slide 5 - Picasso -->
+        <div class="slide" data-index="4">
+            <img class="slide-image" src="../assets/birthday-picasso-v.jpg" alt="毕加索立体派对生日海报">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-number" style="color:#C46878;">05</div>
+                <div class="slide-title">毕加索 · 立体派对</div>
+                <div class="slide-subtitle">Cubist Party</div>
+                <div class="slide-accent-line" style="background-color:#C46878;"></div>
+            </div>
+        </div>
+
+        <!-- Slide 6 - Egypt -->
+        <div class="slide" data-index="5">
+            <img class="slide-image" src="../assets/birthday-egypt.jpg" alt="古埃及法老祝福生日海报">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-number" style="color:#C49A3A;">06</div>
+                <div class="slide-title">古埃及 · 法老祝福</div>
+                <div class="slide-subtitle">Pharaoh's Blessing</div>
+                <div class="slide-accent-line" style="background-color:#C49A3A;"></div>
+            </div>
+        </div>
+
+        <!-- Slide 7 - Greece -->
+        <div class="slide" data-index="6">
+            <img class="slide-image" src="../assets/birthday-greece-v.jpg" alt="古希腊神殿庆典生日海报">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-number" style="color:#7A9DBF;">07</div>
+                <div class="slide-title">古希腊 · 神殿庆典</div>
+                <div class="slide-subtitle">Temple Celebration</div>
+                <div class="slide-accent-line" style="background-color:#7A9DBF;"></div>
+            </div>
+        </div>
+
+        <!-- Slide 8 - Glass -->
+        <div class="slide" data-index="7">
+            <img class="slide-image" src="../assets/birthday-glass-v.jpg" alt="液态玻璃未来之光生日海报">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-number" style="color:#6B8FCC;">08</div>
+                <div class="slide-title">液态玻璃 · 未来之光</div>
+                <div class="slide-subtitle">Liquid Glass Future</div>
+                <div class="slide-accent-line" style="background-color:#6B8FCC;"></div>
+            </div>
+        </div>
+
+        <!-- Play/Pause Button -->
+        <button class="play-pause-btn" id="playPauseBtn" aria-label="暂停自动播放">
+            <svg id="pauseIcon" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            <svg id="playIcon" viewBox="0 0 24 24" style="display:none;"><polygon points="6,4 20,12 6,20"/></svg>
+        </button>
+
+        <!-- Slide Counter -->
+        <div class="slide-counter">
+            <span class="current" id="counterCurrent">01</span> <span>/</span> <span id="counterTotal">08</span>
+        </div>
+
+        <!-- Navigation Dots -->
+        <nav class="nav-dots" aria-label="幻灯片导航">
+            <button class="nav-dot active" data-slide="0" aria-label="第1张：日式侘寂之美"></button>
+            <button class="nav-dot" data-slide="1" aria-label="第2张：中式东方意境"></button>
+            <button class="nav-dot" data-slide="2" aria-label="第3张：玛雅丛林庆典"></button>
+            <button class="nav-dot" data-slide="3" aria-label="第4张：莫奈光影印象"></button>
+            <button class="nav-dot" data-slide="4" aria-label="第5张：毕加索立体派对"></button>
+            <button class="nav-dot" data-slide="5" aria-label="第6张：古埃及法老祝福"></button>
+            <button class="nav-dot" data-slide="6" aria-label="第7张：古希腊神殿庆典"></button>
+            <button class="nav-dot" data-slide="7" aria-label="第8张：液态玻璃未来之光"></button>
+        </nav>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progressBar"></div>
+        </div>
+
+    </main>
+
+    <script>
+    (function() {
+        // ── Config ──
+        const SLIDE_COUNT = 8;
+        const INTERVAL = 4000; // 4 seconds per slide
+        const CROSSFADE = 1200; // 1.2s
+
+        // ── DOM References ──
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.nav-dot');
+        const progressBar = document.getElementById('progressBar');
+        const counterCurrent = document.getElementById('counterCurrent');
+        const counterTotal = document.getElementById('counterTotal');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const pauseIcon = document.getElementById('pauseIcon');
+        const playIcon = document.getElementById('playIcon');
+
+        // ── State ──
+        let currentIndex = 0;
+        let isPlaying = true;
+        let timer = null;
+        let progressRAF = null;
+        let progressStart = null;
+
+        // ── Helpers ──
+        function pad(n) { return String(n).padStart(2, '0'); }
+
+        function goToSlide(index, resetProgress) {
+            if (index < 0) index = SLIDE_COUNT - 1;
+            if (index >= SLIDE_COUNT) index = 0;
+
+            slides[currentIndex].classList.remove('active');
+            slides[index].classList.add('active');
+
+            dots[currentIndex].classList.remove('active');
+            dots[index].classList.add('active');
+
+            currentIndex = index;
+            counterCurrent.textContent = pad(currentIndex + 1);
+
+            if (resetProgress !== false) {
+                resetProgressTimer();
+            }
+        }
+
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+
+        // ── Progress Bar ──
+        function resetProgressTimer() {
+            // Reset animation
+            progressBar.classList.remove('animating');
+            progressBar.style.width = '0%';
+
+            // Force reflow
+            void progressBar.offsetWidth;
+
+            if (isPlaying) {
+                progressBar.classList.add('animating');
+            }
+
+            // Auto advance
+            clearTimeout(timer);
+            if (isPlaying) {
+                timer = setTimeout(nextSlide, INTERVAL);
+            }
+        }
+
+        function startAutoplay() {
+            isPlaying = true;
+            pauseIcon.style.display = '';
+            playIcon.style.display = 'none';
+            playPauseBtn.setAttribute('aria-label', '暂停自动播放');
+            resetProgressTimer();
+        }
+
+        function stopAutoplay() {
+            isPlaying = false;
+            pauseIcon.style.display = 'none';
+            playIcon.style.display = '';
+            playPauseBtn.setAttribute('aria-label', '开始自动播放');
+            clearTimeout(timer);
+            progressBar.classList.remove('animating');
+            // Keep progress at current width
+            const computedWidth = progressBar.getBoundingClientRect().width;
+            const parentWidth = progressBar.parentElement.getBoundingClientRect().width;
+            if (parentWidth > 0) {
+                progressBar.style.width = ((computedWidth / parentWidth) * 100) + '%';
+            }
+        }
+
+        // ── Event Listeners ──
+
+        // Dot navigation
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                const index = parseInt(this.dataset.slide, 10);
+                if (index !== currentIndex) {
+                    goToSlide(index);
+                }
+            });
+        });
+
+        // Play/pause
+        playPauseBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                stopAutoplay();
+            } else {
+                startAutoplay();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                prevSlide();
+            } else if (e.key === ' ') {
+                e.preventDefault();
+                if (isPlaying) { stopAutoplay(); } else { startAutoplay(); }
+            }
+        });
+
+        // ── Initialize ──
+        counterTotal.textContent = pad(SLIDE_COUNT);
+        counterCurrent.textContent = pad(1);
+        startAutoplay();
+    })();
+    </script>
+</body>
+</html>

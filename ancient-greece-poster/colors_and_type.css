@@ -1,0 +1,175 @@
+/* Ancient Greece Poster - Brand Design Tokens */
+/* Prefix: ag */
+
+:root {
+  /* === Color System === */
+  /* Primary: Olympic Gold */
+  --ag-primary: #C9A84C;
+  --ag-primary-hover: #D4B860;
+  --ag-primary-active: #B08E3A;
+
+  /* Background palette - marble and stone */
+  --ag-background: #F2EDE4;
+  --ag-background-secondary: #E8E0D2;
+  --ag-background-tertiary: #FAF8F4;
+  --ag-surface: #F0EBE1;
+  --ag-surface-elevated: #F7F4EF;
+
+  /* Accent: Olive Leaf Green */
+  --ag-accent-olive: #6B7F3B;
+  --ag-accent-olive-light: #8A9E58;
+  --ag-accent-olive-dark: #4A5C28;
+
+  /* Terracotta accent (amphora-inspired) */
+  --ag-accent-terracotta: #C4724E;
+  --ag-accent-terracotta-light: #D4896A;
+  --ag-accent-terracotta-dark: #A05535;
+
+  /* Aegean Blue accent */
+  --ag-accent-aegean: #2C5F7C;
+  --ag-accent-aegean-light: #3D7A9C;
+  --ag-accent-aegean-deep: #1A3D52;
+
+  /* Text colors */
+  --ag-text-primary: #2C2A25;
+  --ag-text-secondary: #5C574E;
+  --ag-text-tertiary: #8B847A;
+  --ag-text-inverse: #F2EDE4;
+  --ag-text-gold: #C9A84C;
+
+  /* Borders and dividers */
+  --ag-border: #C8C0B4;
+  --ag-border-light: #D8D2C8;
+  --ag-divider: #BEB6A8;
+
+  /* State colors */
+  --state-success: #4A7C59;
+  --state-warning: #C4962E;
+  --state-error: #A63D2F;
+  --state-info: #2C5F7C;
+
+  /* Shadow system */
+  --ag-shadow-sm: 0 1px 2px rgba(44, 42, 37, 0.04);
+  --ag-shadow-md: 0 4px 8px rgba(44, 42, 37, 0.05);
+  --ag-shadow-lg: 0 8px 24px rgba(44, 42, 37, 0.05);
+  --ag-shadow-floating: 0 16px 40px rgba(44, 42, 37, 0.08);
+
+  /* === Typography System === */
+  /* Display font: Cinzel (classical Roman inscriptions) */
+  /* Body font: Noto Serif (elegant serif) */
+  --ag-font-display: 'Cinzel', 'Georgia', 'Times New Roman', serif;
+  --ag-font-body: 'Noto Serif SC', 'Noto Serif', 'Georgia', serif;
+  --ag-font-accent: 'Cinzel Decorative', 'Cinzel', serif;
+
+  /* Type scale */
+  --ag-text-xs: 0.75rem;
+  --ag-text-sm: 0.875rem;
+  --ag-text-base: 1rem;
+  --ag-text-lg: 1.125rem;
+  --ag-text-xl: 1.25rem;
+  --ag-text-2xl: 1.5rem;
+  --ag-text-3xl: 2rem;
+  --ag-text-4xl: 2.5rem;
+  --ag-text-5xl: 3.5rem;
+  --ag-text-6xl: 4.5rem;
+  --ag-text-hero: 6rem;
+
+  /* Font weights */
+  --ag-weight-normal: 400;
+  --ag-weight-medium: 500;
+  --ag-weight-bold: 700;
+  --ag-weight-black: 900;
+
+  /* Line heights */
+  --ag-leading-tight: 1.1;
+  --ag-leading-snug: 1.25;
+  --ag-leading-normal: 1.5;
+  --ag-leading-relaxed: 1.7;
+
+  /* Letter spacing */
+  --ag-tracking-tight: -0.02em;
+  --ag-tracking-normal: 0;
+  --ag-tracking-wide: 0.05em;
+  --ag-tracking-wider: 0.1em;
+  --ag-tracking-widest: 0.2em;
+
+  /* === Shape System === */
+  --ag-radius-none: 0px;
+  --ag-radius-sm: 2px;
+  --ag-radius-md: 4px;
+  --ag-radius-lg: 8px;
+  --ag-radius-full: 9999px;
+
+  /* === Spacing System === */
+  --ag-space-1: 0.25rem;
+  --ag-space-2: 0.5rem;
+  --ag-space-3: 0.75rem;
+  --ag-space-4: 1rem;
+  --ag-space-6: 1.5rem;
+  --ag-space-8: 2rem;
+  --ag-space-10: 2.5rem;
+  --ag-space-12: 3rem;
+  --ag-space-16: 4rem;
+  --ag-space-20: 5rem;
+  --ag-space-24: 6rem;
+  --ag-space-32: 8rem;
+}
+
+/* Typography utility classes */
+.ag-display { font-family: var(--ag-font-display); }
+.ag-body { font-family: var(--ag-font-body); }
+.ag-accent { font-family: var(--ag-font-accent); }
+
+.ag-text-hero {
+  font-family: var(--ag-font-accent);
+  font-size: var(--ag-text-hero);
+  font-weight: var(--ag-weight-bold);
+  line-height: var(--ag-leading-tight);
+  letter-spacing: var(--ag-tracking-wider);
+  color: var(--ag-primary);
+  text-transform: uppercase;
+}
+
+.ag-title {
+  font-family: var(--ag-font-display);
+  font-size: var(--ag-text-4xl);
+  font-weight: var(--ag-weight-bold);
+  line-height: var(--ag-leading-tight);
+  letter-spacing: var(--ag-tracking-wide);
+  color: var(--ag-text-primary);
+}
+
+.ag-subtitle {
+  font-family: var(--ag-font-body);
+  font-size: var(--ag-text-xl);
+  font-weight: var(--ag-weight-normal);
+  line-height: var(--ag-leading-snug);
+  color: var(--ag-text-secondary);
+}
+
+.ag-body-text {
+  font-family: var(--ag-font-body);
+  font-size: var(--ag-text-base);
+  font-weight: var(--ag-weight-normal);
+  line-height: var(--ag-leading-relaxed);
+  color: var(--ag-text-primary);
+}
+
+.ag-caption {
+  font-family: var(--ag-font-body);
+  font-size: var(--ag-text-sm);
+  font-weight: var(--ag-weight-normal);
+  line-height: var(--ag-leading-normal);
+  color: var(--ag-text-tertiary);
+  letter-spacing: var(--ag-tracking-wide);
+}
+
+.ag-label {
+  font-family: var(--ag-font-display);
+  font-size: var(--ag-text-xs);
+  font-weight: var(--ag-weight-bold);
+  line-height: var(--ag-leading-normal);
+  color: var(--ag-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--ag-tracking-widest);
+}

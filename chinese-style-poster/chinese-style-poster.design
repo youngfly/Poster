@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "page-poster",
+      "title": "中国风海报",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1782893100000,
+      "canvasData": {
+        "x": 276,
+        "y": 36,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/poster.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "image-001",
+      "title": "水墨山水主视觉",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782893100000,
+      "canvasData": {
+        "x": 0,
+        "y": 696
+      },
+      "devMetadata": {
+        "imageSrc": "assets/hero-chinese-landscape.jpg"
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": false,
+    "deviceType": "freeSize",
+    "projectName": "中国风海报",
+    "designLibrary": null
+  }
+}

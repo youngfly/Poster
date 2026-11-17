@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "page-poster",
+      "title": "毕加索风格海报",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1782900000000,
+      "canvasData": {
+        "x": 0,
+        "y": 0,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/poster.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "image-001",
+      "title": "立体主义肖像主视觉",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782900000000,
+      "canvasData": {
+        "x": 0,
+        "y": 751
+      },
+      "devMetadata": {
+        "imageSrc": "assets/hero-cubist-portrait.jpg"
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": true,
+    "deviceType": "freeSize",
+    "projectName": "毕加索风格海报",
+    "designLibrary": null
+  }
+}

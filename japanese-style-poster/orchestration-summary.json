@@ -1,0 +1,137 @@
+{
+  "project": {
+    "name": "日式风格海报",
+    "path": "c:\\Users\\admin\\Desktop\\poster\\japanese-style-poster",
+    "operation": "create",
+    "deviceType": "freeSize",
+    "language": "zh-CN",
+    "dashboardMode": false,
+    "replicationMode": null,
+    "sourceUrl": null,
+    "visualSpecExcerpt": null,
+    "styleDefinitionBrief": "日式侘寂美学: 温暖米色基底、大地棕色系、宋体衬线字体、大量留白、自然纹理感、竖排文字排版",
+    "designRead": "poster / art-appreciation / warm organic zen / low density / avoid neon, modern gradients, geometric abstraction",
+    "designDials": {
+      "layoutVariance": 4,
+      "motionIntensity": 1,
+      "visualDensity": 1
+    },
+    "styleContinuityAnchors": {
+      "colorSystem": {
+        "primaryColorRole": "warm earth brown #8B7355 for accents and key elements",
+        "brandHuePolicy": "single warm earth hue palette; no secondary/accent",
+        "stateColors": "minimal usage"
+      },
+      "shapeSystem": "sharp/minimal radius (2-4px), clean edges",
+      "typographySystem": "Noto Serif SC display, Noto Sans SC body, vertical writing mode for titles",
+      "spacingSystem": "generous whitespace, asymmetric balance",
+      "componentLanguage": "minimal, decorative borders, subtle textures",
+      "surfaceAndDepth": "border-first, no shadows on static elements",
+      "imageryAndIconography": "nature-inspired, organic, minimal",
+      "interactionTone": "subtle, contemplative"
+    },
+    "specsConstraints": null,
+    "sharedProjectShellContract": {
+      "navigationShell": "poster has no nav shell",
+      "primaryColorSystem": "single warm earth hue #8B7355",
+      "typographySystem": "Noto Serif SC for display/titles, Noto Sans SC for body text, vertical writing for hero title",
+      "radiusScale": "restrained: 2px/4px/8px only",
+      "surfaceDepthModel": "border-first, minimal shadow alpha 0.04-0.05",
+      "ctaStyle": "poster format, no traditional CTA buttons",
+      "alignmentRules": "asymmetric, generous whitespace, vertical rhythm"
+    },
+    "generationTree": {
+      "root": {
+        "nodeId": "gen-page-poster",
+        "kind": "page-leaf",
+        "pageIds": ["page-poster"],
+        "output": "pages/poster.html",
+        "sharedRegions": [],
+        "privateRegions": ["full poster composition"],
+        "mutableSlots": [],
+        "status": "planned",
+        "children": []
+      }
+    }
+  },
+  "designSource": {
+    "operatingMode": "free-explore",
+    "libraryIdentity": {
+      "name": null,
+      "id": null,
+      "version": null,
+      "scope": null,
+      "path": null,
+      "versionSource": null
+    },
+    "libraryPath": null,
+    "cssFilePath": "c:\\Users\\admin\\Desktop\\poster\\japanese-style-poster\\colors_and_type.css",
+    "brandPrefix": "",
+    "themeMode": "light",
+    "designDecisionSummary": "日式侘寂美学: 温暖米色背景、大地棕色系主色、宋体衬线字体、大量留白、竖排文字、自然质感",
+    "componentContractKind": "undefined",
+    "forbiddenInventedComponents": [],
+    "allowedComponents": [],
+    "styleConstraints": {
+      "radiusMax": 8,
+      "spacingBase": 1,
+      "fontSizeBody": 16,
+      "fontSizeMin": 12,
+      "controlHeightDefault": 36,
+      "controlHeightLarge": 44,
+      "staticShadowAlphaMax": 0.05
+    },
+    "productContext": {
+      "kitType": "poster",
+      "productType": "artistic poster"
+    },
+    "actualTokenNameReference": []
+  },
+  "pages": [
+    {
+      "nodeId": "page-poster",
+      "slug": "poster",
+      "title": "日式风格海报",
+      "htmlSrc": "pages/poster.html",
+      "pageIndex": 1,
+      "stateGroupId": null,
+      "stateRole": null,
+      "baseStatePageId": null,
+      "sharedShellContract": [],
+      "mutableRegions": [],
+      "derivedFromHtmlSrc": null,
+      "derivationType": "original",
+      "sourcePageId": null,
+      "sourceHtmlSrc": null,
+      "pageType": "showcase",
+      "businessScenario": "日式艺术风格海报展示",
+      "visualNorthStar": "侘寂之美: 大量留白、竖排标题、自然色系、装饰性分隔线",
+      "compositionPattern": "zen-asymmetric: off-center focal point with generous negative space, vertical text anchor, horizontal rules as compositional dividers",
+      "continuityAnchors": ["warm earth palette", "serif typography"],
+      "libraryRestraintMode": false,
+      "uiKitPath": null,
+      "componentPlan": [],
+      "imagePlan": [
+        {
+          "role": "critical-hero",
+          "sectionType": "hero",
+          "targetFilename": "hero-zen-garden.jpg",
+          "status": "planned"
+        }
+      ],
+      "chartsRequired": false,
+      "miniProgramStyle": false
+    }
+  ],
+  "assets": [
+    {
+      "filename": "hero-zen-garden.jpg",
+      "role": "critical-hero",
+      "sectionType": "hero",
+      "owningPage": "page-poster",
+      "status": "planned"
+    }
+  ],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}

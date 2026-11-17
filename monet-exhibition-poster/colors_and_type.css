@@ -1,0 +1,151 @@
+/* ============================================
+   Monet Exhibition Poster — Brand CSS
+   印象派: 柔和水彩色调、睡莲蓝紫、花园光影
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #5B7FA5;
+  --color-primary-light: #7A9DBF;
+  --color-primary-lighter: #A3C1D9;
+  --color-primary-lightest: #D0E2EF;
+  --color-primary-dark: #3E5F80;
+  --color-primary-darker: #2A4258;
+  --color-primary-darkest: #182B3A;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #7AAF7A;
+  --state-warning: #C49A5A;
+  --state-error: #A85D5D;
+  --state-info: #5A7FA5;
+
+  /* ── Surface Palette (Soft Gallery White) ── */
+  --color-bg-main: #F8F6F2;
+  --color-bg-secondary: #F2EFE8;
+  --color-bg-tertiary: #EBE7DF;
+  --color-bg-elevated: #FBFAF7;
+  --color-bg-overlay: rgba(24, 43, 58, 0.5);
+
+  /* ── Palette: Water Lily Tones ── */
+  --color-lily: #7B9BB5;
+  --color-lily-green: #8BAF8B;
+  --color-lily-pink: #C4A0A8;
+  --color-lily-violet: #9B8BB5;
+  --color-willow: #6B8B5A;
+
+  /* ── Gold Frame Accent ── */
+  --color-gold: #B89E6B;
+  --color-gold-light: #D0BC8A;
+  --color-gold-lighter: #E5D9B8;
+
+  /* ── Text Palette ── */
+  --color-text-primary: #2A2A28;
+  --color-text-secondary: #4A4A45;
+  --color-text-tertiary: #7A7A72;
+  --color-text-inverse: #F8F6F2;
+  --color-text-link: #3E5F80;
+
+  /* ── Border Palette ── */
+  --color-border: #D4CFC5;
+  --color-border-subtle: #E5E1D9;
+  --color-border-strong: #5B7FA5;
+
+  /* ── Typography ── */
+  --font-family-display: "Playfair Display", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  --font-family-accent: "Playfair Display", "Noto Serif SC", Georgia, serif;
+  --font-family-french: "Playfair Display", Georgia, serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+  --letter-spacing-widest: 0.2em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(24, 43, 58, 0.04);
+  --shadow-md: 0 2px 8px rgba(24, 43, 58, 0.05);
+  --shadow-lg: 0 8px 24px rgba(24, 43, 58, 0.05);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-primary: #7A9DBF;
+  --color-primary-light: #5B7FA5;
+  --color-primary-lighter: #3E5F80;
+  --color-primary-lightest: #2A4258;
+  --color-primary-dark: #A3C1D9;
+  --color-primary-darker: #D0E2EF;
+  --color-primary-darkest: #EBF2F8;
+
+  --color-bg-main: #141614;
+  --color-bg-secondary: #1C1E1A;
+  --color-bg-tertiary: #24261F;
+  --color-bg-elevated: #181A16;
+  --color-bg-overlay: rgba(0, 0, 0, 0.65);
+
+  --color-text-primary: #EBE7DF;
+  --color-text-secondary: #C4C0B5;
+  --color-text-tertiary: #8A867A;
+  --color-text-inverse: #2A2A28;
+  --color-text-link: #A3C1D9;
+
+  --color-border: #3A3830;
+  --color-border-subtle: #2E2C25;
+  --color-border-strong: #7A9DBF;
+
+  --color-gold: #D0BC8A;
+  --color-gold-light: #B89E6B;
+  --color-gold-lighter: #8A7448;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}

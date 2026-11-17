@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "page-poster",
+      "title": "玛雅文化海报",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1782897000000,
+      "canvasData": {
+        "x": 0,
+        "y": 0,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/poster.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "image-001",
+      "title": "玛雅金字塔丛林主视觉",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1782897000000,
+      "canvasData": {
+        "x": 0,
+        "y": 591
+      },
+      "devMetadata": {
+        "imageSrc": "assets/hero-mayan-pyramid.jpg"
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": true,
+    "deviceType": "freeSize",
+    "projectName": "玛雅文化海报",
+    "designLibrary": null
+  }
+}

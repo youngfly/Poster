@@ -1,0 +1,108 @@
+{
+  "project": {
+    "name": "古希腊展览海报",
+    "path": "c:\\Users\\admin\\Desktop\\ancient-egypt-poster\\ancient-greece-poster",
+    "operation": "create",
+    "deviceType": "desktop",
+    "language": "zh-CN",
+    "dashboardMode": false,
+    "replicationMode": null,
+    "sourceUrl": null,
+    "visualSpecExcerpt": null,
+    "styleDefinitionBrief": "Ancient Greece exhibition poster, olympic gold + olive green + aegean blue, marble & stone background palette, Cinzel Decorative + Noto Serif, classical luxury museum aesthetic",
+    "designRead": "exhibition poster / museum visitors / classical luxury / low density / avoid neon or modern tech feel",
+    "designDials": {
+      "layoutVariance": 3,
+      "motionIntensity": 1,
+      "visualDensity": 2
+    },
+    "styleContinuityAnchors": {
+      "colorSystem": {
+        "primaryColorRole": "Olympic gold #C9A84C used for borders, accents, key text, and decorative elements",
+        "brandHuePolicy": "single brand hue (gold); olive green and terracotta used as contextual accents from cultural palette",
+        "stateColors": "not applicable for single-page poster"
+      },
+      "shapeSystem": "Sharp geometric edges with meander key patterns, no rounded corners on decorative frames",
+      "typographySystem": {
+        "titleStack": "'Cinzel Decorative', 'Cinzel', serif for display headings",
+        "bodyStack": "'Noto Serif SC', 'Noto Serif', 'Georgia', serif for body text and details"
+      },
+      "spacingSystem": null,
+      "componentLanguage": null,
+      "surfaceAndDepth": "Border-heavy, surface-layered frames inspired by Greek architectural ornament",
+      "imageryAndIconography": "Greek meander/greek key patterns, laurel wreaths, column silhouettes",
+      "interactionTone": null
+    },
+    "specsConstraints": null,
+    "sharedProjectShellContract": null,
+    "generationTree": {
+      "root": {
+        "nodeId": "gen-page-poster",
+        "kind": "page-leaf",
+        "pageIds": ["page-poster"],
+        "output": "pages/poster.html",
+        "sharedRegions": [],
+        "privateRegions": ["full poster"],
+        "mutableSlots": [],
+        "status": "planned",
+        "children": []
+      }
+    }
+  },
+  "designSource": {
+    "operatingMode": "free-explore",
+    "libraryIdentity": {
+      "name": null,
+      "id": null,
+      "version": null,
+      "scope": null,
+      "path": null,
+      "versionSource": null
+    },
+    "cssFilePath": "c:\\Users\\admin\\Desktop\\ancient-egypt-poster\\ancient-greece-poster\\colors_and_type.css",
+    "brandPrefix": "ag",
+    "themeMode": "light",
+    "designDecisionSummary": "Classical Greek palette: olympic gold primary, olive green and terracotta accents, marble white backgrounds, deep charcoal text. Cinzel Decorative display, Noto Serif body. Meander pattern borders, laurel wreath ornaments.",
+    "componentContractKind": null,
+    "forbiddenInventedComponents": [],
+    "allowedComponents": [],
+    "styleConstraints": {
+      "radiusMax": 8,
+      "spacingBase": 1,
+      "fontSizeBody": 16,
+      "fontSizeMin": 10,
+      "controlHeightDefault": 32,
+      "controlHeightLarge": 38
+    },
+    "productContext": {
+      "kitType": null,
+      "productType": "exhibition poster"
+    }
+  },
+  "pages": [
+    {
+      "nodeId": "page-poster",
+      "title": "古希腊展览海报",
+      "htmlSrc": "pages/poster.html",
+      "pageIndex": 1,
+      "pageType": "showcase",
+      "visualNorthStar": "Classical Greek museum exhibition poster with marble texture, gold meander borders, and laurel wreath ornaments",
+      "compositionPattern": "centered vertical poster layout with ornamental frame, hero image, and structured event details grid",
+      "continuityAnchors": [],
+      "componentPlan": null,
+      "imagePlan": {
+        "heroImage": {
+          "filename": "hero-greek-temple.jpg",
+          "role": "critical-hero",
+          "sectionType": "hero",
+          "status": "planned"
+        }
+      },
+      "chartsRequired": false,
+      "miniProgramStyle": false
+    }
+  ],
+  "assets": [],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}

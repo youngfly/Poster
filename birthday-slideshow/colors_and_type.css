@@ -1,0 +1,8 @@
+:root {
+  --color-bg-main: #0A0A0A;
+  --color-text-primary: #F0EBE0;
+  --color-text-secondary: #B0A898;
+  --color-text-tertiary: #6B6860;
+  --font-family-display: -apple-system, "Helvetica Neue", sans-serif;
+  --font-family-body: -apple-system, "Noto Sans SC", sans-serif;
+}

@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古希腊生日庆典</title>
+    <style id="theme-vars">
+/* ============================================
+   Monet Exhibition Poster — Brand CSS
+   印象派: 柔和水彩色调、睡莲蓝紫、花园光影
+   ============================================ */
+
+:root {
+  /* -- Color System -- */
+  --color-primary: #5B7FA5;
+  --color-primary-light: #7A9DBF;
+  --color-primary-lighter: #A3C1D9;
+  --color-primary-lightest: #D0E2EF;
+  --color-primary-dark: #3E5F80;
+  --color-primary-darker: #2A4258;
+  --color-primary-darkest: #182B3A;
+
+  /* -- Semantic / State Colors -- */
+  --state-success: #7AAF7A;
+  --state-warning: #C49A5A;
+  --state-error: #A85D5D;
+  --state-info: #5A7FA5;
+
+  /* -- Surface Palette (Soft Gallery White) -- */
+  --color-bg-main: #F8F6F2;
+  --color-bg-secondary: #F2EFE8;
+  --color-bg-tertiary: #EBE7DF;
+  --color-bg-elevated: #FBFAF7;
+  --color-bg-overlay: rgba(24, 43, 58, 0.5);
+
+  /* -- Palette: Water Lily Tones -- */
+  --color-lily: #7B9BB5;
+  --color-lily-green: #8BAF8B;
+  --color-lily-pink: #C4A0A8;
+  --color-lily-violet: #9B8BB5;
+  --color-willow: #6B8B5A;
+
+  /* -- Gold Frame Accent -- */
+  --color-gold: #B89E6B;
+  --color-gold-light: #D0BC8A;
+  --color-gold-lighter: #E5D9B8;
+
+  /* -- Text Palette -- */
+  --color-text-primary: #2A2A28;
+  --color-text-secondary: #4A4A45;
+  --color-text-tertiary: #7A7A72;
+  --color-text-inverse: #F8F6F2;
+  --color-text-link: #3E5F80;
+
+  /* -- Border Palette -- */
+  --color-border: #D4CFC5;
+  --color-border-subtle: #E5E1D9;
+  --color-border-strong: #5B7FA5;
+
+  /* -- Typography -- */
+  --font-family-display: "Playfair Display", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  --font-family-accent: "Playfair Display", "Noto Serif SC", Georgia, serif;
+  --font-family-french: "Playfair Display", Georgia, serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+  --letter-spacing-widest: 0.2em;
+
+  /* -- Spacing -- */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* -- Radius -- */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* -- Shadows -- */
+  --shadow-sm: 0 1px 2px rgba(24, 43, 58, 0.04);
+  --shadow-md: 0 2px 8px rgba(24, 43, 58, 0.05);
+  --shadow-lg: 0 8px 24px rgba(24, 43, 58, 0.05);
+
+  /* -- Transitions -- */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* -- Dark Mode -- */
+html.dark {
+  --color-primary: #7A9DBF;
+  --color-primary-light: #5B7FA5;
+  --color-primary-lighter: #3E5F80;
+  --color-primary-lightest: #2A4258;
+  --color-primary-dark: #A3C1D9;
+  --color-primary-darker: #D0E2EF;
+  --color-primary-darkest: #EBF2F8;
+
+  --color-bg-main: #141614;
+  --color-bg-secondary: #1C1E1A;
+  --color-bg-tertiary: #24261F;
+  --color-bg-elevated: #181A16;
+  --color-bg-overlay: rgba(0, 0, 0, 0.65);
+
+  --color-text-primary: #EBE7DF;
+  --color-text-secondary: #C4C0B5;
+  --color-text-tertiary: #8A867A;
+  --color-text-inverse: #2A2A28;
+  --color-text-link: #A3C1D9;
+
+  --color-border: #3A3830;
+  --color-border-subtle: #2E2C25;
+  --color-border-strong: #7A9DBF;
+
+  --color-gold: #D0BC8A;
+  --color-gold-light: #B89E6B;
+  --color-gold-lighter: #8A7448;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  
+  @layer base {
+    body { background: var(--ag-background); color: var(--ag-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+
+    <!-- Google Fonts: Cinzel + Noto Serif SC + Noto Sans SC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Greek Theme Inline Styles -->
+    <style>
+      :root {
+        --aegean-blue: #5B8FCC;
+        --aegean-deep: #3A6B9F;
+        --marble-white: #F5F7FA;
+        --marble-cream: #F0EDE6;
+        --golden-olive: #B8983A;
+        --golden-light: #D4B96A;
+        --olive-green: #6B7F3B;
+        --terracotta: #C4724E;
+        --greek-dark: #2C2A25;
+      }
+
+      /* ==========================================
+         MOBILE-FIRST VERTICAL 18:9 CONTAINER
+         ========================================== */
+      html, body { margin: 0; padding: 0; min-height: 100vw; max-width: 100vw; }
+      @media (min-width: 563px) {
+        body { max-width: 562px; margin: 0 auto; min-height: 1005px; box-shadow: 0 0 40px rgba(0,0,0,0.3); }
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: 'Noto Serif SC', serif;
+        background-color: var(--marble-white);
+        color: var(--greek-dark);
+        overflow-x: hidden;
+      }
+
+      /* ==========================================
+         GREEK KEY (MEANDER) BORDER PATTERN
+         ========================================== */
+      .greek-key-border-top,
+      .greek-key-border-bottom {
+        width: 100%;
+        height: 20px;
+        background-color: var(--aegean-blue);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .greek-key-border-top::after,
+      .greek-key-border-bottom::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:
+          linear-gradient(to right, var(--marble-white) 0px, var(--marble-white) 3px, transparent 3px, transparent 6px),
+          linear-gradient(to bottom, var(--marble-white) 0px, var(--marble-white) 3px, transparent 3px, transparent 6px),
+          linear-gradient(to left, var(--marble-white) 0px, var(--marble-white) 3px, transparent 3px, transparent 6px),
+          linear-gradient(to top, var(--marble-white) 0px, var(--marble-white) 3px, transparent 3px, transparent 6px);
+        background-size: 24px 20px;
+        background-position:
+          0px 3px,
+          3px 0px,
+          6px 3px,
+          3px 6px;
+        background-repeat: repeat-x;
+      }
+
+      /* Thinner meander strip for mobile */
+      .meander-strip {
+        width: 100%;
+        height: 24px;
+        background-color: var(--aegean-blue);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'%3E%3Cpath d='M0 6h6V0h6v6h6v6h-6v6h-6v-6H0V6zm18 0h6V0h6v6h6v6h-6v6h-6v-6h-6V6z' fill='%23F5F7FA' fill-opacity='0.85'/%3E%3C/svg%3E");
+        background-repeat: repeat-x;
+        background-size: 36px 24px;
+      }
+
+      /* ==========================================
+         PEDIMENT SHAPE (Greek Temple Top)
+         ========================================== */
+      .pediment-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 28px;
+        margin-bottom: -2px;
+      }
+
+      .pediment {
+        width: 460px;
+        max-width: 90%;
+        height: 90px;
+        position: relative;
+        clip-path: polygon(50% 0%, 5% 85%, 95% 85%);
+        background: linear-gradient(180deg, var(--aegean-deep) 0%, var(--aegean-blue) 100%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 10px;
+      }
+
+      .pediment-title {
+        font-family: 'Cinzel', serif;
+        color: var(--golden-olive);
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+
+      /* ==========================================
+         HERO SECTION — 350px for mobile
+         ========================================== */
+      .hero-section {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        background: linear-gradient(135deg, var(--aegean-deep), var(--aegean-blue), #7BA8D4);
+      }
+
+      .hero-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(58, 107, 159, 0.3) 0%,
+          rgba(91, 143, 204, 0.5) 50%,
+          rgba(245, 247, 250, 0.9) 100%
+        );
+      }
+
+      .hero-content {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5rem;
+      }
+
+      .hero-title {
+        font-family: 'Cinzel', serif;
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--aegean-blue);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        line-height: 1.15;
+        margin-bottom: 0.4rem;
+        animation: fadeInUp 1s ease-out both;
+      }
+
+      .hero-subtitle {
+        font-family: 'Cinzel', serif;
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: var(--aegean-deep);
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      /* Light rays effect */
+      .light-rays {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .light-ray {
+        position: absolute;
+        top: -20%;
+        width: 2px;
+        height: 140%;
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 100%);
+        transform-origin: top center;
+        animation: lightSweep 4s ease-in-out infinite;
+      }
+
+      .light-ray:nth-child(1) { left: 15%; transform: rotate(-15deg); animation-delay: 0s; }
+      .light-ray:nth-child(2) { left: 35%; transform: rotate(-5deg); animation-delay: 1.3s; }
+      .light-ray:nth-child(3) { left: 55%; transform: rotate(5deg); animation-delay: 2.6s; }
+      .light-ray:nth-child(4) { left: 75%; transform: rotate(15deg); animation-delay: 0.8s; }
+
+      /* ==========================================
+         OLIVE BRANCH DIVIDER
+         ========================================== */
+      .olive-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 1rem 0;
+        width: 100%;
+      }
+
+      .olive-branch-line {
+        flex: 1;
+        max-width: 120px;
+        height: 1.5px;
+        background: linear-gradient(90deg, transparent, var(--golden-olive), transparent);
+        position: relative;
+      }
+
+      .olive-branch-center {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .olive-leaf {
+        width: 10px;
+        height: 6px;
+        background: var(--olive-green);
+        border-radius: 0 50% 50% 0;
+        transform: rotate(-30deg);
+      }
+
+      .olive-leaf.right {
+        border-radius: 50% 0 0 50%;
+        transform: rotate(30deg) scaleX(-1);
+      }
+
+      .olive-berry {
+        width: 5px;
+        height: 5px;
+        background: var(--olive-green);
+        border-radius: 50%;
+        opacity: 0.7;
+      }
+
+      /* ==========================================
+         BIRTHDAY MESSAGE — px-6/px-8 padding
+         ========================================== */
+      .message-section {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1.25rem 1.5rem 1.5rem;
+        text-align: center;
+      }
+
+      @media (min-width: 563px) {
+        .message-section {
+          padding: 1.25rem 2rem 1.5rem;
+        }
+      }
+
+      .birthday-message {
+        font-family: 'Noto Serif SC', serif;
+        font-size: 1rem;
+        line-height: 2;
+        color: var(--greek-dark);
+        letter-spacing: 0.05em;
+      }
+
+      /* ==========================================
+         THREE GREEK SYMBOLS
+         ========================================== */
+      .symbols-section {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 36px;
+        padding: 1.5rem 1.5rem;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .symbol-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .symbol-label {
+        font-family: 'Cinzel', serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--aegean-blue);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      /* --- COLUMN SHAPE --- */
+      .greek-column {
+        width: 30px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: columnRise 1.5s ease-out both;
+      }
+
+      .column-capital {
+        width: 44px;
+        height: 10px;
+        background: var(--aegean-blue);
+        border-radius: 2px 2px 0 0;
+        position: relative;
+      }
+
+      .column-capital::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 38px;
+        height: 5px;
+        background: var(--aegean-blue);
+      }
+
+      .column-shaft {
+        width: 24px;
+        flex: 1;
+        background: linear-gradient(90deg, var(--aegean-deep), var(--aegean-blue), var(--aegean-deep));
+        border-radius: 0 0 2px 2px;
+        position: relative;
+      }
+
+      .column-shaft::before,
+      .column-shaft::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 28px;
+        height: 3px;
+        background: var(--aegean-deep);
+        border-radius: 50%;
+        box-shadow: 0 1px 0 rgba(255,255,255,0.3);
+      }
+
+      .column-shaft::before { top: 16px; }
+      .column-shaft::after { bottom: 16px; }
+
+      .column-base {
+        width: 44px;
+        height: 6px;
+        background: var(--aegean-blue);
+        border-radius: 0 0 2px 2px;
+      }
+
+      /* --- LAUREL WREATH --- */
+      .laurel-wreath {
+        width: 72px;
+        height: 88px;
+        position: relative;
+        animation: laurelSpin 20s linear infinite;
+      }
+
+      .laurel-left,
+      .laurel-right {
+        position: absolute;
+        top: 8px;
+        width: 32px;
+        height: 72px;
+      }
+
+      .laurel-left { left: 6px; }
+      .laurel-right { right: 6px; transform: scaleX(-1); }
+
+      .laurel-leaf-pair {
+        position: absolute;
+        display: flex;
+        gap: 2px;
+      }
+
+      .laurel-leaf-sm {
+        width: 7px;
+        height: 4px;
+        background: var(--olive-green);
+        border-radius: 0 60% 60% 0;
+        transform: rotate(-20deg);
+      }
+
+      .laurel-leaf-sm.inner {
+        transform: rotate(10deg);
+        opacity: 0.7;
+        background: var(--golden-olive);
+      }
+
+      .laurel-left .laurel-leaf-pair:nth-child(1) { top: 0; left: 0; transform: rotate(-10deg); }
+      .laurel-left .laurel-leaf-pair:nth-child(2) { top: 11px; left: -3px; transform: rotate(-5deg); }
+      .laurel-left .laurel-leaf-pair:nth-child(3) { top: 22px; left: -6px; transform: rotate(0deg); }
+      .laurel-left .laurel-leaf-pair:nth-child(4) { top: 33px; left: -9px; transform: rotate(5deg); }
+      .laurel-left .laurel-leaf-pair:nth-child(5) { top: 44px; left: -11px; transform: rotate(8deg); }
+      .laurel-left .laurel-leaf-pair:nth-child(6) { top: 54px; left: -9px; transform: rotate(5deg); }
+      .laurel-left .laurel-leaf-pair:nth-child(7) { top: 62px; left: -5px; transform: rotate(-5deg); }
+
+      /* --- AMPHORA SHAPE --- */
+      .amphora {
+        width: 48px;
+        height: 96px;
+        position: relative;
+        animation: fadeInUp 1.5s ease-out 0.5s both;
+      }
+
+      .amphora-rim {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 22px;
+        height: 6px;
+        background: var(--terracotta);
+        border-radius: 3px 3px 0 0;
+      }
+
+      .amphora-neck {
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 16px;
+        height: 13px;
+        background: linear-gradient(90deg, #A05535, var(--terracotta), #A05535);
+        border-radius: 0 0 2px 2px;
+      }
+
+      .amphora-body {
+        position: absolute;
+        top: 19px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 42px;
+        height: 60px;
+        background: linear-gradient(90deg, #A05535, var(--terracotta), #D4896A, var(--terracotta), #A05535);
+        border-radius: 30% 30% 40% 40%;
+      }
+
+      .amphora-handle {
+        position: absolute;
+        width: 6px;
+        height: 20px;
+        border: 2.5px solid var(--terracotta);
+        border-bottom: none;
+        border-radius: 6px 6px 0 0;
+        background: transparent;
+      }
+
+      .amphora-handle.left { top: 13px; left: 3px; }
+      .amphora-handle.right { top: 13px; right: 3px; }
+
+      .amphora-stripe {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 38px;
+        height: 3px;
+        background: var(--golden-olive);
+        border-radius: 2px;
+        opacity: 0.6;
+      }
+
+      .amphora-stripe.top-stripe { top: 40px; }
+      .amphora-stripe.bottom-stripe { top: 57px; }
+
+      /* ==========================================
+         FOOTER
+         ========================================== */
+      .footer-section {
+        text-align: center;
+        padding: 1rem 1rem 1.5rem;
+      }
+
+      .footer-text {
+        font-family: 'Cinzel', serif;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--aegean-blue);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        padding: 1rem 0;
+      }
+
+      /* ==========================================
+         ANIMATIONS
+         ========================================== */
+      @keyframes columnRise {
+        from { transform: scaleY(0); transform-origin: bottom; }
+        to { transform: scaleY(1); transform-origin: bottom; }
+      }
+
+      @keyframes lightSweep {
+        0% { opacity: 0.3; transform: translateX(-30px) rotate(var(--ray-rotate, 0deg)); }
+        50% { opacity: 0.8; transform: translateX(0) rotate(var(--ray-rotate, 0deg)); }
+        100% { opacity: 0.3; transform: translateX(30px) rotate(var(--ray-rotate, 0deg)); }
+      }
+
+      @keyframes laurelSpin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Fade in sections */
+      .fade-section {
+        animation: fadeInUp 1s ease-out both;
+      }
+
+      .fade-delay-1 { animation-delay: 0.2s; }
+      .fade-delay-2 { animation-delay: 0.4s; }
+      .fade-delay-3 { animation-delay: 0.6s; }
+      .fade-delay-4 { animation-delay: 0.8s; }
+      .fade-delay-5 { animation-delay: 1.0s; }
+
+      /* ==========================================
+         MARBLE TEXTURE BACKGROUND
+         ========================================== */
+      .marble-bg {
+        background:
+          radial-gradient(ellipse at 20% 50%, rgba(91,143,204,0.04) 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 20%, rgba(184,152,58,0.04) 0%, transparent 50%),
+          radial-gradient(ellipse at 50% 80%, rgba(107,127,59,0.03) 0%, transparent 50%),
+          linear-gradient(180deg, var(--marble-white) 0%, var(--marble-cream) 100%);
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main>
+
+      <!-- ====== GREEK KEY TOP BORDER ====== -->
+      <div class="meander-strip fade-section" aria-hidden="true"></div>
+
+      <!-- ====== PEDIMENT ====== -->
+      <div class="pediment-wrapper marble-bg">
+        <div class="pediment fade-section fade-delay-1">
+          <span class="pediment-title">生日庆典</span>
+        </div>
+      </div>
+
+      <!-- ====== HERO SECTION ====== -->
+      <section class="hero-section" role="banner">
+        <!-- Background Image -->
+        <img
+          src="../assets/birthday-greece-v.jpg"
+          alt="古希腊生日庆典背景"
+          class="hero-bg"
+          loading="eager"
+        />
+
+        <!-- Blue Gradient Overlay -->
+        <div class="hero-overlay"></div>
+
+        <!-- Light Rays -->
+        <div class="light-rays" aria-hidden="true">
+          <div class="light-ray"></div>
+          <div class="light-ray"></div>
+          <div class="light-ray"></div>
+          <div class="light-ray"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <h1 class="hero-title">生日庆典</h1>
+          <p class="hero-subtitle">Greek Celebration</p>
+        </div>
+      </section>
+
+      <!-- ====== GREEK KEY BORDER (below hero) ====== -->
+      <div class="meander-strip fade-section fade-delay-2" aria-hidden="true"></div>
+
+      <!-- ====== OLIVE BRANCH DIVIDER ====== -->
+      <div class="olive-divider fade-section fade-delay-2">
+        <div class="olive-branch-line"></div>
+        <div class="olive-branch-center">
+          <span class="olive-leaf"></span>
+          <span class="olive-berry"></span>
+          <span class="olive-leaf right"></span>
+        </div>
+        <div class="olive-branch-line"></div>
+      </div>
+
+      <!-- ====== BIRTHDAY MESSAGE ====== -->
+      <section class="message-section fade-section fade-delay-3" aria-label="生日祝福">
+        <p class="birthday-message">
+          在奥林匹斯之光下，<br/>
+          缪斯女神为你歌唱。<br/>
+          愿智慧如雅典娜，勇气如阿瑞斯，<br/>
+          岁月如美酒般醇香。
+        </p>
+      </section>
+
+      <!-- ====== OLIVE BRANCH DIVIDER ====== -->
+      <div class="olive-divider fade-section fade-delay-3">
+        <div class="olive-branch-line"></div>
+        <div class="olive-branch-center">
+          <span class="olive-leaf"></span>
+          <span class="olive-berry"></span>
+          <span class="olive-leaf right"></span>
+        </div>
+        <div class="olive-branch-line"></div>
+      </div>
+
+      <!-- ====== THREE GREEK SYMBOLS ====== -->
+      <section class="symbols-section fade-section fade-delay-4" aria-label="古希腊象征">
+        <!-- Column -->
+        <div class="symbol-card">
+          <div class="greek-column">
+            <div class="column-capital"></div>
+            <div class="column-shaft"></div>
+            <div class="column-base"></div>
+          </div>
+          <span class="symbol-label">Column</span>
+        </div>
+
+        <!-- Laurel Wreath -->
+        <div class="symbol-card">
+          <div class="laurel-wreath">
+            <div class="laurel-left">
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+            </div>
+            <div class="laurel-right">
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+              <div class="laurel-leaf-pair"><span class="laurel-leaf-sm"></span><span class="laurel-leaf-sm inner"></span></div>
+            </div>
+          </div>
+          <span class="symbol-label">Laurel</span>
+        </div>
+
+        <!-- Amphora -->
+        <div class="symbol-card">
+          <div class="amphora">
+            <div class="amphora-rim"></div>
+            <div class="amphora-neck"></div>
+            <div class="amphora-body">
+              <div class="amphora-stripe top-stripe"></div>
+              <div class="amphora-stripe bottom-stripe"></div>
+            </div>
+            <div class="amphora-handle left"></div>
+            <div class="amphora-handle right"></div>
+          </div>
+          <span class="symbol-label">Amphora</span>
+        </div>
+      </section>
+
+      <!-- ====== OLIVE DIVIDER ====== -->
+      <div class="olive-divider fade-section fade-delay-5">
+        <div class="olive-branch-line"></div>
+        <div class="olive-branch-center">
+          <span class="olive-leaf"></span>
+          <span class="olive-berry"></span>
+          <span class="olive-leaf right"></span>
+        </div>
+        <div class="olive-branch-line"></div>
+      </div>
+
+      <!-- ====== FOOTER ====== -->
+      <footer class="footer-section fade-section fade-delay-5">
+        <p class="footer-text">奥林匹克</p>
+      </footer>
+
+      <!-- ====== GREEK KEY BOTTOM BORDER ====== -->
+      <div class="meander-strip" aria-hidden="true"></div>
+
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

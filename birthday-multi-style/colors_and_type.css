@@ -1,0 +1,150 @@
+/* ============================================
+   Chinese Birthday Poster — Brand CSS
+   东方意境: 朱红、墨色、宣纸、水墨韵味
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #B83B3B;
+  --color-primary-light: #D45A5A;
+  --color-primary-lighter: #E89595;
+  --color-primary-lightest: #F5D5D5;
+  --color-primary-dark: #8B2D2D;
+  --color-primary-darker: #5C1E1E;
+  --color-primary-darkest: #2D1010;
+
+  /* ── Ink / Dark Palette ── */
+  --color-ink: #1A1A1A;
+  --color-ink-light: #3D3D3D;
+  --color-ink-lighter: #6B6B6B;
+  --color-ink-lightest: #9E9E9E;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #5B8C5A;
+  --state-warning: #C49A3A;
+  --state-error: #A85D4A;
+  --state-info: #5A7F9F;
+
+  /* ── Surface Palette (Xuan Paper Tones) ── */
+  --color-bg-main: #F7F3EB;
+  --color-bg-secondary: #F0EBE0;
+  --color-bg-tertiary: #E8E1D3;
+  --color-bg-elevated: #FAF8F4;
+  --color-bg-overlay: rgba(26, 16, 16, 0.6);
+
+  /* ── Gold Accent ── */
+  --color-gold: #C49A3A;
+  --color-gold-light: #D4AD5E;
+  --color-gold-lighter: #E8CFA0;
+
+  /* ── Text Palette ── */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #3D3D3D;
+  --color-text-tertiary: #6B6B6B;
+  --color-text-inverse: #F7F3EB;
+  --color-text-link: #8B2D2D;
+
+  /* ── Border Palette ── */
+  --color-border: #D4C9B0;
+  --color-border-subtle: #E2D9CB;
+  --color-border-strong: #B83B3B;
+
+  /* ── Typography ── */
+  --font-family-display: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", "Songti SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-family-accent: "Noto Serif SC", "STKaiti", "KaiTi", Georgia, serif;
+  --font-family-brush: "Noto Serif SC", "STKaiti", "KaiTi", "Ma Shan Zheng", cursive;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-wider: 0.15em;
+  --letter-spacing-widest: 0.25em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --color-space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(26, 26, 26, 0.04);
+  --shadow-md: 0 2px 8px rgba(26, 26, 26, 0.05);
+  --shadow-lg: 0 8px 24px rgba(26, 26, 26, 0.05);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-primary: #D45A5A;
+  --color-primary-light: #B83B3B;
+  --color-primary-lighter: #8B2D2D;
+  --color-primary-lightest: #5C1E1E;
+  --color-primary-dark: #E89595;
+  --color-primary-darker: #F5D5D5;
+  --color-primary-darkest: #FAECEC;
+
+  --color-bg-main: #141210;
+  --color-bg-secondary: #1C1916;
+  --color-bg-tertiary: #252118;
+  --color-bg-elevated: #181614;
+  --color-bg-overlay: rgba(0, 0, 0, 0.7);
+
+  --color-text-primary: #F0EBE0;
+  --color-text-secondary: #D4C9B0;
+  --color-text-tertiary: #9E9E9E;
+  --color-text-inverse: #1A1A1A;
+  --color-text-link: #D45A5A;
+
+  --color-border: #4A3D30;
+  --color-border-subtle: #3D3228;
+  --color-border-strong: #D45A5A;
+
+  --color-gold: #D4AD5E;
+  --color-gold-light: #C49A3A;
+  --color-gold-lighter: #A07B28;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}

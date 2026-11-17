@@ -1,0 +1,130 @@
+{
+  "project": {
+    "name": "毕加索风格海报",
+    "path": "c:\\Users\\admin\\Desktop\\poster\\picasso-style-poster",
+    "operation": "create",
+    "deviceType": "freeSize",
+    "language": "zh-CN",
+    "dashboardMode": false,
+    "replicationMode": null,
+    "sourceUrl": null,
+    "visualSpecExcerpt": null,
+    "styleDefinitionBrief": "毕加索立体主义: 大胆色块拼接、几何碎片构图、蓝粉对比色、零圆角硬朗边角、原始张力排版、 Ochre 画布底色",
+    "designRead": "poster / art-appreciation / bold cubist energy / medium-low density / avoid soft gradients, rounded corners, minimalism, pastel watercolor",
+    "designDials": {
+      "layoutVariance": 5,
+      "motionIntensity": 1,
+      "visualDensity": 2
+    },
+    "styleContinuityAnchors": {
+      "colorSystem": {
+        "primaryColorRole": "picasso blue #2E5BA0 with rose #C46878 and ochre #C4953A as bold accents",
+        "brandHuePolicy": "bold multi-hue palette: blue, rose, ochre, terra, sage — no single secondary accent",
+        "stateColors": "minimal usage"
+      },
+      "shapeSystem": "zero radius — all sharp corners, geometric fragments, angular shapes",
+      "typographySystem": "Playfair Display for dramatic titles, bold/heavy weights, tight leading, negative tracking",
+      "spacingSystem": "asymmetric collage layout, overlapping elements, dynamic white space",
+      "componentLanguage": "geometric blocks, color fields, angular dividers, collage layering",
+      "surfaceAndDepth": "flat color blocks, no shadows on static, hard edges",
+      "imageryAndIconography": "cubist portraits, abstract guitar forms, bold shapes",
+      "interactionTone": "static, dramatic"
+    },
+    "specsConstraints": null,
+    "sharedProjectShellContract": {
+      "navigationShell": "poster has no nav shell",
+      "primaryColorSystem": "picasso blue #2E5BA0 primary with rose/ochre bold accents",
+      "typographySystem": "Playfair Display dramatic titles, bold weights, tight leading, Noto Sans SC body",
+      "radiusScale": "zero radius — all sharp 0px corners",
+      "surfaceDepthModel": "flat color blocks, no shadows",
+      "ctaStyle": "poster format, exhibition emphasis",
+      "alignmentRules": "asymmetric collage layout, overlapping blocks"
+    },
+    "generationTree": {
+      "root": {
+        "nodeId": "gen-page-poster",
+        "kind": "page-leaf",
+        "pageIds": ["page-poster"],
+        "output": "pages/poster.html",
+        "sharedRegions": [],
+        "privateRegions": ["full poster composition"],
+        "mutableSlots": [],
+        "status": "planned",
+        "children": []
+      }
+    }
+  },
+  "designSource": {
+    "operatingMode": "free-explore",
+    "libraryIdentity": null,
+    "libraryPath": null,
+    "cssFilePath": "c:\\Users\\Desktop\\poster\\picasso-style-poster\\colors_and_type.css",
+    "brandPrefix": "",
+    "themeMode": "light",
+    "designDecisionSummary": "毕加索立体主义: 零圆角硬朗几何、蓝粉赭对比色块、拼贴式不对称构图、画布底色",
+    "componentContractKind": "undefined",
+    "forbiddenInventedComponents": [],
+    "allowedComponents": [],
+    "styleConstraints": {
+      "radiusMax": 0,
+      "spacingBase": 1,
+      "fontSizeBody": 16,
+      "fontSizeMin": 12,
+      "controlHeightDefault": 36,
+      "controlHeightLarge": 44,
+      "staticShadowAlphaMax": 0.05
+    },
+    "productContext": {
+      "kitType": "poster",
+      "productType": "artistic cubist poster"
+    },
+    "actualTokenNameReference": []
+  },
+  "pages": [
+    {
+      "nodeId": "page-poster",
+      "slug": "poster",
+      "title": "毕加索风格海报",
+      "htmlSrc": "pages/poster.html",
+      "pageIndex": 1,
+      "stateGroupId": null,
+      "stateRole": null,
+      "baseStatePageId": null,
+      "sharedShellContract": [],
+      "mutableRegions": [],
+      "derivedFromHtmlSrc": null,
+      "derivationType": "original",
+      "sourcePageId": null,
+      "sourceHtmlSrc": null,
+      "pageType": "showcase",
+      "businessScenario": "毕加索立体主义艺术风格宣传海报",
+      "visualNorthStar": "立体主义碎片: 零圆角几何色块、蓝粉赭对比色、拼贴式不对称构图、粗体戏剧性排版",
+      "compositionPattern": "cubist-collage: overlapping geometric color blocks, asymmetric fragmented layout, bold angular dividers, hard-edge color fields",
+      "continuityAnchors": ["zero-radius geometric language", "blue-rose-ochre palette"],
+      "libraryRestraintMode": false,
+      "uiKitPath": null,
+      "componentPlan": [],
+      "imagePlan": [
+        {
+          "role": "critical-hero",
+          "sectionType": "hero",
+          "targetFilename": "hero-cubist-portrait.jpg",
+          "status": "planned"
+        }
+      ],
+      "chartsRequired": false,
+      "miniProgramStyle": false
+    }
+  ],
+  "assets": [
+    {
+      "filename": "hero-cubist-portrait.jpg",
+      "role": "critical-hero",
+      "sectionType": "hero",
+      "owningPage": "page-poster",
+      "status": "planned"
+    }
+  ],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}

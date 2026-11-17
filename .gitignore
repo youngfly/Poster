@@ -1,0 +1,11 @@
+# 依赖
+node_modules/
+
+# 智能体 / 工具缓存（非交付物）
+.uploads/
+.workbuddy/
+
+# 系统 / 编辑器临时文件
+.DS_Store
+Thumbs.db
+*.tmp

@@ -1,0 +1,137 @@
+{
+  "project": {
+    "name": "中国风海报",
+    "path": "c:\\Users\\admin\\Desktop\\poster\\chinese-style-poster",
+    "operation": "create",
+    "deviceType": "freeSize",
+    "language": "zh-CN",
+    "dashboardMode": false,
+    "replicationMode": null,
+    "sourceUrl": null,
+    "visualSpecExcerpt": null,
+    "styleDefinitionBrief": "中国东方意境: 朱红印章色系、墨色层次、宣纸质感底色、宋体/楷体字体、竖排文字、水墨留白",
+    "designRead": "poster / cultural-appreciation / bold ink-wash elegance / low density / avoid neon gradients, modern geometric abstraction, cute/kawaii",
+    "designDials": {
+      "layoutVariance": 4,
+      "motionIntensity": 1,
+      "visualDensity": 1
+    },
+    "styleContinuityAnchors": {
+      "colorSystem": {
+        "primaryColorRole": "朱红 #B83B3B for seals and accent elements",
+        "brandHuePolicy": "single primary hue (vermilion) with ink dark palette",
+        "stateColors": "minimal usage"
+      },
+      "shapeSystem": "sharp edges, minimal radius, rectangular stamps",
+      "typographySystem": "Noto Serif SC for display, Noto Sans SC for body, vertical writing for hero, KaiTi for poetic sections",
+      "spacingSystem": "generous whitespace, balanced asymmetric composition",
+      "componentLanguage": "decorative borders, stamp elements, ink-wash effects",
+      "surfaceAndDepth": "flat/layered paper, no shadows on static elements",
+      "imageryAndIconography": "traditional Chinese landscapes, ink-wash, nature motifs",
+      "interactionTone": "static, contemplative"
+    },
+    "specsConstraints": null,
+    "sharedProjectShellContract": {
+      "navigationShell": "poster has no nav shell",
+      "primaryColorSystem": "single primary vermilion #B83B3B with ink palette",
+      "typographySystem": "Noto Serif SC display, Noto Sans SC body, vertical writing for hero title, KaiTi for accent text",
+      "radiusScale": "restrained: 2px/4px/8px only",
+      "surfaceDepthModel": "border-first, minimal shadow alpha 0.04-0.05",
+      "ctaStyle": "poster format, no traditional CTA buttons",
+      "alignmentRules": "asymmetric, generous whitespace, vertical rhythm"
+    },
+    "generationTree": {
+      "root": {
+        "nodeId": "gen-page-poster",
+        "kind": "page-leaf",
+        "pageIds": ["page-poster"],
+        "output": "pages/poster.html",
+        "sharedRegions": [],
+        "privateRegions": ["full poster composition"],
+        "mutableSlots": [],
+        "status": "planned",
+        "children": []
+      }
+    }
+  },
+  "designSource": {
+    "operatingMode": "free-explore",
+    "libraryIdentity": {
+      "name": null,
+      "id": null,
+      "version": null,
+      "scope": null,
+      "path": null,
+      "versionSource": null
+    },
+    "libraryPath": null,
+    "cssFilePath": "c:\\Users\\admin\\Desktop\\poster\\chinese-style-poster\\colors_and_type.css",
+    "brandPrefix": "",
+    "themeMode": "light",
+    "designDecisionSummary": "中国东方意境: 朱红印章色、墨色层次、宣纸质感、宋体楷体、竖排文字、水墨留白",
+    "componentContractKind": "undefined",
+    "forbiddenInventedComponents": [],
+    "allowedComponents": [],
+    "styleConstraints": {
+      "radiusMax": 8,
+      "spacingBase": 1,
+      "fontSizeBody": 16,
+      "fontSizeMin": 12,
+      "controlHeightDefault": 36,
+      "controlHeightLarge": 44,
+      "staticShadowAlphaMax": 0.05
+    },
+    "productContext": {
+      "kitType": "poster",
+      "productType": "artistic poster"
+    },
+    "actualTokenNameReference": []
+  },
+  "pages": [
+    {
+      "nodeId": "page-poster",
+      "slug": "poster",
+      "title": "中国风海报",
+      "htmlSrc": "pages/poster.html",
+      "pageIndex": 1,
+      "stateGroupId": null,
+      "stateRole": null,
+      "baseStatePageId": null,
+      "sharedShellContract": [],
+      "mutableRegions": [],
+      "derivedFromHtmlSrc": null,
+      "derivationType": "original",
+      "sourcePageId": null,
+      "sourceHtmlSrc": null,
+      "pageType": "showcase",
+      "businessScenario": "中国传统文化艺术海报",
+      "visualNorthStar": "东方意境: 水墨留白、朱红印章、竖排标题、宣纸质感、古典边框",
+      "compositionPattern": "ink-wash-scroll: vertical reading flow, off-center hero with ink-wash imagery, stamp-seal accents, traditional border frame",
+      "continuityAnchors": ["vermilion ink palette", "serif/kai typography"],
+      "libraryRestraintMode": false,
+      "uiKitPath": null,
+      "componentPlan": [],
+      "imagePlan": [
+        {
+          "role": "critical-hero",
+          "sectionType": "hero",
+          "targetFilename": "hero-chinese-landscape.jpg",
+          "status": "planned"
+        }
+      ],
+      "chartsRequired": false,
+      "miniProgramStyle": false
+    }
+  ],
+  "assets": [
+    {
+      "filename": "hero-chinese-landscape.jpg",
+      "role": "critical-hero",
+      "sectionType": "hero",
+      "owningPage": "page-poster",
+      "status": "planned"
+    }
+  ],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}

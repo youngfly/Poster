@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>液态玻璃生日快乐</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style id="theme-vars">
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.45);
+            --glass-bg-heavy: rgba(255, 255, 255, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --glass-blur: 20px;
+            --glass-blur-heavy: 30px;
+            --glass-radius: 20px;
+            --glass-radius-lg: 20px;
+            --glass-shadow: 0 8px 32px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.5);
+            --glass-shadow-lg: 0 16px 48px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.5);
+            --prism-blue: #6B8FCC;
+            --prism-pink: #E88098;
+            --prism-gold: #D4A850;
+            --prism-teal: #6AAFA0;
+            --prism-lavender: #9888CC;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <style>
+        /* ===== MOBILE-FIRST VERTICAL 18:9 CONSTRAINTS ===== */
+        html, body { margin: 0; padding: 0; min-height: 100vw; max-width: 100vw; }
+        @media (min-width: 563px) {
+            body { max-width: 562px; margin: 0 auto; min-height: 1005px; box-shadow: 0 0 40px rgba(0,0,0,0.3); }
+        }
+
+        @layer base {
+            body {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+                font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+                color: #1a1a2e;
+                min-height: 100vh;
+            }
+        }
+
+        /* ===== GRADIENT BACKGROUND ===== */
+        .glass-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: radial-gradient(ellipse at top right, #9888CC 0%, #6B8FCC 30%, #E88098 60%, #D4A850 85%, #F2F0ED 100%);
+            min-height: 100vh;
+        }
+
+        /* ===== GLASS MORPHISM BASE ===== */
+        .glass-panel {
+            background: var(--glass-bg);
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid var(--glass-border);
+            border-radius: var(--glass-radius);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .glass-panel-heavy {
+            background: var(--glass-bg-heavy);
+            -webkit-backdrop-filter: blur(var(--glass-blur-heavy));
+            backdrop-filter: blur(var(--glass-blur-heavy));
+            border: 1px solid var(--glass-border);
+            border-radius: var(--glass-radius-lg);
+            box-shadow: var(--glass-shadow-lg);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes springIn {
+            0% { opacity: 0; transform: scale(0.9) translateY(30px); }
+            60% { transform: scale(1.02) translateY(-5px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes prismShimmer {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        @keyframes bobOrb {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes borderRainbow {
+            0% { border-color: #6B8FCC; }
+            25% { border-color: #E88098; }
+            50% { border-color: #D4A850; }
+            75% { border-color: #6AAFA0; }
+            100% { border-color: #6B8FCC; }
+        }
+
+        @keyframes refraction {
+            0%, 100% { opacity: 0.4; transform: rotate(0deg) scale(1); }
+            25% { opacity: 0.7; transform: rotate(90deg) scale(1.1); }
+            50% { opacity: 0.5; transform: rotate(180deg) scale(1.05); }
+            75% { opacity: 0.8; transform: rotate(270deg) scale(1.15); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== DECORATIVE GLASS ORBS ===== */
+        .glass-orb {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .glass-orb::after {
+            content: '';
+            position: absolute;
+            top: 15%;
+            left: 20%;
+            width: 30%;
+            height: 25%;
+            background: radial-gradient(ellipse, rgba(255,255,255,0.8) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* ===== PRISMATIC BORDER EFFECT ===== */
+        .prism-border {
+            position: relative;
+        }
+
+        .prism-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: calc(var(--glass-radius-lg) + 2px);
+            background: linear-gradient(135deg, #6B8FCC, #9888CC, #E88098, #D4A850, #6AAFA0, #6B8FCC);
+            background-size: 200% 200%;
+            animation: prismShimmer 4s linear infinite;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        /* ===== SPRING-IN UTILITIES ===== */
+        .spring-in-1 { animation: springIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both; }
+        .spring-in-2 { animation: springIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both; }
+        .spring-in-3 { animation: springIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both; }
+        .spring-in-4 { animation: springIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.7s both; }
+        .spring-in-5 { animation: springIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.9s both; }
+        .spring-in-6 { animation: springIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.1s both; }
+
+        /* ===== ORB FLOAT ===== */
+        .orb-bob-1 { animation: bobOrb 5s ease-in-out infinite; }
+        .orb-bob-2 { animation: bobOrb 6s ease-in-out infinite 0.5s; }
+        .orb-bob-3 { animation: bobOrb 7s ease-in-out infinite 1s; }
+        .orb-bob-4 { animation: bobOrb 5.5s ease-in-out infinite 1.5s; }
+        .orb-bob-5 { animation: bobOrb 6.5s ease-in-out infinite 0.3s; }
+        .orb-bob-6 { animation: bobOrb 7.5s ease-in-out infinite 0.8s; }
+        .orb-bob-7 { animation: bobOrb 5.8s ease-in-out infinite 1.2s; }
+
+        /* ===== RAINBOW BORDER ANIMATION ===== */
+        .rainbow-border {
+            animation: borderRainbow 4s ease-in-out infinite;
+            border-width: 2px;
+        }
+
+        /* ===== REFRACTION OVERLAY ===== */
+        .refraction-overlay {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(
+                135deg,
+                transparent 20%,
+                rgba(107, 143, 204, 0.08) 30%,
+                rgba(232, 128, 152, 0.08) 40%,
+                transparent 50%,
+                rgba(212, 168, 80, 0.08) 60%,
+                transparent 70%,
+                rgba(106, 175, 160, 0.08) 80%,
+                transparent 90%
+            );
+            background-size: 300% 300%;
+            animation: prismShimmer 6s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* ===== GLASS PILL BUTTON ===== */
+        .glass-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 24px;
+            background: var(--glass-bg);
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 999px;
+            box-shadow: var(--glass-shadow);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #1a1a2e;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            width: 100%;
+            max-width: 280px;
+        }
+
+        @media (min-width: 400px) {
+            .glass-pill {
+                width: auto;
+                max-width: none;
+            }
+        }
+
+        .glass-pill:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: var(--glass-shadow-lg);
+            background: var(--glass-bg-heavy);
+        }
+
+        /* ===== IMAGE GLASS FRAME ===== */
+        .glass-image-frame {
+            overflow: hidden;
+            border-radius: var(--glass-radius-lg);
+        }
+
+        .glass-image-frame img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        .title-cn {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 900;
+            letter-spacing: 0.04em;
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+
+        .subtitle-en {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            font-weight: 200;
+            letter-spacing: 0.15em;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 0 1px 10px rgba(0,0,0,0.1);
+        }
+
+        .wishes-text {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 400;
+            line-height: 2;
+            color: #1a1a2e;
+        }
+    </style>
+</head>
+<body>
+    <!-- Multi-color gradient background -->
+    <div class="glass-bg"></div>
+
+    <!-- Decorative glass orbs (reduced sizes: 40-80px) -->
+    <div class="glass-orb orb-bob-1" style="width:70px;height:70px;top:8%;left:5%;background:radial-gradient(circle at 35% 35%, rgba(107,143,204,0.5) 0%, rgba(107,143,204,0.15) 50%, transparent 100%);filter:blur(2px);"></div>
+    <div class="glass-orb orb-bob-2" style="width:50px;height:50px;top:15%;right:8%;background:radial-gradient(circle at 35% 35%, rgba(232,128,152,0.5) 0%, rgba(232,128,152,0.15) 50%, transparent 100%);filter:blur(2px);"></div>
+    <div class="glass-orb orb-bob-3" style="width:80px;height:80px;top:35%;left:-20px;background:radial-gradient(circle at 35% 35%, rgba(152,136,204,0.4) 0%, rgba(152,136,204,0.1) 50%, transparent 100%);filter:blur(3px);"></div>
+    <div class="glass-orb orb-bob-4" style="width:60px;height:60px;top:55%;right:-15px;background:radial-gradient(circle at 35% 35%, rgba(212,168,80,0.45) 0%, rgba(212,168,80,0.12) 50%, transparent 100%);filter:blur(2px);"></div>
+    <div class="glass-orb orb-bob-5" style="width:55px;height:55px;top:70%;left:8%;background:radial-gradient(circle at 35% 35%, rgba(106,175,160,0.45) 0%, rgba(106,175,160,0.12) 50%, transparent 100%);filter:blur(2px);"></div>
+    <div class="glass-orb orb-bob-6" style="width:75px;height:75px;bottom:10%;right:5%;background:radial-gradient(circle at 35% 35%, rgba(107,143,204,0.35) 0%, rgba(232,128,152,0.15) 50%, transparent 100%);filter:blur(3px);"></div>
+    <div class="glass-orb orb-bob-7" style="width:40px;height:40px;top:45%;left:60%;background:radial-gradient(circle at 35% 35%, rgba(232,128,152,0.4) 0%, rgba(212,168,80,0.15) 50%, transparent 100%);filter:blur(2px);"></div>
+
+    <main class="relative z-10 min-h-screen flex flex-col items-center px-5 py-8">
+
+        <!-- Title Panel -->
+        <section class="glass-panel-heavy prism-border rainbow-border spring-in-1 relative px-6 py-6 mb-4 text-center w-full" style="border-radius:var(--glass-radius-lg);">
+            <div class="refraction-overlay"></div>
+            <div class="relative z-10">
+                <h1 class="title-cn text-3xl md:text-4xl mb-2">生日快乐</h1>
+                <p class="subtitle-en text-base md:text-lg">Happy Birthday</p>
+            </div>
+        </section>
+
+        <!-- Hero Image Panel (300px height, cover fit) -->
+        <section class="glass-panel glass-image-frame spring-in-2 relative w-full mb-4" style="border-radius:var(--glass-radius-lg);">
+            <div class="refraction-overlay"></div>
+            <img src="../assets/birthday-glass-v.jpg" alt="生日快乐" loading="lazy">
+        </section>
+
+        <!-- Wishes Card -->
+        <section class="glass-panel-heavy spring-in-3 relative w-full px-6 py-6 mb-4 text-center">
+            <div class="refraction-overlay"></div>
+            <div class="relative z-10">
+                <p class="wishes-text text-base leading-loose">
+                    愿你的每一天都充满阳光与欢笑，<br>
+                    愿所有美好都如约而至。<br>
+                    <span class="font-bold text-lg mt-3 block" style="color:#9888CC;">生日快乐！</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Info Pills (stacked on narrow, 2+1 on wider) -->
+        <nav class="flex flex-col items-center gap-3 spring-in-4 w-full mb-6" aria-label="生日派对信息" style="max-width:562px;">
+            <div class="flex flex-wrap gap-3 justify-center w-full px-1">
+                <span class="glass-pill spring-in-4" style="animation-delay:0.9s;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    2026年7月2日
+                </span>
+                <span class="glass-pill spring-in-5" style="animation-delay:1.1s;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    下午 6:00
+                </span>
+            </div>
+            <span class="glass-pill spring-in-5" style="animation-delay:1.3s;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                星光宴会厅
+            </span>
+        </nav>
+
+        <!-- Footer Glass Panel -->
+        <footer class="glass-panel spring-in-6 w-full px-6 py-5 text-center">
+            <div class="refraction-overlay"></div>
+            <p class="relative z-10 text-xs" style="color:rgba(26,26,46,0.6);font-weight:300;">
+                用心准备，只为最好的你
+            </p>
+        </footer>
+
+    </main>
+</body>
+</html>

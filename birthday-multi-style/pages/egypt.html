@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古埃及生日祝福</title>
+    <style id="theme-vars">
+:root {
+    --egypt-gold: #C49A3A;
+    --egypt-gold-light: #D4B05A;
+    --egypt-gold-dark: #A07828;
+    --egypt-turquoise: #4AA0A0;
+    --egypt-turquoise-light: #6BC0C0;
+    --egypt-turquoise-dark: #3A8080;
+    --egypt-sand: #F5EDE0;
+    --egypt-sand-dark: #E8D8C4;
+    --egypt-sand-light: #FBF7F0;
+    --egypt-brown: #5C3D1A;
+    --egypt-brown-dark: #3A2508;
+    --egypt-cream: #FFF8EC;
+    --egypt-ochre: #CC7722;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-egypt-gold: #C49A3A;
+    --color-egypt-gold-light: #D4B05A;
+    --color-egypt-turquoise: #4AA0A0;
+    --color-egypt-sand: #F5EDE0;
+    --color-egypt-brown: #5C3D1A;
+  }
+  @layer base {
+    body { background: var(--egypt-sand); color: var(--egypt-brown); }
+  }
+    </style>
+    <style>
+      /* ===== MOBILE-FIRST VERTICAL 18:9 CONTAINMENT ===== */
+      html, body { margin: 0; padding: 0; min-height: 100vw; max-width: 100vw; }
+      @media (min-width: 563px) {
+        body { max-width: 562px; margin: 0 auto; min-height: 1005px; box-shadow: 0 0 40px rgba(0,0,0,0.3); }
+      }
+
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      /* ===== CSS ANIMATIONS ===== */
+      @keyframes sandDrift {
+        0% { transform: translateX(-5px); opacity: 0.5; }
+        50% { transform: translateX(5px); opacity: 0.8; }
+        100% { transform: translateX(-5px); opacity: 0.5; }
+      }
+      @keyframes goldPulse {
+        0%, 100% { text-shadow: 0 0 10px rgba(196,154,58,0.3); }
+        50% { text-shadow: 0 0 20px rgba(196,154,58,0.6), 0 0 40px rgba(196,154,58,0.2); }
+      }
+      @keyframes glyphReveal {
+        from { opacity: 0; filter: brightness(0); }
+        to { opacity: 1; filter: brightness(1); }
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes floatUp {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes shimmerGold {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes pyramidGlow {
+        0%, 100% { filter: drop-shadow(0 0 8px rgba(196,154,58,0.3)); }
+        50% { filter: drop-shadow(0 0 20px rgba(196,154,58,0.7)); }
+      }
+
+      /* ===== BASE STYLES ===== */
+      body {
+        font-family: 'Noto Serif SC', serif;
+        background: linear-gradient(180deg, var(--egypt-sand-light) 0%, var(--egypt-sand) 30%, var(--egypt-sand-dark) 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* ===== EGYPTIAN BORDER FRAME ===== */
+      .egypt-frame {
+        position: relative;
+        border: 3px solid var(--egypt-gold);
+        margin: 12px;
+        padding: 28px 24px;
+        box-shadow: inset 0 0 0 1px var(--egypt-gold-dark), 0 0 30px rgba(196,154,58,0.15);
+      }
+      .egypt-frame::before {
+        content: '';
+        position: absolute;
+        inset: 6px;
+        border: 1px solid var(--egypt-gold-light);
+        pointer-events: none;
+      }
+
+      /* Lotus corner ornaments */
+      .lotus-corner {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+      }
+      .lotus-corner::before,
+      .lotus-corner::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid var(--egypt-gold);
+      }
+      .lotus-corner::before {
+        top: 0; left: 0;
+      }
+      .lotus-corner::after {
+        top: 0; left: 0;
+        transform: translate(15px, -8px);
+      }
+      .lotus-corner--tl { top: -8px; left: -8px; }
+      .lotus-corner--tr { top: -8px; right: -8px; transform: scaleX(-1); }
+      .lotus-corner--bl { bottom: -8px; left: -8px; transform: scaleY(-1); }
+      .lotus-corner--br { bottom: -8px; right: -8px; transform: scale(-1, -1); }
+
+      /* ===== HERO SECTION ===== */
+      .hero-section {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 24px;
+      }
+      .hero-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: sepia(0.3) saturate(1.2);
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(196,154,58,0.15) 0%,
+          rgba(92,61,26,0.4) 60%,
+          rgba(92,61,26,0.85) 100%
+        );
+      }
+      .hero-overlay::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(196,154,58,0.1) 0%, transparent 50%, rgba(196,154,58,0.08) 100%);
+        animation: sandDrift 6s ease-in-out infinite;
+      }
+
+      /* ===== TITLE ===== */
+      .title-egypt {
+        font-family: 'Cinzel', 'Noto Serif SC', serif;
+        color: var(--egypt-gold);
+        text-align: center;
+        font-size: 1.875rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        animation: goldPulse 3s ease-in-out infinite;
+        margin-bottom: 8px;
+        background: linear-gradient(90deg, var(--egypt-gold-dark), var(--egypt-gold-light), var(--egypt-gold), var(--egypt-gold-dark));
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: goldPulse 3s ease-in-out infinite, shimmerGold 8s linear infinite;
+      }
+      .subtitle-egypt {
+        font-family: 'Cinzel', serif;
+        color: var(--egypt-gold-light);
+        text-align: center;
+        font-size: 0.875rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        opacity: 0.85;
+        margin-bottom: 20px;
+      }
+
+      /* ===== LOTUS DIVIDER ===== */
+      .lotus-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 20px 0;
+      }
+      .lotus-divider__line {
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--egypt-gold), transparent);
+      }
+      .lotus-divider__flower {
+        position: relative;
+        width: 40px;
+        height: 30px;
+      }
+      .lotus-divider__flower::before,
+      .lotus-divider__flower::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 2px solid var(--egypt-gold);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .lotus-divider__flower::before { left: 0; }
+      .lotus-divider__flower::after { right: 0; }
+      .lotus-divider__dot {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--egypt-gold);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* ===== BIRTHDAY MESSAGE ===== */
+      .blessing-message {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 2;
+        color: var(--egypt-brown);
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 24px;
+        font-weight: 500;
+        opacity: 0;
+        animation: fadeIn 1.2s ease-out 0.5s forwards;
+      }
+      .blessing-message p {
+        margin-bottom: 4px;
+      }
+
+      /* ===== ICON ROW ===== */
+      .icon-row {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        margin: 24px 0;
+      }
+      .egypt-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        opacity: 0;
+      }
+      .egypt-icon:nth-child(1) { animation: fadeIn 1s ease-out 0.3s forwards; }
+      .egypt-icon:nth-child(2) { animation: fadeIn 1s ease-out 0.6s forwards; }
+      .egypt-icon:nth-child(3) { animation: fadeIn 1s ease-out 0.9s forwards; }
+      .egypt-icon__shape {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: pyramidGlow 4s ease-in-out infinite;
+      }
+      .egypt-icon__label {
+        font-family: 'Cinzel', serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        color: var(--egypt-gold);
+        text-transform: uppercase;
+      }
+
+      /* Ankh - CSS shape */
+      .ankh {
+        position: relative;
+        width: 22px;
+        height: 44px;
+        transform: scale(0.85);
+      }
+      .ankh__loop {
+        width: 22px;
+        height: 22px;
+        border: 3px solid var(--egypt-gold);
+        border-radius: 50%;
+        margin: 0 auto 2px;
+      }
+      .ankh__cross {
+        position: relative;
+        width: 3px;
+        height: 32px;
+        background: var(--egypt-gold);
+        margin: 0 auto;
+      }
+      .ankh__cross::before {
+        content: '';
+        position: absolute;
+        width: 26px;
+        height: 3px;
+        background: var(--egypt-gold);
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* Eye of Horus - CSS shape */
+      .eye-of-horus {
+        position: relative;
+        width: 46px;
+        height: 30px;
+        transform: scale(0.85);
+      }
+      .eye-of-horus__eye {
+        width: 32px;
+        height: 20px;
+        border: 3px solid var(--egypt-gold);
+        border-radius: 50% 50% 50% 50%;
+        position: absolute;
+        top: 6px;
+        left: 10px;
+        overflow: hidden;
+      }
+      .eye-of-horus__pupil {
+        width: 8px;
+        height: 8px;
+        background: var(--egypt-gold);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .eye-of-horus__tear {
+        position: absolute;
+        width: 3px;
+        height: 20px;
+        background: var(--egypt-gold);
+        bottom: -6px;
+        right: 12px;
+        transform: skewX(-8deg);
+      }
+      .eye-of-horus__brow {
+        position: absolute;
+        top: 2px;
+        left: 4px;
+        width: 48px;
+        height: 3px;
+        background: var(--egypt-gold);
+        transform: rotate(-3deg);
+        border-radius: 2px;
+      }
+      .eye-of-horus__tail {
+        position: absolute;
+        bottom: -10px;
+        left: 4px;
+        width: 20px;
+        height: 3px;
+        background: var(--egypt-gold);
+        transform: rotate(-15deg);
+        border-radius: 2px;
+      }
+
+      /* Scarab - CSS shape */
+      .scarab {
+        position: relative;
+        width: 34px;
+        height: 30px;
+        transform: scale(0.85);
+      }
+      .scarab__body {
+        width: 28px;
+        height: 22px;
+        border: 3px solid var(--egypt-gold);
+        border-radius: 50%;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+      }
+      .scarab__head {
+        width: 10px;
+        height: 14px;
+        border: 3px solid var(--egypt-gold);
+        border-radius: 50% 50% 30% 30%;
+        position: absolute;
+        top: 10px;
+        left: -2px;
+      }
+      .scarab__wing-l {
+        position: absolute;
+        top: 2px;
+        left: 12px;
+        width: 16px;
+        height: 16px;
+        border: 3px solid var(--egypt-gold);
+        border-radius: 50% 50% 20% 80%;
+        transform: rotate(10deg);
+      }
+      .scarab__wing-r {
+        position: absolute;
+        top: 2px;
+        right: 4px;
+        width: 16px;
+        height: 16px;
+        border: 3px solid var(--egypt-gold);
+        border-radius: 50% 50% 80% 20%;
+        transform: rotate(-10deg);
+      }
+      .scarab__line {
+        position: absolute;
+        top: 14px;
+        left: 50%;
+        width: 3px;
+        height: 14px;
+        background: var(--egypt-gold);
+        transform: translateX(-50%);
+      }
+
+      /* ===== HIEROGLYPH BAND ===== */
+      .hieroglyph-band {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        margin: 24px 0 20px;
+        flex-wrap: wrap;
+        padding: 0 24px;
+      }
+      .hieroglyph-band__glyph {
+        width: 16px;
+        height: 16px;
+        border: 1.5px solid var(--egypt-gold);
+        opacity: 0;
+        animation: glyphReveal 0.6s ease-out forwards;
+      }
+      .hieroglyph-band__glyph:nth-child(odd) { background: var(--egypt-gold); opacity: 0.6; }
+      .hieroglyph-band__glyph:nth-child(3n) { width: 16px; height: 16px; border-radius: 50%; }
+      .hieroglyph-band__glyph:nth-child(5n) { width: 8px; height: 16px; }
+      .hieroglyph-band__glyph:nth-child(7n) { width: 16px; height: 8px; }
+
+      /* ===== SAND PARTICLES ===== */
+      .sand-particles {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .sand-particle {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: var(--egypt-gold);
+        border-radius: 50%;
+        opacity: 0;
+        animation: sandDrift 5s ease-in-out infinite;
+      }
+
+      /* ===== FOOTER ===== */
+      .egypt-footer {
+        text-align: center;
+        font-family: 'Cinzel', serif;
+        font-size: 0.8rem;
+        color: var(--egypt-gold);
+        letter-spacing: 0.2em;
+        opacity: 0.7;
+        padding-top: 16px;
+        border-top: 1px solid rgba(196,154,58,0.2);
+      }
+
+      /* ===== PYRAMID DECORATION ===== */
+      .pyramid-deco {
+        display: flex;
+        justify-content: center;
+        gap: 28px;
+        margin: 12px 0 8px;
+      }
+      .pyramid-shape {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 28px solid var(--egypt-gold);
+        opacity: 0.6;
+        animation: pyramidGlow 4s ease-in-out infinite;
+      }
+      .pyramid-shape:nth-child(2) {
+        border-left-width: 14px;
+        border-right-width: 14px;
+        border-bottom-width: 20px;
+        animation-delay: 1s;
+      }
+      .pyramid-shape:nth-child(3) {
+        border-left-width: 10px;
+        border-right-width: 10px;
+        border-bottom-width: 14px;
+        animation-delay: 2s;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 640px) {
+        .egypt-frame { margin: 8px; padding: 20px 16px; }
+        .title-egypt { font-size: 1.5rem; letter-spacing: 0.1em; }
+        .hero-section { height: 280px; }
+        .icon-row { gap: 24px; }
+        .blessing-message { font-size: 0.9rem; line-height: 1.9; padding: 0 16px; }
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main>
+
+      <!-- Egyptian Decorative Border Frame -->
+      <div class="egypt-frame">
+        <!-- Lotus corner ornaments -->
+        <div class="lotus-corner lotus-corner--tl"></div>
+        <div class="lotus-corner lotus-corner--tr"></div>
+        <div class="lotus-corner lotus-corner--bl"></div>
+        <div class="lotus-corner lotus-corner--br"></div>
+
+        <!-- Sand particle overlay -->
+        <div class="sand-particles" aria-hidden="true">
+          <div class="sand-particle" style="top:10%; left:5%; animation-delay:0s; animation-duration:4s;"></div>
+          <div class="sand-particle" style="top:20%; left:15%; animation-delay:1s; animation-duration:5s;"></div>
+          <div class="sand-particle" style="top:35%; left:80%; animation-delay:2s; animation-duration:6s;"></div>
+          <div class="sand-particle" style="top:50%; left:90%; animation-delay:0.5s; animation-duration:4.5s;"></div>
+          <div class="sand-particle" style="top:65%; left:10%; animation-delay:1.5s; animation-duration:5.5s;"></div>
+          <div class="sand-particle" style="top:75%; left:70%; animation-delay:3s; animation-duration:4s;"></div>
+          <div class="sand-particle" style="top:85%; left:25%; animation-delay:2.5s; animation-duration:6.5s;"></div>
+          <div class="sand-particle" style="top:15%; left:60%; animation-delay:1.2s; animation-duration:5.2s;"></div>
+          <div class="sand-particle" style="top:45%; left:40%; animation-delay:3.5s; animation-duration:4.8s;"></div>
+          <div class="sand-particle" style="top:90%; left:55%; animation-delay:0.8s; animation-duration:5.8s;"></div>
+          <div class="sand-particle" style="top:30%; left:95%; animation-delay:2.2s; animation-duration:4.3s;"></div>
+          <div class="sand-particle" style="top:60%; left:50%; animation-delay:1.8s; animation-duration:6.2s;"></div>
+        </div>
+
+        <!-- Hero Image with Golden Gradient Overlay -->
+        <div class="hero-section">
+          <img src="../assets/birthday-egypt-v.jpg" alt="Ancient Egyptian birthday scene">
+          <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Large Title -->
+        <h1 class="title-egypt">生辰之禧</h1>
+
+        <!-- Subtitle -->
+        <p class="subtitle-egypt">Anubis Blessing</p>
+
+        <!-- Gold Ornamental Lotus Divider -->
+        <div class="lotus-divider">
+          <div class="lotus-divider__line"></div>
+          <div class="lotus-divider__flower">
+            <span class="lotus-divider__dot"></span>
+          </div>
+          <div class="lotus-divider__line"></div>
+        </div>
+
+        <!-- Birthday Blessing Message -->
+        <div class="blessing-message">
+          <p>在尼罗河畔，在金字塔之巅，</p>
+          <p>众神为你降下祝福。</p>
+          <p>愿你的生命如法老般荣耀，</p>
+          <p>如太阳神拉般永恒。</p>
+        </div>
+
+        <!-- Lotus Divider -->
+        <div class="lotus-divider">
+          <div class="lotus-divider__line"></div>
+          <div class="lotus-divider__flower">
+            <span class="lotus-divider__dot"></span>
+          </div>
+          <div class="lotus-divider__line"></div>
+        </div>
+
+        <!-- Three Sacred Icons Row -->
+        <div class="icon-row">
+          <!-- Ankh - Symbol of Life -->
+          <div class="egypt-icon">
+            <div class="egypt-icon__shape">
+              <div class="ankh">
+                <div class="ankh__loop"></div>
+                <div class="ankh__cross"></div>
+              </div>
+            </div>
+            <span class="egypt-icon__label">Ankh &middot; Life</span>
+          </div>
+
+          <!-- Eye of Horus -->
+          <div class="egypt-icon">
+            <div class="egypt-icon__shape">
+              <div class="eye-of-horus">
+                <div class="eye-of-horus__brow"></div>
+                <div class="eye-of-horus__eye">
+                  <div class="eye-of-horus__pupil"></div>
+                </div>
+                <div class="eye-of-horus__tear"></div>
+                <div class="eye-of-horus__tail"></div>
+              </div>
+            </div>
+            <span class="egypt-icon__label">Eye of Horus</span>
+          </div>
+
+          <!-- Scarab -->
+          <div class="egypt-icon">
+            <div class="egypt-icon__shape">
+              <div class="scarab">
+                <div class="scarab__wing-l"></div>
+                <div class="scarab__wing-r"></div>
+                <div class="scarab__body"></div>
+                <div class="scarab__head"></div>
+                <div class="scarab__line"></div>
+              </div>
+            </div>
+            <span class="egypt-icon__label">Scarab</span>
+          </div>
+        </div>
+
+        <!-- Pyramid Decoration -->
+        <div class="pyramid-deco" aria-hidden="true">
+          <div class="pyramid-shape"></div>
+          <div class="pyramid-shape"></div>
+          <div class="pyramid-shape"></div>
+        </div>
+
+        <!-- Hieroglyphic Decoration Band -->
+        <div class="hieroglyph-band" aria-hidden="true">
+          <div class="hieroglyph-band__glyph" style="animation-delay: 0.1s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 0.2s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 0.3s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 0.4s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 0.5s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 0.6s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 0.7s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 0.8s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 0.9s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 1.0s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 1.1s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 1.2s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 1.3s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 1.4s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 1.5s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 1.6s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 1.7s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 1.8s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 1.9s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 2.0s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 2.1s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 2.2s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 2.3s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 2.4s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 2.5s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 2.6s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 2.7s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 2.8s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 2.9s;"></div>
+          <div class="hieroglyph-band__glyph" style="animation-delay: 3.0s;"></div>
+        </div>
+
+        <!-- Footer with Egyptian Calendar -->
+        <footer class="egypt-footer">
+          <p>&#x2751; 古埃及历法 &middot; 贤者之年 &middot; 丰收季 &#x2751;</p>
+        </footer>
+
+      </div><!-- /.egypt-frame -->
+
+    </main>
+    <script>
+      // Generate staggered animation delays for hieroglyph band on load
+      document.addEventListener('DOMContentLoaded', function() {
+        const glyphs = document.querySelectorAll('.hieroglyph-band__glyph');
+        glyphs.forEach(function(g, i) {
+          g.style.animationDelay = (i * 0.08) + 's';
+        });
+      });
+    </script>
+</body>
+</html>

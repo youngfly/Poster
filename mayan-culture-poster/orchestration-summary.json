@@ -1,0 +1,130 @@
+{
+  "project": {
+    "name": "玛雅文化海报",
+    "path": "c:\\Users\\admin\\Desktop\\poster\\mayan-culture-poster",
+    "operation": "create",
+    "deviceType": "freeSize",
+    "language": "zh-CN",
+    "dashboardMode": false,
+    "replicationMode": null,
+    "sourceUrl": null,
+    "visualSpecExcerpt": null,
+    "styleDefinitionBrief": "古代玛雅文明: 翡翠绿与黄金色系、石灰石质感背景、金字塔剪影、阶梯几何图案、象形文字装饰、丛林迷雾氛围",
+    "designRead": "poster / cultural-exhibition / mystical ancient grandeur / low density / avoid neon gradients, modern geometric minimalism, cute/kawaii",
+    "designDials": {
+      "layoutVariance": 4,
+      "motionIntensity": 1,
+      "visualDensity": 2
+    },
+    "styleContinuityAnchors": {
+      "colorSystem": {
+        "primaryColorRole": "jade green #2D6B4F for primary accents, gold #B8922E for secondary highlights",
+        "brandHuePolicy": "jade green primary with gold secondary accent, stone neutrals for backgrounds",
+        "stateColors": "minimal usage"
+      },
+      "shapeSystem": "sharp geometric edges, stepped pyramid shapes, angular patterns",
+      "typographySystem": "Cinzel for display (Latin ancient feel), Noto Serif SC for Chinese titles, wide letter-spacing for majesty",
+      "spacingSystem": "generous vertical spacing, centered ceremonial layout",
+      "componentLanguage": "geometric borders, stepped pyramid motifs, glyph-inspired ornaments",
+      "surfaceAndDepth": "layered stone texture, minimal shadow",
+      "imageryAndIconography": "ancient ruins, jungle, pyramids, glyphs, carved stone",
+      "interactionTone": "static, ceremonial"
+    },
+    "specsConstraints": null,
+    "sharedProjectShellContract": {
+      "navigationShell": "poster has no nav shell",
+      "primaryColorSystem": "jade green #2D6B4F primary with gold #B8922E accent",
+      "typographySystem": "Cinzel display, Noto Serif SC for Chinese, Noto Sans SC for body, wide letter-spacing",
+      "radiusScale": "restrained: 2px/4px/8px only",
+      "surfaceDepthModel": "border-first, minimal shadow alpha 0.04-0.05",
+      "ctaStyle": "poster format, no traditional CTA buttons",
+      "alignmentRules": "centered ceremonial composition with geometric balance"
+    },
+    "generationTree": {
+      "root": {
+        "nodeId": "gen-page-poster",
+        "kind": "page-leaf",
+        "pageIds": ["page-poster"],
+        "output": "pages/poster.html",
+        "sharedRegions": [],
+        "privateRegions": ["full poster composition"],
+        "mutableSlots": [],
+        "status": "planned",
+        "children": []
+      }
+    }
+  },
+  "designSource": {
+    "operatingMode": "free-explore",
+    "libraryIdentity": null,
+    "libraryPath": null,
+    "cssFilePath": "c:\\Users\\admin\\Desktop\\poster\\mayan-culture-poster\\colors_and_type.css",
+    "brandPrefix": "",
+    "themeMode": "light",
+    "designDecisionSummary": "古代玛雅文明: 翡翠绿+黄金色、石灰石质感、金字塔阶梯图案、象形文字装饰、丛林迷雾",
+    "componentContractKind": "undefined",
+    "forbiddenInventedComponents": [],
+    "allowedComponents": [],
+    "styleConstraints": {
+      "radiusMax": 8,
+      "spacingBase": 1,
+      "fontSizeBody": 16,
+      "fontSizeMin": 12,
+      "controlHeightDefault": 36,
+      "controlHeightLarge": 44,
+      "staticShadowAlphaMax": 0.05
+    },
+    "productContext": {
+      "kitType": "poster",
+      "productType": "artistic cultural poster"
+    },
+    "actualTokenNameReference": []
+  },
+  "pages": [
+    {
+      "nodeId": "page-poster",
+      "slug": "poster",
+      "title": "玛雅文化海报",
+      "htmlSrc": "pages/poster.html",
+      "pageIndex": 1,
+      "stateGroupId": null,
+      "stateRole": null,
+      "baseStatePageId": null,
+      "sharedShellContract": [],
+      "mutableRegions": [],
+      "derivedFromHtmlSrc": null,
+      "derivationType": "original",
+      "sourcePageId": null,
+      "sourceHtmlSrc": null,
+      "pageType": "showcase",
+      "businessScenario": "古代玛雅文明文化展示海报",
+      "visualNorthStar": "丛林金字塔: 阶梯几何边框、翡翠绿与黄金色、神秘氛围、象形文字装饰元素",
+      "compositionPattern": "ceremonial-vertical: centered hero with pyramid imagery, stepped geometric border frame, gold accent ornaments, descending information hierarchy",
+      "continuityAnchors": ["jade-green-gold palette", "geometric stepped patterns"],
+      "libraryRestraintMode": false,
+      "uiKitPath": null,
+      "componentPlan": [],
+      "imagePlan": [
+        {
+          "role": "critical-hero",
+          "sectionType": "hero",
+          "targetFilename": "hero-mayan-pyramid.jpg",
+          "status": "planned"
+        }
+      ],
+      "chartsRequired": false,
+      "miniProgramStyle": false
+    }
+  ],
+  "assets": [
+    {
+      "filename": "hero-mayan-pyramid.jpg",
+      "role": "critical-hero",
+      "sectionType": "hero",
+      "owningPage": "page-poster",
+      "status": "planned"
+    }
+  ],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}

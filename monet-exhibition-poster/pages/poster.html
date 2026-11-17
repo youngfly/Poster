@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monet Exhibition Poster</title>
+    <style id="theme-vars">
+/* ============================================
+   Monet Exhibition Poster — Brand CSS
+   印象派: 柔和水彩色调、睡莲蓝紫、花园光影
+   ============================================ */
+
+:root {
+  /* ── Color System ── */
+  --color-primary: #5B7FA5;
+  --color-primary-light: #7A9DBF;
+  --color-primary-lighter: #A3C1D9;
+  --color-primary-lightest: #D0E2EF;
+  --color-primary-dark: #3E5F80;
+  --color-primary-darker: #2A4258;
+  --color-primary-darkest: #182B3A;
+
+  /* ── Semantic / State Colors ── */
+  --state-success: #7AAF7A;
+  --state-warning: #C49A5A;
+  --state-error: #A85D5D;
+  --state-info: #5A7FA5;
+
+  /* ── Surface Palette (Soft Gallery White) ── */
+  --color-bg-main: #F8F6F2;
+  --color-bg-secondary: #F2EFE8;
+  --color-bg-tertiary: #EBE7DF;
+  --color-bg-elevated: #FBFAF7;
+  --color-bg-overlay: rgba(24, 43, 58, 0.5);
+
+  /* ── Palette: Water Lily Tones ── */
+  --color-lily: #7B9BB5;
+  --color-lily-green: #8BAF8B;
+  --color-lily-pink: #C4A0A8;
+  --color-lily-violet: #9B8BB5;
+  --color-willow: #6B8B5A;
+
+  /* ── Gold Frame Accent ── */
+  --color-gold: #B89E6B;
+  --color-gold-light: #D0BC8A;
+  --color-gold-lighter: #E5D9B8;
+
+  /* ── Text Palette ── */
+  --color-text-primary: #2A2A28;
+  --color-text-secondary: #4A4A45;
+  --color-text-tertiary: #7A7A72;
+  --color-text-inverse: #F8F6F2;
+  --color-text-link: #3E5F80;
+
+  /* ── Border Palette ── */
+  --color-border: #D4CFC5;
+  --color-border-subtle: #E5E1D9;
+  --color-border-strong: #5B7FA5;
+
+  /* ── Typography ── */
+  --font-family-display: "Playfair Display", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  --font-family-body: "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  --font-family-accent: "Playfair Display", "Noto Serif SC", Georgia, serif;
+  --font-family-french: "Playfair Display", Georgia, serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.25rem;
+  --font-size-5xl: 4.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  --line-height-loose: 2.0;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+  --letter-spacing-widest: 0.2em;
+
+  /* ── Spacing ── */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ── Radius ── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(24, 43, 58, 0.04);
+  --shadow-md: 0 2px 8px rgba(24, 43, 58, 0.05);
+  --shadow-lg: 0 8px 24px rgba(24, 43, 58, 0.05);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-primary: #7A9DBF;
+  --color-primary-light: #5B7FA5;
+  --color-primary-lighter: #3E5F80;
+  --color-primary-lightest: #2A4258;
+  --color-primary-dark: #A3C1D9;
+  --color-primary-darker: #D0E2EF;
+  --color-primary-darkest: #EBF2F8;
+
+  --color-bg-main: #141614;
+  --color-bg-secondary: #1C1E1A;
+  --color-bg-tertiary: #24261F;
+  --color-bg-elevated: #181A16;
+  --color-bg-overlay: rgba(0, 0, 0, 0.65);
+
+  --color-text-primary: #EBE7DF;
+  --color-text-secondary: #C4C0B5;
+  --color-text-tertiary: #8A867A;
+  --color-text-inverse: #2A2A28;
+  --color-text-link: #A3C1D9;
+
+  --color-border: #3A3830;
+  --color-border-subtle: #2E2C25;
+  --color-border-strong: #7A9DBF;
+
+  --color-gold: #D0BC8A;
+  --color-gold-light: #B89E6B;
+  --color-gold-lighter: #8A7448;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-primary: var(--color-primary);
+    --color-border: var(--color-border);
+  }
+  @layer base {
+    body { background: var(--color-background); color: var(--color-text-primary); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main class="flex justify-center">
+      <div class="relative w-full max-w-[700px] mx-auto min-h-screen py-12 px-8 sm:px-12 md:px-16" style="background: var(--color-bg-main);">
+
+        <!-- Ornamental Gold Frame Border -->
+        <div class="absolute inset-4 sm:inset-6 pointer-events-none" style="border: 1px solid var(--color-gold-light);"></div>
+        <div class="absolute inset-6 sm:inset-8 pointer-events-none" style="border: 1px solid var(--color-gold-light);"></div>
+
+        <!-- Corner ornaments -->
+        <div class="absolute top-4 sm:top-6 left-4 sm:left-6 w-4 h-4 pointer-events-none" style="border-top: 1px solid var(--color-gold); border-left: 1px solid var(--color-gold);"></div>
+        <div class="absolute top-4 sm:top-6 right-4 sm:right-6 w-4 h-4 pointer-events-none" style="border-top: 1px solid var(--color-gold); border-right: 1px solid var(--color-gold);"></div>
+        <div class="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 w-4 h-4 pointer-events-none" style="border-bottom: 1px solid var(--color-gold); border-left: 1px solid var(--color-gold);"></div>
+        <div class="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 w-4 h-4 pointer-events-none" style="border-bottom: 1px solid var(--color-gold); border-right: 1px solid var(--color-gold);"></div>
+
+        <!-- Inner content wrapper -->
+        <div class="relative z-10 flex flex-col items-center">
+
+          <!-- Museum Header -->
+          <header class="flex flex-col items-center pt-6 sm:pt-8">
+            <p class="text-center uppercase" style="font-family: var(--font-family-body); font-size: var(--font-size-xs); color: var(--color-gold); letter-spacing: var(--letter-spacing-widest); line-height: var(--line-height-normal);">
+              特别展览 &nbsp; SPECIAL EXHIBITION
+            </p>
+            <div class="flex items-center gap-3 mt-3">
+              <div class="w-12" style="height: 1px; background: var(--color-gold-light);"></div>
+              <div class="w-1.5 h-1.5 rotate-45" style="background: var(--color-gold);"></div>
+              <div class="w-12" style="height: 1px; background: var(--color-gold-light);"></div>
+            </div>
+          </header>
+
+          <!-- Hero Image Section -->
+          <section class="w-full mt-10 sm:mt-12 px-4 sm:px-6" style="flex: 0 0 auto;">
+            <div class="relative w-full" style="aspect-ratio: 4/3; max-height: 50vh;">
+              <img
+                src="../assets/hero-water-lilies.jpg"
+                alt="Monet Water Lilies"
+                class="w-full h-full object-cover"
+                style="border: 2px solid var(--color-gold); filter: saturate(0.9);"
+              >
+            </div>
+          </section>
+
+          <!-- Title Section -->
+          <section class="flex flex-col items-center mt-10 sm:mt-12 px-4">
+            <h1
+              class="text-center"
+              style="font-family: var(--font-family-display); font-size: var(--font-size-5xl); font-weight: var(--font-weight-bold); color: var(--color-text-primary); letter-spacing: var(--letter-spacing-wide); line-height: var(--line-height-tight); text-wrap: balance; word-break: keep-all; overflow-wrap: break-word;"
+            >
+              莫奈
+            </h1>
+            <p
+              class="mt-2 italic text-center"
+              style="font-family: var(--font-family-french); font-size: var(--font-size-2xl); font-weight: var(--font-weight-light); color: var(--color-lily); letter-spacing: var(--letter-spacing-normal);"
+            >
+              Claude Monet
+            </p>
+            <div class="flex items-center gap-3 mt-5">
+              <div class="w-2 h-2 rounded-full" style="background: var(--color-gold-light);"></div>
+              <div class="w-24 sm:w-32" style="height: 1px; background: var(--color-gold-light);"></div>
+              <div class="w-2 h-2 rounded-full" style="background: var(--color-gold-light);"></div>
+            </div>
+          </section>
+
+          <!-- Exhibition Theme Section -->
+          <section class="flex flex-col items-center mt-10 sm:mt-12 px-4">
+            <h2
+              class="text-center"
+              style="font-family: 'Noto Serif SC', var(--font-family-display); font-size: var(--font-size-2xl); font-weight: var(--font-weight-semibold); color: var(--color-text-primary); letter-spacing: var(--letter-spacing-wide); line-height: var(--line-height-snug);"
+            >
+              光与色的诗人
+            </h2>
+            <p
+              class="mt-2 italic text-center"
+              style="font-family: var(--font-family-french); font-size: var(--font-size-md); font-weight: var(--font-weight-regular); color: var(--color-text-tertiary); letter-spacing: var(--letter-spacing-normal);"
+            >
+              The Poet of Light and Color
+            </p>
+            <p
+              class="mt-6 text-center"
+              style="font-family: var(--font-family-body); font-size: var(--font-size-sm); font-weight: var(--font-weight-regular); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); max-width: 520px;"
+            >
+              一八四零年至一九二六年，克劳德·莫奈用画笔追逐光影的足迹，将瞬间的自然之美凝固为永恒。从吉维尼花园的睡莲到印象黎明的晨雾，他的作品改变了世界对艺术的认知。
+            </p>
+          </section>
+
+          <!-- Exhibition Details Section -->
+          <section class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-10 sm:mt-12 px-4">
+            <span
+              class="whitespace-nowrap text-center"
+              style="font-family: var(--font-family-body); font-size: var(--font-size-sm); font-weight: var(--font-weight-regular); color: var(--color-text-tertiary); letter-spacing: var(--letter-spacing-wider);"
+            >
+              展期：2026.08.15 — 11.30
+            </span>
+            <span
+              class="hidden sm:inline-block"
+              style="color: var(--color-border); font-size: var(--font-size-sm);"
+            >
+              |
+            </span>
+            <span
+              class="whitespace-nowrap text-center"
+              style="font-family: var(--font-family-body); font-size: var(--font-size-sm); font-weight: var(--font-weight-regular); color: var(--color-text-tertiary); letter-spacing: var(--letter-spacing-wider);"
+            >
+              地点：国家美术馆
+            </span>
+            <span
+              class="hidden sm:inline-block"
+              style="color: var(--color-border); font-size: var(--font-size-sm);"
+            >
+              |
+            </span>
+            <span
+              class="whitespace-nowrap text-center"
+              style="font-family: var(--font-family-body); font-size: var(--font-size-sm); font-weight: var(--font-weight-regular); color: var(--color-text-tertiary); letter-spacing: var(--letter-spacing-wider);"
+            >
+              策展人：林雅芳
+            </span>
+          </section>
+
+          <!-- Color Palette Band -->
+          <section class="flex items-center justify-center gap-6 mt-10 sm:mt-12" aria-label="Monet's color palette">
+            <div class="w-3 h-3 rounded-full" style="background: var(--color-lily);"></div>
+            <div class="w-3 h-3 rounded-full" style="background: var(--color-lily-green);"></div>
+            <div class="w-3 h-3 rounded-full" style="background: var(--color-lily-pink);"></div>
+            <div class="w-3 h-3 rounded-full" style="background: var(--color-lily-violet);"></div>
+            <div class="w-3 h-3 rounded-full" style="background: var(--color-gold);"></div>
+          </section>
+
+          <!-- Footer -->
+          <footer class="flex flex-col items-center mt-10 sm:mt-12 mb-6 sm:mb-8 w-full px-4">
+            <div class="flex items-center gap-3 w-full max-w-md">
+              <div class="flex-1" style="height: 1px; background: var(--color-gold-lighter);"></div>
+              <div class="w-1 h-1 rotate-45" style="background: var(--color-gold-light);"></div>
+              <div class="flex-1" style="height: 1px; background: var(--color-gold-lighter);"></div>
+            </div>
+            <p
+              class="mt-4 text-center"
+              style="font-family: var(--font-family-body); font-size: var(--font-size-xs); font-weight: var(--font-weight-regular); color: var(--color-text-tertiary); letter-spacing: var(--letter-spacing-wide);"
+            >
+              主办：法国国家美术馆 &nbsp;|&nbsp; 协办：中国文化部
+            </p>
+            <p
+              class="mt-2 text-right w-full max-w-md"
+              style="font-family: var(--font-family-body); font-size: var(--font-size-xs); font-weight: var(--font-weight-regular); color: var(--color-text-tertiary); letter-spacing: var(--letter-spacing-normal); opacity: 0.6;"
+            >
+              No. 2026-M-001
+            </p>
+          </footer>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Custom poster styles (placed after <main>, before </body> per hard rules) -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap');
+
+      /* Subtle paper/canvas texture overlay */
+      main > div::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 200px 200px;
+      }
+
+      /* Responsive title scaling */
+      @media (max-width: 480px) {
+        h1 { font-size: clamp(2.5rem, 10vw, var(--font-size-5xl)) !important; }
+        section > h2 { font-size: clamp(1.25rem, 5vw, var(--font-size-2xl)) !important; }
+      }
+    </style>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

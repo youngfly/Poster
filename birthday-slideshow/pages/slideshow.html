@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <style id="theme-vars">
+:root {
+  --color-bg-main: #0A0A0A;
+  --color-text-primary: #F0EBE0;
+  --color-text-secondary: #B0A898;
+  --color-text-tertiary: #6B6860;
+  --font-family-display: -apple-system, "Helvetica Neue", sans-serif;
+  --font-family-body: -apple-system, "Noto Sans SC", sans-serif;
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  
+  @layer base {
+    body { background: var(--color-background); color: var(--color-text-primary); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main>
+        <div class="slideshow-container">
+            <div class="vignette"></div>
+
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img class="slide-image" src="../assets/birthday-japanese-v.jpg" alt="日式 · 侘寂之美">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-number" style="color: #8B7355;">01</div>
+                    <h1 class="slide-title">日式 · 侘寂之美</h1>
+                    <p class="slide-subtitle" style="color: #8B7355;">Wabi-Sabi Birthday</p>
+                    <div class="slide-accent-line" style="background: #8B7355;"></div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img class="slide-image" src="../assets/birthday-chinese-v.jpg" alt="中式 · 东方意境">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-number" style="color: #B83B3B;">02</div>
+                    <h1 class="slide-title">中式 · 东方意境</h1>
+                    <p class="slide-subtitle" style="color: #B83B3B;">Oriental Auspicious</p>
+                    <div class="slide-accent-line" style="background: #B83B3B;"></div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img class="slide-image" src="../assets/birthday-mayan-v.jpg" alt="玛雅 · 丛林庆典">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-number" style="color: #2D6B4F;">03</div>
+                    <h1 class="slide-title">玛雅 · 丛林庆典</h1>
+                    <p class="slide-subtitle" style="color: #2D6B4F;">Mayan Celebration</p>
+                    <div class="slide-accent-line" style="background: #2D6B4F;"></div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img class="slide-image" src="../assets/birthday-monet-v.jpg" alt="莫奈 · 光影印象">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-number" style="color: #5B7FA5;">04</div>
+                    <h1 class="slide-title">莫奈 · 光影印象</h1>
+                    <p class="slide-subtitle" style="color: #5B7FA5;">Impressionist Light</p>
+                    <div class="slide-accent-line" style="background: #5B7FA5;"></div>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img class="slide-image" src="../assets/birthday-picasso-v.jpg" alt="毕加索 · 立体派对">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-number" style="color: #C46878;">05</div>
+                    <h1 class="slide-title">毕加索 · 立体派对</h1>
+                    <p class="slide-subtitle" style="color: #C46878;">Cubist Party</p>
+                    <div class="slide-accent-line" style="background: #C46878;"></div>
+                </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide">
+                <img class="slide-image" src="../assets/birthday-egypt-v.jpg" alt="古埃及 · 法老祝福">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-number" style="color: #C49A3A;">06</div>
+                    <h1 class="slide-title">古埃及 · 法老祝福</h1>
+                    <p class="slide-subtitle" style="color: #C49A3A;">Pharaoh's Blessing</p>
+                    <div class="slide-accent-line" style="background: #C49A3A;"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide">
+                <img class="slide-image" src="../assets/birthday-greece-v.jpg" alt="古希腊 · 神殿庆典">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-number" style="color: #7A9DBF;">07</div>
+                    <h1 class="slide-title">古希腊 · 神殿庆典</h1>
+                    <p class="slide-subtitle" style="color: #7A9DBF;">Temple Celebration</p>
+                    <div class="slide-accent-line" style="background: #7A9DBF;"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="slide">
+                <img class="slide-image" src="../assets/birthday-glass-v.jpg" alt="液态玻璃 · 未来之光">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-number" style="color: #6B8FCC;">08</div>
+                    <h1 class="slide-title">液态玻璃 · 未来之光</h1>
+                    <p class="slide-subtitle" style="color: #6B8FCC;">Liquid Glass Future</p>
+                    <div class="slide-accent-line" style="background: #6B8FCC;"></div>
+                </div>
+            </div>
+
+            <!-- UI Controls -->
+            <div class="slide-counter">01 / 08</div>
+            <button class="play-pause" aria-label="Pause slideshow">&#10074;&#10074;</button>
+            <div class="nav-dots">
+                <button class="nav-dot active" aria-label="Slide 1"></button>
+                <button class="nav-dot" aria-label="Slide 2"></button>
+                <button class="nav-dot" aria-label="Slide 3"></button>
+                <button class="nav-dot" aria-label="Slide 4"></button>
+                <button class="nav-dot" aria-label="Slide 5"></button>
+                <button class="nav-dot" aria-label="Slide 6"></button>
+                <button class="nav-dot" aria-label="Slide 7"></button>
+                <button class="nav-dot" aria-label="Slide 8"></button>
+            </div>
+            <div class="progress-bar"></div>
+        </div>
+    </main>
+
+    <style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #000;
+  font-family: -apple-system, "Noto Sans SC", "Helvetica Neue", sans-serif;
+}
+
+/* Desktop: center in portrait frame */
+@media (min-width: 500px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+@media (min-width: 500px) {
+  .slideshow-container {
+    width: 393px;
+    height: 852px;
+    max-height: 100vh;
+    border-radius: 0;
+    box-shadow: 0 0 60px rgba(0,0,0,0.5);
+  }
+}
+
+@keyframes kenburns {
+  0% { transform: scale(1.0) translate(0, 0); }
+  25% { transform: scale(1.12) translate(-0.5%, -0.3%); }
+  50% { transform: scale(1.18) translate(-1%, -0.6%); }
+  75% { transform: scale(1.22) translate(-0.3%, -1%); }
+  100% { transform: scale(1.25) translate(-0.8%, -0.5%); }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 48px;
+  left: 24px;
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.slide.active .slide-content {
+  animation: floatUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.slide-number {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  z-index: -1;
+  transform: translateY(16px);
+}
+
+.slide.active .slide-number {
+  animation: floatUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0s both;
+}
+
+.slide.active .slide-title {
+  animation: floatUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.slide.active .slide-subtitle {
+  animation: floatUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.slide.active .slide-accent-line {
+  animation: floatUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  z-index: 0;
+}
+.slide.active { opacity: 1; z-index: 1; }
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: kenburns 12s ease-in-out infinite alternate;
+}
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 40%, transparent 70%);
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.3) 100%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.slide-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin: 0 0 4px 0;
+}
+
+.slide-subtitle {
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+}
+
+.slide-accent-line {
+  width: 40px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #D4AD4E;
+  z-index: 50;
+  transition: width 3s linear;
+  width: 0%;
+}
+
+.nav-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 50;
+}
+
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.nav-dot.active {
+  background: #D4AD4E;
+  width: 10px;
+  height: 10px;
+  transform: scale(1.2);
+}
+
+.slide-counter {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.75rem;
+  z-index: 50;
+  font-variant-numeric: tabular-nums;
+}
+
+.play-pause {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+  padding: 0;
+}
+    </style>
+
+    <script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.nav-dot');
+  const progressBar = document.querySelector('.progress-bar');
+  const counter = document.querySelector('.slide-counter');
+  const playPauseBtn = document.querySelector('.play-pause');
+  
+  const TOTAL = slides.length;
+  let current = 0;
+  let playing = true;
+  let interval;
+  
+  function showSlide(n) {
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === n);
+    });
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === n);
+    });
+    counter.textContent = String(n + 1).padStart(2, '0') + ' / ' + String(TOTAL).padStart(2, '0');
+    // Reset progress
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0%';
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        progressBar.style.transition = 'width 3s linear';
+        progressBar.style.width = '100%';
+      });
+    });
+  }
+  
+  function nextSlide() {
+    current = (current + 1) % TOTAL;
+    showSlide(current);
+  }
+  
+  function startAutoPlay() { interval = setInterval(nextSlide, 3000); }
+  function stopAutoPlay() { clearInterval(interval); }
+  
+  // Dot navigation
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      stopAutoPlay();
+      current = i;
+      showSlide(current);
+      if (playing) startAutoPlay();
+    });
+  });
+  
+  // Play/pause
+  playPauseBtn.addEventListener('click', () => {
+    playing = !playing;
+    playPauseBtn.innerHTML = playing ? '&#10074;&#10074;' : '&#9654;';
+    if (playing) {
+      startAutoPlay();
+      progressBar.style.transition = 'width 3s linear';
+      progressBar.style.width = '100%';
+    } else {
+      stopAutoPlay();
+    }
+  });
+  
+  // Keyboard
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      stopAutoPlay();
+      current = (current + 1) % TOTAL;
+      showSlide(current);
+      if (playing) startAutoPlay();
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      stopAutoPlay();
+      current = (current - 1 + TOTAL) % TOTAL;
+      showSlide(current);
+      if (playing) startAutoPlay();
+    } else if (e.key === ' ') {
+      playPauseBtn.click();
+    }
+  });
+  
+  // Touch swipe
+  let touchStartX = 0;
+  let touchStartY = 0;
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+      stopAutoPlay();
+      if (dx < 0) {
+        current = (current + 1) % TOTAL;
+      } else {
+        current = (current - 1 + TOTAL) % TOTAL;
+      }
+      showSlide(current);
+      if (playing) startAutoPlay();
+    }
+  }, { passive: true });
+  
+  // Init
+  showSlide(0);
+  startAutoPlay();
+})();
+    </script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

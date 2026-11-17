@@ -1,0 +1,130 @@
+{
+  "project": {
+    "name": "莫奈印象派展览海报",
+    "path": "c:\\Users\\admin\\Desktop\\poster\\monet-exhibition-poster",
+    "operation": "create",
+    "deviceType": "freeSize",
+    "language": "zh-CN",
+    "dashboardMode": false,
+    "replicationMode": null,
+    "sourceUrl": null,
+    "visualSpecExcerpt": null,
+    "styleDefinitionBrief": "莫奈印象派: 柔和水彩蓝绿色调、睡莲与花园光影、Playfair Display 法式衬线字体、画廊留白、金色画框质感",
+    "designRead": "exhibition-poster / art-enthusiasts / soft impressionist elegance / low density / avoid neon, hard geometric, bold modern typography",
+    "designDials": {
+      "layoutVariance": 3,
+      "motionIntensity": 1,
+      "visualDensity": 1
+    },
+    "styleContinuityAnchors": {
+      "colorSystem": {
+        "primaryColorRole": "water lily blue #5B7FA5 for primary accents, soft pastels for lily/green/violet touches",
+        "brandHuePolicy": "soft pastel palette; no secondary/accent brand hue; lily tones for mood",
+        "stateColors": "minimal usage"
+      },
+      "shapeSystem": "gentle edges, gallery-white frames, 2-4px radius",
+      "typographySystem": "Playfair Display for French titles, Noto Serif SC for Chinese, Noto Sans SC for body",
+      "spacingSystem": "generous gallery whitespace, elegant vertical rhythm",
+      "componentLanguage": "museum/gallery aesthetic, ornamental borders, refined typography",
+      "surfaceAndDepth": "border-first, minimal shadow",
+      "imageryAndIconography": "impressionist water lilies, gardens, bridges, soft landscapes",
+      "interactionTone": "static, contemplative gallery feel"
+    },
+    "specsConstraints": null,
+    "sharedProjectShellContract": {
+      "navigationShell": "poster has no nav shell",
+      "primaryColorSystem": "water lily blue #5B7FA5 primary with pastel lily accents",
+      "typographySystem": "Playfair Display display, Noto Serif SC Chinese titles, Noto Sans SC body",
+      "radiusScale": "restrained: 2px/4px/8px only",
+      "surfaceDepthModel": "border-first, minimal shadow alpha 0.04-0.05",
+      "ctaStyle": "poster format, exhibition info emphasis",
+      "alignmentRules": "centered elegant gallery layout"
+    },
+    "generationTree": {
+      "root": {
+        "nodeId": "gen-page-poster",
+        "kind": "page-leaf",
+        "pageIds": ["page-poster"],
+        "output": "pages/poster.html",
+        "sharedRegions": [],
+        "privateRegions": ["full poster composition"],
+        "mutableSlots": [],
+        "status": "planned",
+        "children": []
+      }
+    }
+  },
+  "designSource": {
+    "operatingMode": "free-explore",
+    "libraryIdentity": null,
+    "libraryPath": null,
+    "cssFilePath": "c:\\Users\\admin\\Desktop\\poster\\monet-exhibition-poster\\colors_and_type.css",
+    "brandPrefix": "",
+    "themeMode": "light",
+    "designDecisionSummary": "莫奈印象派展览: 水彩蓝绿色调、睡莲花园主题、法式衬线字体、画廊留白美学",
+    "componentContractKind": "undefined",
+    "forbiddenInventedComponents": [],
+    "allowedComponents": [],
+    "styleConstraints": {
+      "radiusMax": 8,
+      "spacingBase": 1,
+      "fontSizeBody": 16,
+      "fontSizeMin": 12,
+      "controlHeightDefault": 36,
+      "controlHeightLarge": 44,
+      "staticShadowAlphaMax": 0.05
+    },
+    "productContext": {
+      "kitType": "poster",
+      "productType": "exhibition art poster"
+    },
+    "actualTokenNameReference": []
+  },
+  "pages": [
+    {
+      "nodeId": "page-poster",
+      "slug": "poster",
+      "title": "莫奈印象派展览海报",
+      "htmlSrc": "pages/poster.html",
+      "pageIndex": 1,
+      "stateGroupId": null,
+      "stateRole": null,
+      "baseStatePageId": null,
+      "sharedShellContract": [],
+      "mutableRegions": [],
+      "derivedFromHtmlSrc": null,
+      "derivationType": "original",
+      "sourcePageId": null,
+      "sourceHtmlSrc": null,
+      "pageType": "showcase",
+      "businessScenario": "莫奈印象派画展宣传海报",
+      "visualNorthStar": "印象派光影: 柔和水彩色调、法式优雅字体、画廊留白、金色画框边饰、睡莲意象",
+      "compositionPattern": "gallery-exhibition: centered hero image with soft frame, elegant typography hierarchy, museum-quality spacing",
+      "continuityAnchors": ["soft pastel palette", "Playfair Display typography"],
+      "libraryRestraintMode": false,
+      "uiKitPath": null,
+      "componentPlan": [],
+      "imagePlan": [
+        {
+          "role": "critical-hero",
+          "sectionType": "hero",
+          "targetFilename": "hero-water-lilies.jpg",
+          "status": "planned"
+        }
+      ],
+      "chartsRequired": false,
+      "miniProgramStyle": false
+    }
+  ],
+  "assets": [
+    {
+      "filename": "hero-water-lilies.jpg",
+      "role": "critical-hero",
+      "sectionType": "hero",
+      "owningPage": "page-poster",
+      "status": "planned"
+    }
+  ],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}

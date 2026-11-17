@@ -1,0 +1,187 @@
+{
+  "data": [
+    {
+      "id": "page-wallpaper",
+      "title": "太空地球壁纸",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1783476300000,
+      "canvasData": {
+        "x": 0,
+        "y": 0,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/wallpaper.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "page-wallpaper-terminator",
+      "title": "晨昏线壁纸",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1783476500000,
+      "canvasData": {
+        "x": 0,
+        "y": 377,
+        "group": 1
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/wallpaper-terminator.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "page-wallpaper-horizon",
+      "title": "地平线壁纸",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1783476700000,
+      "canvasData": {
+        "x": 0,
+        "y": 754,
+        "group": 2
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/wallpaper-horizon.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "page-wallpaper-ocean",
+      "title": "海洋剖面壁纸",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1783477100000,
+      "canvasData": {
+        "x": 0,
+        "y": 1131,
+        "group": 3
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/wallpaper-ocean.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "page-wallpaper-triple-star",
+      "title": "三星系统壁纸",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1783477300000,
+      "canvasData": {
+        "x": -12,
+        "y": 1476,
+        "group": 4
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/wallpaper-triple-star.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "image-001",
+      "title": "地球主视觉",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1783476300000,
+      "canvasData": {
+        "x": 0,
+        "y": 1885
+      },
+      "devMetadata": {
+        "imageSrc": "assets/earth-wallpaper-hero.jpg"
+      }
+    },
+    {
+      "id": "image-002",
+      "title": "星空背景",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1783476300000,
+      "canvasData": {
+        "x": 620,
+        "y": 1885
+      },
+      "devMetadata": {
+        "imageSrc": "assets/starfield-background.jpg"
+      }
+    },
+    {
+      "id": "image-003",
+      "title": "晨昏线地球",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1783476500000,
+      "canvasData": {
+        "x": 1240,
+        "y": 1885
+      },
+      "devMetadata": {
+        "imageSrc": "assets/earth-terminator.jpg"
+      }
+    },
+    {
+      "id": "image-004",
+      "title": "地平线地球",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1783476700000,
+      "canvasData": {
+        "x": 1860,
+        "y": 1885
+      },
+      "devMetadata": {
+        "imageSrc": "assets/earth-horizon.jpg"
+      }
+    },
+    {
+      "id": "image-005",
+      "title": "太阳系八大行星",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1783476900000,
+      "canvasData": {
+        "x": 2480,
+        "y": 1885
+      },
+      "devMetadata": {
+        "imageSrc": "assets/solar-system-planets.jpg"
+      }
+    },
+    {
+      "id": "image-006",
+      "title": "海洋剖面图",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1783477100000,
+      "canvasData": {
+        "x": 3100,
+        "y": 1885
+      },
+      "devMetadata": {
+        "imageSrc": "assets/ocean-cross-section.jpg"
+      }
+    },
+    {
+      "id": "image-007",
+      "title": "三星恒星系统",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1783477300000,
+      "canvasData": {
+        "x": 3720,
+        "y": 1885
+      },
+      "devMetadata": {
+        "imageSrc": "assets/triple-star-system.jpg"
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": false,
+    "deviceType": "desktop",
+    "projectName": "太空地球壁纸"
+  }
+}
